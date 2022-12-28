@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USBRelay", "USBRelay.csproj", "{97950A69-7274-47CF-9737-C8EFB8EA1F5D}"
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "YourDyno", "..\..\..\..\Program Files (x86)\YourDyno\YourDyno.exe", "{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Program Files (x86)\YourDyno\YourDyno.exe
+		RemoteMachine = DESKTOP-VM7F87A
+		StartingDirectory = C:\Program Files (x86)\YourDyno
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		dynoKRAFT|Any CPU = dynoKRAFT|Any CPU
+		dynoKRAFT|x86 = dynoKRAFT|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Debug|x86.ActiveCfg = Debug|x86
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Debug|x86.Build.0 = Debug|x86
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.dynoKRAFT|Any CPU.ActiveCfg = dynoKRAFT|Any CPU
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.dynoKRAFT|Any CPU.Build.0 = dynoKRAFT|Any CPU
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.dynoKRAFT|x86.ActiveCfg = dynoKRAFT|x86
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.dynoKRAFT|x86.Build.0 = dynoKRAFT|x86
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Release|x86.ActiveCfg = Release|x86
+		{97950A69-7274-47CF-9737-C8EFB8EA1F5D}.Release|x86.Build.0 = Release|x86
+		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.Debug|Any CPU.ActiveCfg = Release|x86
+		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.Debug|x86.ActiveCfg = Release|x86
+		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.dynoKRAFT|Any CPU.ActiveCfg = Release|x86
+		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.dynoKRAFT|x86.ActiveCfg = Release|x86
+		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.Release|Any CPU.ActiveCfg = Release|x86
+		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0171668F-23D9-4F32-8300-835B236E6755}
+	EndGlobalSection
+EndGlobal
