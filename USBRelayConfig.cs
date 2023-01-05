@@ -1,8 +1,10 @@
-﻿using System;
+﻿using PluginContracts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -15,8 +17,12 @@ using USB;
 namespace USBRelay
 {
     public partial class USBRelayConfig : Form
-    {    
+    {
+        const int MAX_NUMBER_OF_RELAYS = 8;        
+
         string dlldir; //Remembers the location of the installed driver
+
+        List<Label> hotkeyLabels;
 
         //Loads the driver from embedded resource
         static public class NativeMethods
@@ -94,6 +100,18 @@ namespace USBRelay
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
             InitializeComponent();
 
+            hotkeyLabels = new List<Label>()
+            {
+                hotkey1Label,
+                hotkey2Label,
+                hotkey3Label,
+                hotkey4Label,
+                hotkey5Label,
+                hotkey6Label,
+                hotkey7Label,
+                hotkey8Label
+            };
+
             //Starts the driver
             RelayManager.Init();
 
@@ -129,17 +147,90 @@ namespace USBRelay
                 trigger7Panel.Enabled = channelCount > 4 ? true : false;
                 trigger8Panel.Enabled = channelCount > 4 ? true : false;
             }
-        }
 
-        private void hotkey1Button_Click(object sender, EventArgs e)
-        {
-
-        }
+            //Show hotkeys
+            for (int i = 1; i <= hotkeyLabels.Count(); i++)
+            {
+                Keys savedHotkey = (Keys)Properties.Settings.Default["hotkey" + i];
+                hotkeyLabels[i - 1].Text = savedHotkey == Keys.None ? "<none>" : savedHotkey.ToString();
+            }           
+        }        
 
         private void USBRelayConfig_Load(object sender, EventArgs e)
         {
             var deviceSerialNumber = RelayManager.RelaySerial();
             serialNumberLabel.Text = deviceSerialNumber == "none" ? "<not connected>" : deviceSerialNumber;
+        }
+
+        private void HotkeyButton_Click(object sender, EventArgs e)
+        {
+            var hotkeyButtonsIndexed = new Dictionary<string, int>()
+            {
+                { "hotkey1Button", 1 },
+                { "hotkey2Button", 2 },
+                { "hotkey3Button", 3 },
+                { "hotkey4Button", 4 },
+                { "hotkey5Button", 5 },
+                { "hotkey6Button", 6 },
+                { "hotkey7Button", 7 },
+                { "hotkey8Button", 8 }
+            };
+
+            string clickedButtonName = ((Button)sender).Name;
+            SetHotkey(hotkeyButtonsIndexed[clickedButtonName]);
+        }
+
+        private void SetHotkey(int hotkeyNumber)
+        {
+            Keys hotkey = Keys.None;
+            Keypress k = new Keypress(value => hotkey = value);
+            k.ShowDialog();
+            Properties.Settings.Default["hotkey" + hotkeyNumber] = hotkey;
+            Properties.Settings.Default.Save();
+            hotkeyLabels[hotkeyNumber - 1].Text = hotkey == Keys.None ? "<none>" : hotkey.ToString();            
+        }
+
+        public void KeyPressed(Keys pressedKey)
+        {
+            for (int i = 1; i <= MAX_NUMBER_OF_RELAYS; i++)
+            {                
+                if (pressedKey.ToString() == Properties.Settings.Default["hotkey" + i].ToString())
+                {
+                    HotkeyPressed(i);
+                    serialNumberLabel.Text = RelayManager.RelayStatus().ToString();
+                    break;
+                }
+            }
+        }
+
+        private void HotkeyPressed(int hotkeyChannel)
+        {
+            int hotkeyChannelBitmask = (int)Math.Pow(2, hotkeyChannel - 1);
+            if ((RelayManager.RelayStatus() & hotkeyChannelBitmask) > 0)
+            {
+                RelayManager.CloseChannel(hotkeyChannel);
+            }
+            else
+            {
+                RelayManager.OpenChannel(hotkeyChannel);
+            }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            const int WM_KEYDOWN = 0x100;
+            const int WM_SYSKEYDOWN = 0x104;
+
+            if ((msg.Msg == WM_KEYDOWN) || (msg.Msg == WM_SYSKEYDOWN))
+            {
+                KeyPressed(keyData);                
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void on1Button_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -133,7 +133,7 @@
             // on4Button
             // 
             this.on4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on4Button.Location = new System.Drawing.Point(554, 3);
+            this.on4Button.Location = new System.Drawing.Point(637, 3);
             this.on4Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on4Button.Name = "on4Button";
             this.on4Button.Size = new System.Drawing.Size(50, 23);
@@ -156,13 +156,13 @@
             this.trigger6Panel.Controls.Add(this.trigger6Label);
             this.trigger6Panel.Location = new System.Drawing.Point(7, 199);
             this.trigger6Panel.Name = "trigger6Panel";
-            this.trigger6Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger6Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger6Panel.TabIndex = 10;
             // 
             // off6Button
             // 
             this.off6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off6Button.Location = new System.Drawing.Point(610, 3);
+            this.off6Button.Location = new System.Drawing.Point(693, 3);
             this.off6Button.Name = "off6Button";
             this.off6Button.Size = new System.Drawing.Size(50, 23);
             this.off6Button.TabIndex = 9;
@@ -172,7 +172,7 @@
             // on6Button
             // 
             this.on6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on6Button.Location = new System.Drawing.Point(554, 3);
+            this.on6Button.Location = new System.Drawing.Point(637, 3);
             this.on6Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on6Button.Name = "on6Button";
             this.on6Button.Size = new System.Drawing.Size(50, 23);
@@ -183,35 +183,39 @@
             // hotkey6Button
             // 
             this.hotkey6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey6Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey6Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey6Button.Name = "hotkey6Button";
             this.hotkey6Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey6Button.TabIndex = 7;
             this.hotkey6Button.Text = "Set Hotkey";
             this.hotkey6Button.UseVisualStyleBackColor = true;
+            this.hotkey6Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey6Label
             // 
-            this.hotkey6Label.AutoSize = true;
+            this.hotkey6Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey6Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey6Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey6Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey6Label.Name = "hotkey6Label";
-            this.hotkey6Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey6Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey6Label.TabIndex = 6;
             this.hotkey6Label.Text = "<none>";
+            this.hotkey6Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerPoint6NumericUpDown
             // 
             this.triggerPoint6NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint6NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint6NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint6NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint6NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint6NumericUpDown.Name = "triggerPoint6NumericUpDown";
-            this.triggerPoint6NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint6NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint6NumericUpDown.TabIndex = 5;
             // 
             // compare6ComboBox
@@ -220,7 +224,8 @@
             this.compare6ComboBox.FormattingEnabled = true;
             this.compare6ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare6ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare6ComboBox.Name = "compare6ComboBox";
             this.compare6ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -239,6 +244,7 @@
             // 
             // triggerSignal6ComboBox
             // 
+            this.triggerSignal6ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal6ComboBox.FormattingEnabled = true;
             this.triggerSignal6ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal6ComboBox.Name = "triggerSignal6ComboBox";
@@ -271,13 +277,13 @@
             this.trigger5Panel.Controls.Add(this.trigger5Label);
             this.trigger5Panel.Location = new System.Drawing.Point(7, 163);
             this.trigger5Panel.Name = "trigger5Panel";
-            this.trigger5Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger5Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger5Panel.TabIndex = 12;
             // 
             // off5Button
             // 
             this.off5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off5Button.Location = new System.Drawing.Point(610, 3);
+            this.off5Button.Location = new System.Drawing.Point(693, 3);
             this.off5Button.Name = "off5Button";
             this.off5Button.Size = new System.Drawing.Size(50, 23);
             this.off5Button.TabIndex = 9;
@@ -287,7 +293,7 @@
             // on5Button
             // 
             this.on5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on5Button.Location = new System.Drawing.Point(554, 3);
+            this.on5Button.Location = new System.Drawing.Point(637, 3);
             this.on5Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on5Button.Name = "on5Button";
             this.on5Button.Size = new System.Drawing.Size(50, 23);
@@ -298,35 +304,39 @@
             // hotkey5Button
             // 
             this.hotkey5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey5Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey5Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey5Button.Name = "hotkey5Button";
             this.hotkey5Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey5Button.TabIndex = 7;
             this.hotkey5Button.Text = "Set Hotkey";
             this.hotkey5Button.UseVisualStyleBackColor = true;
+            this.hotkey5Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey5Label
             // 
-            this.hotkey5Label.AutoSize = true;
+            this.hotkey5Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey5Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey5Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey5Label.Name = "hotkey5Label";
-            this.hotkey5Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey5Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey5Label.TabIndex = 6;
             this.hotkey5Label.Text = "<none>";
+            this.hotkey5Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerPoint5NumericUpDown
             // 
             this.triggerPoint5NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint5NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint5NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint5NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint5NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint5NumericUpDown.Name = "triggerPoint5NumericUpDown";
-            this.triggerPoint5NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint5NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint5NumericUpDown.TabIndex = 5;
             // 
             // compare5ComboBox
@@ -335,7 +345,8 @@
             this.compare5ComboBox.FormattingEnabled = true;
             this.compare5ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare5ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare5ComboBox.Name = "compare5ComboBox";
             this.compare5ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -354,6 +365,7 @@
             // 
             // triggerSignal5ComboBox
             // 
+            this.triggerSignal5ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal5ComboBox.FormattingEnabled = true;
             this.triggerSignal5ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal5ComboBox.Name = "triggerSignal5ComboBox";
@@ -384,6 +396,7 @@
             // 
             // triggerSignal4ComboBox
             // 
+            this.triggerSignal4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal4ComboBox.FormattingEnabled = true;
             this.triggerSignal4ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal4ComboBox.Name = "triggerSignal4ComboBox";
@@ -404,7 +417,7 @@
             // off3Button
             // 
             this.off3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off3Button.Location = new System.Drawing.Point(610, 3);
+            this.off3Button.Location = new System.Drawing.Point(693, 3);
             this.off3Button.Name = "off3Button";
             this.off3Button.Size = new System.Drawing.Size(50, 23);
             this.off3Button.TabIndex = 9;
@@ -414,41 +427,45 @@
             // hotkey4Button
             // 
             this.hotkey4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey4Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey4Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey4Button.Name = "hotkey4Button";
             this.hotkey4Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey4Button.TabIndex = 7;
             this.hotkey4Button.Text = "Set Hotkey";
             this.hotkey4Button.UseVisualStyleBackColor = true;
+            this.hotkey4Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey4Label
             // 
-            this.hotkey4Label.AutoSize = true;
+            this.hotkey4Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey4Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey4Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey4Label.Name = "hotkey4Label";
-            this.hotkey4Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey4Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey4Label.TabIndex = 6;
             this.hotkey4Label.Text = "<none>";
+            this.hotkey4Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerPoint4NumericUpDown
             // 
             this.triggerPoint4NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint4NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint4NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint4NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint4NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint4NumericUpDown.Name = "triggerPoint4NumericUpDown";
-            this.triggerPoint4NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint4NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint4NumericUpDown.TabIndex = 5;
             // 
             // on3Button
             // 
             this.on3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on3Button.Location = new System.Drawing.Point(554, 3);
+            this.on3Button.Location = new System.Drawing.Point(637, 3);
             this.on3Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on3Button.Name = "on3Button";
             this.on3Button.Size = new System.Drawing.Size(50, 23);
@@ -459,35 +476,39 @@
             // hotkey3Button
             // 
             this.hotkey3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey3Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey3Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey3Button.Name = "hotkey3Button";
             this.hotkey3Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey3Button.TabIndex = 7;
             this.hotkey3Button.Text = "Set Hotkey";
             this.hotkey3Button.UseVisualStyleBackColor = true;
+            this.hotkey3Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey3Label
             // 
-            this.hotkey3Label.AutoSize = true;
+            this.hotkey3Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey3Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey3Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey3Label.Name = "hotkey3Label";
-            this.hotkey3Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey3Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey3Label.TabIndex = 6;
             this.hotkey3Label.Text = "<none>";
+            this.hotkey3Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerPoint3NumericUpDown
             // 
             this.triggerPoint3NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint3NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint3NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint3NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint3NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint3NumericUpDown.Name = "triggerPoint3NumericUpDown";
-            this.triggerPoint3NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint3NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint3NumericUpDown.TabIndex = 5;
             // 
             // compare3ComboBox
@@ -496,7 +517,8 @@
             this.compare3ComboBox.FormattingEnabled = true;
             this.compare3ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare3ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare3ComboBox.Name = "compare3ComboBox";
             this.compare3ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -515,6 +537,7 @@
             // 
             // triggerSignal3ComboBox
             // 
+            this.triggerSignal3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal3ComboBox.FormattingEnabled = true;
             this.triggerSignal3ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal3ComboBox.Name = "triggerSignal3ComboBox";
@@ -535,7 +558,7 @@
             // off4Button
             // 
             this.off4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off4Button.Location = new System.Drawing.Point(610, 3);
+            this.off4Button.Location = new System.Drawing.Point(693, 3);
             this.off4Button.Name = "off4Button";
             this.off4Button.Size = new System.Drawing.Size(50, 23);
             this.off4Button.TabIndex = 9;
@@ -548,7 +571,8 @@
             this.compare4ComboBox.FormattingEnabled = true;
             this.compare4ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare4ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare4ComboBox.Name = "compare4ComboBox";
             this.compare4ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -557,7 +581,7 @@
             // off2Button
             // 
             this.off2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off2Button.Location = new System.Drawing.Point(610, 3);
+            this.off2Button.Location = new System.Drawing.Point(693, 3);
             this.off2Button.Name = "off2Button";
             this.off2Button.Size = new System.Drawing.Size(50, 23);
             this.off2Button.TabIndex = 9;
@@ -571,7 +595,7 @@
             this.serialNumberLabel.Location = new System.Drawing.Point(148, 9);
             this.serialNumberLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.serialNumberLabel.Name = "serialNumberLabel";
-            this.serialNumberLabel.Size = new System.Drawing.Size(106, 16);
+            this.serialNumberLabel.Size = new System.Drawing.Size(105, 16);
             this.serialNumberLabel.TabIndex = 28;
             this.serialNumberLabel.Text = "<not connected>";
             // 
@@ -590,13 +614,13 @@
             this.trigger8Panel.Controls.Add(this.trigger8Label);
             this.trigger8Panel.Location = new System.Drawing.Point(7, 271);
             this.trigger8Panel.Name = "trigger8Panel";
-            this.trigger8Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger8Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger8Panel.TabIndex = 10;
             // 
             // off8Button
             // 
             this.off8Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off8Button.Location = new System.Drawing.Point(610, 3);
+            this.off8Button.Location = new System.Drawing.Point(693, 3);
             this.off8Button.Name = "off8Button";
             this.off8Button.Size = new System.Drawing.Size(50, 23);
             this.off8Button.TabIndex = 9;
@@ -606,7 +630,7 @@
             // on8Button
             // 
             this.on8Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on8Button.Location = new System.Drawing.Point(554, 3);
+            this.on8Button.Location = new System.Drawing.Point(637, 3);
             this.on8Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on8Button.Name = "on8Button";
             this.on8Button.Size = new System.Drawing.Size(50, 23);
@@ -617,35 +641,39 @@
             // hotkey8Button
             // 
             this.hotkey8Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey8Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey8Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey8Button.Name = "hotkey8Button";
             this.hotkey8Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey8Button.TabIndex = 7;
             this.hotkey8Button.Text = "Set Hotkey";
             this.hotkey8Button.UseVisualStyleBackColor = true;
+            this.hotkey8Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey8Label
             // 
-            this.hotkey8Label.AutoSize = true;
+            this.hotkey8Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey8Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey8Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey8Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey8Label.Name = "hotkey8Label";
-            this.hotkey8Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey8Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey8Label.TabIndex = 6;
             this.hotkey8Label.Text = "<none>";
+            this.hotkey8Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerPoint8NumericUpDown
             // 
             this.triggerPoint8NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint8NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint8NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint8NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint8NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint8NumericUpDown.Name = "triggerPoint8NumericUpDown";
-            this.triggerPoint8NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint8NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint8NumericUpDown.TabIndex = 5;
             // 
             // compare8ComboBox
@@ -654,7 +682,8 @@
             this.compare8ComboBox.FormattingEnabled = true;
             this.compare8ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare8ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare8ComboBox.Name = "compare8ComboBox";
             this.compare8ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -673,6 +702,7 @@
             // 
             // triggerSignal8ComboBox
             // 
+            this.triggerSignal8ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal8ComboBox.FormattingEnabled = true;
             this.triggerSignal8ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal8ComboBox.Name = "triggerSignal8ComboBox";
@@ -693,7 +723,7 @@
             // on2Button
             // 
             this.on2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on2Button.Location = new System.Drawing.Point(554, 3);
+            this.on2Button.Location = new System.Drawing.Point(637, 3);
             this.on2Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on2Button.Name = "on2Button";
             this.on2Button.Size = new System.Drawing.Size(50, 23);
@@ -704,7 +734,7 @@
             // off1Button
             // 
             this.off1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off1Button.Location = new System.Drawing.Point(610, 3);
+            this.off1Button.Location = new System.Drawing.Point(693, 3);
             this.off1Button.Name = "off1Button";
             this.off1Button.Size = new System.Drawing.Size(50, 23);
             this.off1Button.TabIndex = 9;
@@ -726,13 +756,13 @@
             this.trigger7Panel.Controls.Add(this.trigger7Label);
             this.trigger7Panel.Location = new System.Drawing.Point(7, 235);
             this.trigger7Panel.Name = "trigger7Panel";
-            this.trigger7Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger7Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger7Panel.TabIndex = 10;
             // 
             // off7Button
             // 
             this.off7Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off7Button.Location = new System.Drawing.Point(610, 3);
+            this.off7Button.Location = new System.Drawing.Point(693, 3);
             this.off7Button.Name = "off7Button";
             this.off7Button.Size = new System.Drawing.Size(50, 23);
             this.off7Button.TabIndex = 9;
@@ -742,7 +772,7 @@
             // on7Button
             // 
             this.on7Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on7Button.Location = new System.Drawing.Point(554, 3);
+            this.on7Button.Location = new System.Drawing.Point(637, 3);
             this.on7Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on7Button.Name = "on7Button";
             this.on7Button.Size = new System.Drawing.Size(50, 23);
@@ -753,35 +783,39 @@
             // hotkey7Button
             // 
             this.hotkey7Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey7Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey7Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey7Button.Name = "hotkey7Button";
             this.hotkey7Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey7Button.TabIndex = 7;
             this.hotkey7Button.Text = "Set Hotkey";
             this.hotkey7Button.UseVisualStyleBackColor = true;
+            this.hotkey7Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey7Label
             // 
-            this.hotkey7Label.AutoSize = true;
+            this.hotkey7Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey7Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey7Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey7Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey7Label.Name = "hotkey7Label";
-            this.hotkey7Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey7Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey7Label.TabIndex = 6;
             this.hotkey7Label.Text = "<none>";
+            this.hotkey7Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerPoint7NumericUpDown
             // 
             this.triggerPoint7NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint7NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint7NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint7NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint7NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint7NumericUpDown.Name = "triggerPoint7NumericUpDown";
-            this.triggerPoint7NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint7NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint7NumericUpDown.TabIndex = 5;
             // 
             // compare7ComboBox
@@ -790,7 +824,8 @@
             this.compare7ComboBox.FormattingEnabled = true;
             this.compare7ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare7ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare7ComboBox.Name = "compare7ComboBox";
             this.compare7ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -809,6 +844,7 @@
             // 
             // triggerSignal7ComboBox
             // 
+            this.triggerSignal7ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal7ComboBox.FormattingEnabled = true;
             this.triggerSignal7ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal7ComboBox.Name = "triggerSignal7ComboBox";
@@ -840,25 +876,27 @@
             // on1Button
             // 
             this.on1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on1Button.Location = new System.Drawing.Point(554, 3);
+            this.on1Button.Location = new System.Drawing.Point(637, 3);
             this.on1Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.on1Button.Name = "on1Button";
             this.on1Button.Size = new System.Drawing.Size(50, 23);
             this.on1Button.TabIndex = 8;
             this.on1Button.Text = "On";
             this.on1Button.UseVisualStyleBackColor = true;
+            this.on1Button.Click += new System.EventHandler(this.on1Button_Click);
             // 
             // triggerPoint2NumericUpDown
             // 
             this.triggerPoint2NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint2NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint2NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint2NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint2NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint2NumericUpDown.Name = "triggerPoint2NumericUpDown";
-            this.triggerPoint2NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint2NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint2NumericUpDown.TabIndex = 5;
             // 
             // compare2ComboBox
@@ -867,7 +905,8 @@
             this.compare2ComboBox.FormattingEnabled = true;
             this.compare2ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare2ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare2ComboBox.Name = "compare2ComboBox";
             this.compare2ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -887,36 +926,40 @@
             // hotkey1Button
             // 
             this.hotkey1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey1Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey1Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey1Button.Name = "hotkey1Button";
             this.hotkey1Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey1Button.TabIndex = 7;
             this.hotkey1Button.Text = "Set Hotkey";
             this.hotkey1Button.UseVisualStyleBackColor = true;
-            this.hotkey1Button.Click += new System.EventHandler(this.hotkey1Button_Click);
+            this.hotkey1Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey1Label
             // 
-            this.hotkey1Label.AutoSize = true;
+            this.hotkey1Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hotkey1Label.AutoEllipsis = true;
             this.hotkey1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey1Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey1Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey1Label.Name = "hotkey1Label";
-            this.hotkey1Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey1Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey1Label.TabIndex = 6;
             this.hotkey1Label.Text = "<none>";
+            this.hotkey1Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerPoint1NumericUpDown
             // 
             this.triggerPoint1NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPoint1NumericUpDown.Location = new System.Drawing.Point(326, 6);
+            this.triggerPoint1NumericUpDown.Location = new System.Drawing.Point(331, 6);
+            this.triggerPoint1NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPoint1NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.triggerPoint1NumericUpDown.Name = "triggerPoint1NumericUpDown";
-            this.triggerPoint1NumericUpDown.Size = new System.Drawing.Size(70, 20);
+            this.triggerPoint1NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint1NumericUpDown.TabIndex = 5;
             // 
             // compare1ComboBox
@@ -925,7 +968,8 @@
             this.compare1ComboBox.FormattingEnabled = true;
             this.compare1ComboBox.Items.AddRange(new object[] {
             "<=",
-            ">="});
+            ">=",
+            "="});
             this.compare1ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare1ComboBox.Name = "compare1ComboBox";
             this.compare1ComboBox.Size = new System.Drawing.Size(40, 21);
@@ -944,6 +988,7 @@
             // 
             // triggerSignal1ComboBox
             // 
+            this.triggerSignal1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal1ComboBox.FormattingEnabled = true;
             this.triggerSignal1ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal1ComboBox.Name = "triggerSignal1ComboBox";
@@ -964,26 +1009,30 @@
             // hotkey2Button
             // 
             this.hotkey2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey2Button.Location = new System.Drawing.Point(461, 3);
+            this.hotkey2Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey2Button.Name = "hotkey2Button";
             this.hotkey2Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey2Button.TabIndex = 7;
             this.hotkey2Button.Text = "Set Hotkey";
             this.hotkey2Button.UseVisualStyleBackColor = true;
+            this.hotkey2Button.Click += new System.EventHandler(this.HotkeyButton_Click);
             // 
             // hotkey2Label
             // 
-            this.hotkey2Label.AutoSize = true;
+            this.hotkey2Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey2Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey2Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey2Label.Name = "hotkey2Label";
-            this.hotkey2Label.Size = new System.Drawing.Size(49, 15);
+            this.hotkey2Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey2Label.TabIndex = 6;
             this.hotkey2Label.Text = "<none>";
+            this.hotkey2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // triggerSignal2ComboBox
             // 
+            this.triggerSignal2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.triggerSignal2ComboBox.FormattingEnabled = true;
             this.triggerSignal2ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal2ComboBox.Name = "triggerSignal2ComboBox";
@@ -1005,7 +1054,7 @@
             this.trigger4Panel.Controls.Add(this.trigger4Label);
             this.trigger4Panel.Location = new System.Drawing.Point(7, 127);
             this.trigger4Panel.Name = "trigger4Panel";
-            this.trigger4Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger4Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger4Panel.TabIndex = 10;
             // 
             // label1
@@ -1014,7 +1063,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 16);
+            this.label1.Size = new System.Drawing.Size(132, 16);
             this.label1.TabIndex = 27;
             this.label1.Text = "USB Relay Serial:";
             // 
@@ -1033,7 +1082,7 @@
             this.trigger1Panel.Controls.Add(this.trigger1Label);
             this.trigger1Panel.Location = new System.Drawing.Point(7, 19);
             this.trigger1Panel.Name = "trigger1Panel";
-            this.trigger1Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger1Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger1Panel.TabIndex = 0;
             // 
             // groupBox1
@@ -1051,7 +1100,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 316);
+            this.groupBox1.Size = new System.Drawing.Size(760, 316);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "USB Relay Triggers";
@@ -1071,7 +1120,7 @@
             this.trigger3Panel.Controls.Add(this.trigger3Label);
             this.trigger3Panel.Location = new System.Drawing.Point(7, 91);
             this.trigger3Panel.Name = "trigger3Panel";
-            this.trigger3Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger3Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger3Panel.TabIndex = 11;
             // 
             // trigger2Panel
@@ -1089,14 +1138,14 @@
             this.trigger2Panel.Controls.Add(this.trigger2Label);
             this.trigger2Panel.Location = new System.Drawing.Point(7, 55);
             this.trigger2Panel.Name = "trigger2Panel";
-            this.trigger2Panel.Size = new System.Drawing.Size(687, 30);
+            this.trigger2Panel.Size = new System.Drawing.Size(747, 30);
             this.trigger2Panel.TabIndex = 10;
             // 
             // USBRelayConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 401);
+            this.ClientSize = new System.Drawing.Size(784, 401);
             this.Controls.Add(this.serialNumberLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

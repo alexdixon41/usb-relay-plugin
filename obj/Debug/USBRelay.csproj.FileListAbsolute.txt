@@ -1,0 +1,10 @@
+C:\ProgramData\YourDynoPlugins\USBRelay.dll
+C:\ProgramData\YourDynoPlugins\USBRelay.pdb
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.csproj.AssemblyReference.cache
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.USBRelayConfig.resources
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.csproj.GenerateResource.cache
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.csproj.CopyComplete
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.dll
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.pdb
+C:\ProgramData\YourDynoPlugins\USBRelay.dll.config

@@ -85,7 +85,18 @@ namespace USBRelay
         {
             get
             {
-                return new Keys[] { Keys.A }.ToList();
+                var keyArray = new Keys[] 
+                { 
+                    Properties.Settings.Default.hotkey1, 
+                    Properties.Settings.Default.hotkey2,
+                    Properties.Settings.Default.hotkey3, 
+                    Properties.Settings.Default.hotkey4,
+                    Properties.Settings.Default.hotkey5,
+                    Properties.Settings.Default.hotkey6,
+                    Properties.Settings.Default.hotkey7,
+                    Properties.Settings.Default.hotkey8
+                };
+                return keyArray.ToList();
             }
         }
 
@@ -101,7 +112,7 @@ namespace USBRelay
 
         public void hotkeyPressed(Keys hotkey)
         {
-            
+            USBRelayConfig.KeyPressed(hotkey);
         }
     }
 }
