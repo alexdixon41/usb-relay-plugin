@@ -18,11 +18,14 @@ namespace USBRelay
 {
     public partial class USBRelayConfig : Form
     {
-        const int MAX_NUMBER_OF_RELAYS = 8;        
+        const int MAX_NUMBER_OF_RELAYS = 8;
+
+        private int hotkeyLocks = 0;
 
         string dlldir; //Remembers the location of the installed driver
 
         List<Label> hotkeyLabels;
+        List<Button> relayButtons;
 
         //Loads the driver from embedded resource
         static public class NativeMethods
@@ -112,6 +115,18 @@ namespace USBRelay
                 hotkey8Label
             };
 
+            relayButtons = new List<Button>()
+            {
+                relay1Button,
+                relay2Button,
+                relay3Button,
+                relay4Button,
+                relay5Button,
+                relay6Button,
+                relay7Button,
+                relay8Button
+            };
+
             //Starts the driver
             RelayManager.Init();
 
@@ -134,7 +149,7 @@ namespace USBRelay
                 RelayManager.OpenDevice(0);
 
                 //Reads serial number
-                serialNumberLabel.Text = RelayManager.RelaySerial().ToString();
+               serialNumberLabel.Text = RelayManager.RelaySerial().ToString();
 
                 //Enables trigger controls based on how many channels the USB Relay device has
                 int channelCount = RelayManager.ChannelsCount();
@@ -164,20 +179,13 @@ namespace USBRelay
 
         private void HotkeyButton_Click(object sender, EventArgs e)
         {
-            var hotkeyButtonsIndexed = new Dictionary<string, int>()
-            {
-                { "hotkey1Button", 1 },
-                { "hotkey2Button", 2 },
-                { "hotkey3Button", 3 },
-                { "hotkey4Button", 4 },
-                { "hotkey5Button", 5 },
-                { "hotkey6Button", 6 },
-                { "hotkey7Button", 7 },
-                { "hotkey8Button", 8 }
-            };
+            string buttonName = ((Button)sender).Name;
+            int relayChannel;
 
-            string clickedButtonName = ((Button)sender).Name;
-            SetHotkey(hotkeyButtonsIndexed[clickedButtonName]);
+            if (buttonName.Length > 5 && int.TryParse(buttonName.Substring(6, 1), out relayChannel))
+            {
+                SetHotkey(relayChannel);
+            }
         }
 
         private void SetHotkey(int hotkeyNumber)
@@ -196,23 +204,9 @@ namespace USBRelay
             {                
                 if (pressedKey.ToString() == Properties.Settings.Default["hotkey" + i].ToString())
                 {
-                    HotkeyPressed(i);
-                    serialNumberLabel.Text = RelayManager.RelayStatus().ToString();
-                    break;
+                    ToggleRelay(i);
+                    return;                    
                 }
-            }
-        }
-
-        private void HotkeyPressed(int hotkeyChannel)
-        {
-            int hotkeyChannelBitmask = (int)Math.Pow(2, hotkeyChannel - 1);
-            if ((RelayManager.RelayStatus() & hotkeyChannelBitmask) > 0)
-            {
-                RelayManager.CloseChannel(hotkeyChannel);
-            }
-            else
-            {
-                RelayManager.OpenChannel(hotkeyChannel);
             }
         }
 
@@ -226,11 +220,34 @@ namespace USBRelay
                 KeyPressed(keyData);                
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }       
+
+        private void ToggleRelay(int channel)
+        {
+            int channelBitmask = (int)Math.Pow(2, channel - 1);
+            if ((RelayManager.RelayStatus() & channelBitmask) > 0)
+            {
+                RelayManager.CloseChannel(channel);
+                relayButtons[channel - 1].BackColor = Color.Tomato;
+                relayButtons[channel - 1].Text = "On";
+            }
+            else
+            {
+                RelayManager.OpenChannel(channel);
+                relayButtons[channel - 1].BackColor = Color.Green;
+                relayButtons[channel - 1].Text = "Off";
+            }
         }
 
-        private void on1Button_Click(object sender, EventArgs e)
-        {
-            
+        private void RelayOnButton_Click(object sender, EventArgs e)
+        {            
+            string buttonName = ((Button)sender).Name;
+            int relayChannel;
+
+            if (buttonName.Length > 5 && int.TryParse(buttonName.Substring(5, 1), out relayChannel))
+            {
+                ToggleRelay(relayChannel);
+            }            
         }
     }
 }

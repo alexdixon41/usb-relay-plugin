@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.on4Button = new System.Windows.Forms.Button();
+            this.relay4Button = new System.Windows.Forms.Button();
             this.trigger6Panel = new System.Windows.Forms.Panel();
-            this.off6Button = new System.Windows.Forms.Button();
-            this.on6Button = new System.Windows.Forms.Button();
+            this.relay6Button = new System.Windows.Forms.Button();
             this.hotkey6Button = new System.Windows.Forms.Button();
             this.hotkey6Label = new System.Windows.Forms.Label();
             this.triggerPoint6NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -40,8 +39,7 @@
             this.triggerSignal6ComboBox = new System.Windows.Forms.ComboBox();
             this.trigger6Label = new System.Windows.Forms.Label();
             this.trigger5Panel = new System.Windows.Forms.Panel();
-            this.off5Button = new System.Windows.Forms.Button();
-            this.on5Button = new System.Windows.Forms.Button();
+            this.relay5Button = new System.Windows.Forms.Button();
             this.hotkey5Button = new System.Windows.Forms.Button();
             this.hotkey5Label = new System.Windows.Forms.Label();
             this.triggerPoint5NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -52,11 +50,10 @@
             this.is4Label = new System.Windows.Forms.Label();
             this.triggerSignal4ComboBox = new System.Windows.Forms.ComboBox();
             this.trigger4Label = new System.Windows.Forms.Label();
-            this.off3Button = new System.Windows.Forms.Button();
             this.hotkey4Button = new System.Windows.Forms.Button();
             this.hotkey4Label = new System.Windows.Forms.Label();
             this.triggerPoint4NumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.on3Button = new System.Windows.Forms.Button();
+            this.relay3Button = new System.Windows.Forms.Button();
             this.hotkey3Button = new System.Windows.Forms.Button();
             this.hotkey3Label = new System.Windows.Forms.Label();
             this.triggerPoint3NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -64,13 +61,10 @@
             this.is3Label = new System.Windows.Forms.Label();
             this.triggerSignal3ComboBox = new System.Windows.Forms.ComboBox();
             this.trigger3Label = new System.Windows.Forms.Label();
-            this.off4Button = new System.Windows.Forms.Button();
             this.compare4ComboBox = new System.Windows.Forms.ComboBox();
-            this.off2Button = new System.Windows.Forms.Button();
             this.serialNumberLabel = new System.Windows.Forms.Label();
             this.trigger8Panel = new System.Windows.Forms.Panel();
-            this.off8Button = new System.Windows.Forms.Button();
-            this.on8Button = new System.Windows.Forms.Button();
+            this.relay8Button = new System.Windows.Forms.Button();
             this.hotkey8Button = new System.Windows.Forms.Button();
             this.hotkey8Label = new System.Windows.Forms.Label();
             this.triggerPoint8NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -78,11 +72,9 @@
             this.is8Label = new System.Windows.Forms.Label();
             this.triggerSignal8ComboBox = new System.Windows.Forms.ComboBox();
             this.trigger8Label = new System.Windows.Forms.Label();
-            this.on2Button = new System.Windows.Forms.Button();
-            this.off1Button = new System.Windows.Forms.Button();
+            this.relay2Button = new System.Windows.Forms.Button();
             this.trigger7Panel = new System.Windows.Forms.Panel();
-            this.off7Button = new System.Windows.Forms.Button();
-            this.on7Button = new System.Windows.Forms.Button();
+            this.relay7Button = new System.Windows.Forms.Button();
             this.hotkey7Button = new System.Windows.Forms.Button();
             this.hotkey7Label = new System.Windows.Forms.Label();
             this.triggerPoint7NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -91,7 +83,7 @@
             this.triggerSignal7ComboBox = new System.Windows.Forms.ComboBox();
             this.trigger7Label = new System.Windows.Forms.Label();
             this.trigger2Label = new System.Windows.Forms.Label();
-            this.on1Button = new System.Windows.Forms.Button();
+            this.relay1Button = new System.Windows.Forms.Button();
             this.triggerPoint2NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.compare2ComboBox = new System.Windows.Forms.ComboBox();
             this.is2Label = new System.Windows.Forms.Label();
@@ -130,23 +122,26 @@
             this.trigger2Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // on4Button
+            // relay4Button
             // 
-            this.on4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on4Button.Location = new System.Drawing.Point(637, 3);
-            this.on4Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on4Button.Name = "on4Button";
-            this.on4Button.Size = new System.Drawing.Size(50, 23);
-            this.on4Button.TabIndex = 8;
-            this.on4Button.Text = "On";
-            this.on4Button.UseVisualStyleBackColor = true;
+            this.relay4Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay4Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay4Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay4Button.Location = new System.Drawing.Point(634, 3);
+            this.relay4Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay4Button.Name = "relay4Button";
+            this.relay4Button.Size = new System.Drawing.Size(50, 23);
+            this.relay4Button.TabIndex = 8;
+            this.relay4Button.Text = "On";
+            this.relay4Button.UseVisualStyleBackColor = false;
+            this.relay4Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // trigger6Panel
             // 
             this.trigger6Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger6Panel.Controls.Add(this.off6Button);
-            this.trigger6Panel.Controls.Add(this.on6Button);
+            this.trigger6Panel.Controls.Add(this.relay6Button);
             this.trigger6Panel.Controls.Add(this.hotkey6Button);
             this.trigger6Panel.Controls.Add(this.hotkey6Label);
             this.trigger6Panel.Controls.Add(this.triggerPoint6NumericUpDown);
@@ -156,32 +151,27 @@
             this.trigger6Panel.Controls.Add(this.trigger6Label);
             this.trigger6Panel.Location = new System.Drawing.Point(7, 199);
             this.trigger6Panel.Name = "trigger6Panel";
-            this.trigger6Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger6Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger6Panel.TabIndex = 10;
             // 
-            // off6Button
+            // relay6Button
             // 
-            this.off6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off6Button.Location = new System.Drawing.Point(693, 3);
-            this.off6Button.Name = "off6Button";
-            this.off6Button.Size = new System.Drawing.Size(50, 23);
-            this.off6Button.TabIndex = 9;
-            this.off6Button.Text = "Off";
-            this.off6Button.UseVisualStyleBackColor = true;
-            // 
-            // on6Button
-            // 
-            this.on6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on6Button.Location = new System.Drawing.Point(637, 3);
-            this.on6Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on6Button.Name = "on6Button";
-            this.on6Button.Size = new System.Drawing.Size(50, 23);
-            this.on6Button.TabIndex = 8;
-            this.on6Button.Text = "On";
-            this.on6Button.UseVisualStyleBackColor = true;
+            this.relay6Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay6Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay6Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay6Button.Location = new System.Drawing.Point(634, 3);
+            this.relay6Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay6Button.Name = "relay6Button";
+            this.relay6Button.Size = new System.Drawing.Size(50, 23);
+            this.relay6Button.TabIndex = 8;
+            this.relay6Button.Text = "On";
+            this.relay6Button.UseVisualStyleBackColor = false;
+            this.relay6Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // hotkey6Button
             // 
+            this.hotkey6Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey6Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey6Button.Name = "hotkey6Button";
@@ -198,6 +188,7 @@
             this.hotkey6Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey6Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey6Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey6Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey6Label.Name = "hotkey6Label";
             this.hotkey6Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey6Label.TabIndex = 6;
@@ -266,8 +257,7 @@
             // 
             this.trigger5Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger5Panel.Controls.Add(this.off5Button);
-            this.trigger5Panel.Controls.Add(this.on5Button);
+            this.trigger5Panel.Controls.Add(this.relay5Button);
             this.trigger5Panel.Controls.Add(this.hotkey5Button);
             this.trigger5Panel.Controls.Add(this.hotkey5Label);
             this.trigger5Panel.Controls.Add(this.triggerPoint5NumericUpDown);
@@ -277,32 +267,27 @@
             this.trigger5Panel.Controls.Add(this.trigger5Label);
             this.trigger5Panel.Location = new System.Drawing.Point(7, 163);
             this.trigger5Panel.Name = "trigger5Panel";
-            this.trigger5Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger5Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger5Panel.TabIndex = 12;
             // 
-            // off5Button
+            // relay5Button
             // 
-            this.off5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off5Button.Location = new System.Drawing.Point(693, 3);
-            this.off5Button.Name = "off5Button";
-            this.off5Button.Size = new System.Drawing.Size(50, 23);
-            this.off5Button.TabIndex = 9;
-            this.off5Button.Text = "Off";
-            this.off5Button.UseVisualStyleBackColor = true;
-            // 
-            // on5Button
-            // 
-            this.on5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on5Button.Location = new System.Drawing.Point(637, 3);
-            this.on5Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on5Button.Name = "on5Button";
-            this.on5Button.Size = new System.Drawing.Size(50, 23);
-            this.on5Button.TabIndex = 8;
-            this.on5Button.Text = "On";
-            this.on5Button.UseVisualStyleBackColor = true;
+            this.relay5Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay5Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay5Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay5Button.Location = new System.Drawing.Point(634, 3);
+            this.relay5Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay5Button.Name = "relay5Button";
+            this.relay5Button.Size = new System.Drawing.Size(50, 23);
+            this.relay5Button.TabIndex = 8;
+            this.relay5Button.Text = "On";
+            this.relay5Button.UseVisualStyleBackColor = false;
+            this.relay5Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // hotkey5Button
             // 
+            this.hotkey5Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey5Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey5Button.Name = "hotkey5Button";
@@ -319,6 +304,7 @@
             this.hotkey5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey5Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey5Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey5Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey5Label.Name = "hotkey5Label";
             this.hotkey5Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey5Label.TabIndex = 6;
@@ -414,18 +400,9 @@
             this.trigger4Label.TabIndex = 0;
             this.trigger4Label.Text = "Trigger relay 4 when:";
             // 
-            // off3Button
-            // 
-            this.off3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off3Button.Location = new System.Drawing.Point(693, 3);
-            this.off3Button.Name = "off3Button";
-            this.off3Button.Size = new System.Drawing.Size(50, 23);
-            this.off3Button.TabIndex = 9;
-            this.off3Button.Text = "Off";
-            this.off3Button.UseVisualStyleBackColor = true;
-            // 
             // hotkey4Button
             // 
+            this.hotkey4Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey4Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey4Button.Name = "hotkey4Button";
@@ -442,6 +419,7 @@
             this.hotkey4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey4Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey4Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey4Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey4Label.Name = "hotkey4Label";
             this.hotkey4Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey4Label.TabIndex = 6;
@@ -462,19 +440,24 @@
             this.triggerPoint4NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint4NumericUpDown.TabIndex = 5;
             // 
-            // on3Button
+            // relay3Button
             // 
-            this.on3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on3Button.Location = new System.Drawing.Point(637, 3);
-            this.on3Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on3Button.Name = "on3Button";
-            this.on3Button.Size = new System.Drawing.Size(50, 23);
-            this.on3Button.TabIndex = 8;
-            this.on3Button.Text = "On";
-            this.on3Button.UseVisualStyleBackColor = true;
+            this.relay3Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay3Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay3Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay3Button.Location = new System.Drawing.Point(634, 3);
+            this.relay3Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay3Button.Name = "relay3Button";
+            this.relay3Button.Size = new System.Drawing.Size(50, 23);
+            this.relay3Button.TabIndex = 8;
+            this.relay3Button.Text = "On";
+            this.relay3Button.UseVisualStyleBackColor = false;
+            this.relay3Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // hotkey3Button
             // 
+            this.hotkey3Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey3Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey3Button.Name = "hotkey3Button";
@@ -491,6 +474,7 @@
             this.hotkey3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey3Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey3Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey3Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey3Label.Name = "hotkey3Label";
             this.hotkey3Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey3Label.TabIndex = 6;
@@ -555,16 +539,6 @@
             this.trigger3Label.TabIndex = 0;
             this.trigger3Label.Text = "Trigger relay 3 when:";
             // 
-            // off4Button
-            // 
-            this.off4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off4Button.Location = new System.Drawing.Point(693, 3);
-            this.off4Button.Name = "off4Button";
-            this.off4Button.Size = new System.Drawing.Size(50, 23);
-            this.off4Button.TabIndex = 9;
-            this.off4Button.Text = "Off";
-            this.off4Button.UseVisualStyleBackColor = true;
-            // 
             // compare4ComboBox
             // 
             this.compare4ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -577,16 +551,6 @@
             this.compare4ComboBox.Name = "compare4ComboBox";
             this.compare4ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare4ComboBox.TabIndex = 3;
-            // 
-            // off2Button
-            // 
-            this.off2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off2Button.Location = new System.Drawing.Point(693, 3);
-            this.off2Button.Name = "off2Button";
-            this.off2Button.Size = new System.Drawing.Size(50, 23);
-            this.off2Button.TabIndex = 9;
-            this.off2Button.Text = "Off";
-            this.off2Button.UseVisualStyleBackColor = true;
             // 
             // serialNumberLabel
             // 
@@ -603,8 +567,7 @@
             // 
             this.trigger8Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger8Panel.Controls.Add(this.off8Button);
-            this.trigger8Panel.Controls.Add(this.on8Button);
+            this.trigger8Panel.Controls.Add(this.relay8Button);
             this.trigger8Panel.Controls.Add(this.hotkey8Button);
             this.trigger8Panel.Controls.Add(this.hotkey8Label);
             this.trigger8Panel.Controls.Add(this.triggerPoint8NumericUpDown);
@@ -614,32 +577,27 @@
             this.trigger8Panel.Controls.Add(this.trigger8Label);
             this.trigger8Panel.Location = new System.Drawing.Point(7, 271);
             this.trigger8Panel.Name = "trigger8Panel";
-            this.trigger8Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger8Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger8Panel.TabIndex = 10;
             // 
-            // off8Button
+            // relay8Button
             // 
-            this.off8Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off8Button.Location = new System.Drawing.Point(693, 3);
-            this.off8Button.Name = "off8Button";
-            this.off8Button.Size = new System.Drawing.Size(50, 23);
-            this.off8Button.TabIndex = 9;
-            this.off8Button.Text = "Off";
-            this.off8Button.UseVisualStyleBackColor = true;
-            // 
-            // on8Button
-            // 
-            this.on8Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on8Button.Location = new System.Drawing.Point(637, 3);
-            this.on8Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on8Button.Name = "on8Button";
-            this.on8Button.Size = new System.Drawing.Size(50, 23);
-            this.on8Button.TabIndex = 8;
-            this.on8Button.Text = "On";
-            this.on8Button.UseVisualStyleBackColor = true;
+            this.relay8Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay8Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay8Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay8Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay8Button.Location = new System.Drawing.Point(634, 3);
+            this.relay8Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay8Button.Name = "relay8Button";
+            this.relay8Button.Size = new System.Drawing.Size(50, 23);
+            this.relay8Button.TabIndex = 8;
+            this.relay8Button.Text = "On";
+            this.relay8Button.UseVisualStyleBackColor = false;
+            this.relay8Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // hotkey8Button
             // 
+            this.hotkey8Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey8Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey8Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey8Button.Name = "hotkey8Button";
@@ -656,6 +614,7 @@
             this.hotkey8Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey8Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey8Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey8Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey8Label.Name = "hotkey8Label";
             this.hotkey8Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey8Label.TabIndex = 6;
@@ -720,33 +679,26 @@
             this.trigger8Label.TabIndex = 0;
             this.trigger8Label.Text = "Trigger relay 8 when:";
             // 
-            // on2Button
+            // relay2Button
             // 
-            this.on2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on2Button.Location = new System.Drawing.Point(637, 3);
-            this.on2Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on2Button.Name = "on2Button";
-            this.on2Button.Size = new System.Drawing.Size(50, 23);
-            this.on2Button.TabIndex = 8;
-            this.on2Button.Text = "On";
-            this.on2Button.UseVisualStyleBackColor = true;
-            // 
-            // off1Button
-            // 
-            this.off1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off1Button.Location = new System.Drawing.Point(693, 3);
-            this.off1Button.Name = "off1Button";
-            this.off1Button.Size = new System.Drawing.Size(50, 23);
-            this.off1Button.TabIndex = 9;
-            this.off1Button.Text = "Off";
-            this.off1Button.UseVisualStyleBackColor = true;
+            this.relay2Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay2Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay2Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay2Button.Location = new System.Drawing.Point(634, 4);
+            this.relay2Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay2Button.Name = "relay2Button";
+            this.relay2Button.Size = new System.Drawing.Size(50, 23);
+            this.relay2Button.TabIndex = 8;
+            this.relay2Button.Text = "On";
+            this.relay2Button.UseVisualStyleBackColor = false;
+            this.relay2Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // trigger7Panel
             // 
             this.trigger7Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger7Panel.Controls.Add(this.off7Button);
-            this.trigger7Panel.Controls.Add(this.on7Button);
+            this.trigger7Panel.Controls.Add(this.relay7Button);
             this.trigger7Panel.Controls.Add(this.hotkey7Button);
             this.trigger7Panel.Controls.Add(this.hotkey7Label);
             this.trigger7Panel.Controls.Add(this.triggerPoint7NumericUpDown);
@@ -756,32 +708,27 @@
             this.trigger7Panel.Controls.Add(this.trigger7Label);
             this.trigger7Panel.Location = new System.Drawing.Point(7, 235);
             this.trigger7Panel.Name = "trigger7Panel";
-            this.trigger7Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger7Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger7Panel.TabIndex = 10;
             // 
-            // off7Button
+            // relay7Button
             // 
-            this.off7Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.off7Button.Location = new System.Drawing.Point(693, 3);
-            this.off7Button.Name = "off7Button";
-            this.off7Button.Size = new System.Drawing.Size(50, 23);
-            this.off7Button.TabIndex = 9;
-            this.off7Button.Text = "Off";
-            this.off7Button.UseVisualStyleBackColor = true;
-            // 
-            // on7Button
-            // 
-            this.on7Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on7Button.Location = new System.Drawing.Point(637, 3);
-            this.on7Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on7Button.Name = "on7Button";
-            this.on7Button.Size = new System.Drawing.Size(50, 23);
-            this.on7Button.TabIndex = 8;
-            this.on7Button.Text = "On";
-            this.on7Button.UseVisualStyleBackColor = true;
+            this.relay7Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay7Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay7Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay7Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay7Button.Location = new System.Drawing.Point(634, 3);
+            this.relay7Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay7Button.Name = "relay7Button";
+            this.relay7Button.Size = new System.Drawing.Size(50, 23);
+            this.relay7Button.TabIndex = 8;
+            this.relay7Button.Text = "On";
+            this.relay7Button.UseVisualStyleBackColor = false;
+            this.relay7Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // hotkey7Button
             // 
+            this.hotkey7Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey7Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey7Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey7Button.Name = "hotkey7Button";
@@ -798,6 +745,7 @@
             this.hotkey7Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey7Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey7Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey7Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey7Label.Name = "hotkey7Label";
             this.hotkey7Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey7Label.TabIndex = 6;
@@ -873,17 +821,20 @@
             this.trigger2Label.TabIndex = 0;
             this.trigger2Label.Text = "Trigger relay 2 when:";
             // 
-            // on1Button
+            // relay1Button
             // 
-            this.on1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.on1Button.Location = new System.Drawing.Point(637, 3);
-            this.on1Button.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.on1Button.Name = "on1Button";
-            this.on1Button.Size = new System.Drawing.Size(50, 23);
-            this.on1Button.TabIndex = 8;
-            this.on1Button.Text = "On";
-            this.on1Button.UseVisualStyleBackColor = true;
-            this.on1Button.Click += new System.EventHandler(this.on1Button_Click);
+            this.relay1Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.relay1Button.BackColor = System.Drawing.Color.Tomato;
+            this.relay1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.relay1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay1Button.Location = new System.Drawing.Point(634, 3);
+            this.relay1Button.Margin = new System.Windows.Forms.Padding(20, 3, 10, 3);
+            this.relay1Button.Name = "relay1Button";
+            this.relay1Button.Size = new System.Drawing.Size(50, 23);
+            this.relay1Button.TabIndex = 8;
+            this.relay1Button.Text = "On";
+            this.relay1Button.UseVisualStyleBackColor = false;
+            this.relay1Button.Click += new System.EventHandler(this.RelayOnButton_Click);
             // 
             // triggerPoint2NumericUpDown
             // 
@@ -925,6 +876,7 @@
             // 
             // hotkey1Button
             // 
+            this.hotkey1Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey1Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey1Button.Name = "hotkey1Button";
@@ -942,6 +894,7 @@
             this.hotkey1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey1Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey1Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey1Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey1Label.Name = "hotkey1Label";
             this.hotkey1Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey1Label.TabIndex = 6;
@@ -1008,6 +961,7 @@
             // 
             // hotkey2Button
             // 
+            this.hotkey2Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey2Button.Location = new System.Drawing.Point(544, 3);
             this.hotkey2Button.Name = "hotkey2Button";
@@ -1024,6 +978,7 @@
             this.hotkey2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hotkey2Label.Location = new System.Drawing.Point(404, 6);
             this.hotkey2Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
+            this.hotkey2Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey2Label.Name = "hotkey2Label";
             this.hotkey2Label.Size = new System.Drawing.Size(132, 20);
             this.hotkey2Label.TabIndex = 6;
@@ -1043,8 +998,7 @@
             // 
             this.trigger4Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger4Panel.Controls.Add(this.off4Button);
-            this.trigger4Panel.Controls.Add(this.on4Button);
+            this.trigger4Panel.Controls.Add(this.relay4Button);
             this.trigger4Panel.Controls.Add(this.hotkey4Button);
             this.trigger4Panel.Controls.Add(this.hotkey4Label);
             this.trigger4Panel.Controls.Add(this.triggerPoint4NumericUpDown);
@@ -1054,7 +1008,7 @@
             this.trigger4Panel.Controls.Add(this.trigger4Label);
             this.trigger4Panel.Location = new System.Drawing.Point(7, 127);
             this.trigger4Panel.Name = "trigger4Panel";
-            this.trigger4Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger4Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger4Panel.TabIndex = 10;
             // 
             // label1
@@ -1071,8 +1025,7 @@
             // 
             this.trigger1Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger1Panel.Controls.Add(this.off1Button);
-            this.trigger1Panel.Controls.Add(this.on1Button);
+            this.trigger1Panel.Controls.Add(this.relay1Button);
             this.trigger1Panel.Controls.Add(this.hotkey1Button);
             this.trigger1Panel.Controls.Add(this.hotkey1Label);
             this.trigger1Panel.Controls.Add(this.triggerPoint1NumericUpDown);
@@ -1082,7 +1035,7 @@
             this.trigger1Panel.Controls.Add(this.trigger1Label);
             this.trigger1Panel.Location = new System.Drawing.Point(7, 19);
             this.trigger1Panel.Name = "trigger1Panel";
-            this.trigger1Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger1Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger1Panel.TabIndex = 0;
             // 
             // groupBox1
@@ -1100,7 +1053,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(760, 316);
+            this.groupBox1.Size = new System.Drawing.Size(707, 316);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "USB Relay Triggers";
@@ -1109,8 +1062,7 @@
             // 
             this.trigger3Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger3Panel.Controls.Add(this.off3Button);
-            this.trigger3Panel.Controls.Add(this.on3Button);
+            this.trigger3Panel.Controls.Add(this.relay3Button);
             this.trigger3Panel.Controls.Add(this.hotkey3Button);
             this.trigger3Panel.Controls.Add(this.hotkey3Label);
             this.trigger3Panel.Controls.Add(this.triggerPoint3NumericUpDown);
@@ -1120,15 +1072,14 @@
             this.trigger3Panel.Controls.Add(this.trigger3Label);
             this.trigger3Panel.Location = new System.Drawing.Point(7, 91);
             this.trigger3Panel.Name = "trigger3Panel";
-            this.trigger3Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger3Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger3Panel.TabIndex = 11;
             // 
             // trigger2Panel
             // 
             this.trigger2Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trigger2Panel.Controls.Add(this.off2Button);
-            this.trigger2Panel.Controls.Add(this.on2Button);
+            this.trigger2Panel.Controls.Add(this.relay2Button);
             this.trigger2Panel.Controls.Add(this.hotkey2Button);
             this.trigger2Panel.Controls.Add(this.hotkey2Label);
             this.trigger2Panel.Controls.Add(this.triggerPoint2NumericUpDown);
@@ -1138,17 +1089,18 @@
             this.trigger2Panel.Controls.Add(this.trigger2Label);
             this.trigger2Panel.Location = new System.Drawing.Point(7, 55);
             this.trigger2Panel.Name = "trigger2Panel";
-            this.trigger2Panel.Size = new System.Drawing.Size(747, 30);
+            this.trigger2Panel.Size = new System.Drawing.Size(694, 30);
             this.trigger2Panel.TabIndex = 10;
             // 
             // USBRelayConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 401);
+            this.ClientSize = new System.Drawing.Size(731, 401);
             this.Controls.Add(this.serialNumberLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.MinimumSize = new System.Drawing.Size(640, 250);
             this.Name = "USBRelayConfig";
             this.Text = "USB Relay Config";
             this.Load += new System.EventHandler(this.USBRelayConfig_Load);
@@ -1184,10 +1136,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button on4Button;
+        private System.Windows.Forms.Button relay4Button;
         private System.Windows.Forms.Panel trigger6Panel;
-        private System.Windows.Forms.Button off6Button;
-        private System.Windows.Forms.Button on6Button;
+        private System.Windows.Forms.Button relay6Button;
         private System.Windows.Forms.Button hotkey6Button;
         private System.Windows.Forms.Label hotkey6Label;
         private System.Windows.Forms.NumericUpDown triggerPoint6NumericUpDown;
@@ -1196,8 +1147,7 @@
         private System.Windows.Forms.ComboBox triggerSignal6ComboBox;
         private System.Windows.Forms.Label trigger6Label;
         private System.Windows.Forms.Panel trigger5Panel;
-        private System.Windows.Forms.Button off5Button;
-        private System.Windows.Forms.Button on5Button;
+        private System.Windows.Forms.Button relay5Button;
         private System.Windows.Forms.Button hotkey5Button;
         private System.Windows.Forms.Label hotkey5Label;
         private System.Windows.Forms.NumericUpDown triggerPoint5NumericUpDown;
@@ -1208,11 +1158,10 @@
         private System.Windows.Forms.Label is4Label;
         private System.Windows.Forms.ComboBox triggerSignal4ComboBox;
         private System.Windows.Forms.Label trigger4Label;
-        private System.Windows.Forms.Button off3Button;
         private System.Windows.Forms.Button hotkey4Button;
         private System.Windows.Forms.Label hotkey4Label;
         private System.Windows.Forms.NumericUpDown triggerPoint4NumericUpDown;
-        private System.Windows.Forms.Button on3Button;
+        private System.Windows.Forms.Button relay3Button;
         private System.Windows.Forms.Button hotkey3Button;
         private System.Windows.Forms.Label hotkey3Label;
         private System.Windows.Forms.NumericUpDown triggerPoint3NumericUpDown;
@@ -1220,13 +1169,10 @@
         private System.Windows.Forms.Label is3Label;
         private System.Windows.Forms.ComboBox triggerSignal3ComboBox;
         private System.Windows.Forms.Label trigger3Label;
-        private System.Windows.Forms.Button off4Button;
         private System.Windows.Forms.ComboBox compare4ComboBox;
-        private System.Windows.Forms.Button off2Button;
         private System.Windows.Forms.Label serialNumberLabel;
         private System.Windows.Forms.Panel trigger8Panel;
-        private System.Windows.Forms.Button off8Button;
-        private System.Windows.Forms.Button on8Button;
+        private System.Windows.Forms.Button relay8Button;
         private System.Windows.Forms.Button hotkey8Button;
         private System.Windows.Forms.Label hotkey8Label;
         private System.Windows.Forms.NumericUpDown triggerPoint8NumericUpDown;
@@ -1234,11 +1180,9 @@
         private System.Windows.Forms.Label is8Label;
         private System.Windows.Forms.ComboBox triggerSignal8ComboBox;
         private System.Windows.Forms.Label trigger8Label;
-        private System.Windows.Forms.Button on2Button;
-        private System.Windows.Forms.Button off1Button;
+        private System.Windows.Forms.Button relay2Button;
         private System.Windows.Forms.Panel trigger7Panel;
-        private System.Windows.Forms.Button off7Button;
-        private System.Windows.Forms.Button on7Button;
+        private System.Windows.Forms.Button relay7Button;
         private System.Windows.Forms.Button hotkey7Button;
         private System.Windows.Forms.Label hotkey7Label;
         private System.Windows.Forms.NumericUpDown triggerPoint7NumericUpDown;
@@ -1247,7 +1191,7 @@
         private System.Windows.Forms.ComboBox triggerSignal7ComboBox;
         private System.Windows.Forms.Label trigger7Label;
         private System.Windows.Forms.Label trigger2Label;
-        private System.Windows.Forms.Button on1Button;
+        private System.Windows.Forms.Button relay1Button;
         private System.Windows.Forms.NumericUpDown triggerPoint2NumericUpDown;
         private System.Windows.Forms.ComboBox compare2ComboBox;
         private System.Windows.Forms.Label is2Label;
