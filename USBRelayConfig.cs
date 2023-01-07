@@ -10,6 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using USB;
@@ -19,6 +20,19 @@ namespace USBRelay
     public partial class USBRelayConfig : Form
     {
         const int MAX_NUMBER_OF_RELAYS = 8;
+        const int RELAY_TOGGLE_SPACING_MILLIS = 2000;
+
+        bool[] relayCanToggle = new bool[]
+        {
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        };
 
         private int hotkeyLocks = 0;
 
@@ -222,21 +236,38 @@ namespace USBRelay
             return base.ProcessCmdKey(ref msg, keyData);
         }       
 
+
         private void ToggleRelay(int channel)
         {
             int channelBitmask = (int)Math.Pow(2, channel - 1);
-            if ((RelayManager.RelayStatus() & channelBitmask) > 0)
+
+            if (relayCanToggle[channel - 1])
             {
-                RelayManager.CloseChannel(channel);
-                relayButtons[channel - 1].BackColor = Color.Tomato;
-                relayButtons[channel - 1].Text = "On";
+                relayCanToggle[channel - 1] = false;
+
+                if ((RelayManager.RelayStatus() & channelBitmask) > 0)
+                {
+                    RelayManager.CloseChannel(channel);
+                    relayButtons[channel - 1].BackColor = Color.Tomato;
+                    relayButtons[channel - 1].Text = "On";
+                }
+                else
+                {
+                    RelayManager.OpenChannel(channel);
+                    relayButtons[channel - 1].BackColor = Color.Green;
+                    relayButtons[channel - 1].Text = "Off";
+                }
+
+                BackgroundWorker backgroundWorker = new BackgroundWorker();
+                backgroundWorker.DoWork += (o, e) =>
+                {
+                    Thread.Sleep(RELAY_TOGGLE_SPACING_MILLIS);
+                    relayCanToggle[channel - 1] = true;
+                };
+                backgroundWorker.RunWorkerAsync();
             }
-            else
-            {
-                RelayManager.OpenChannel(channel);
-                relayButtons[channel - 1].BackColor = Color.Green;
-                relayButtons[channel - 1].Text = "Off";
-            }
+
+            
         }
 
         private void RelayOnButton_Click(object sender, EventArgs e)
