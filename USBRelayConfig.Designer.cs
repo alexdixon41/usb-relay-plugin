@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USBRelayConfig));
             this.relay4Button = new System.Windows.Forms.Button();
             this.trigger6Panel = new System.Windows.Forms.Panel();
             this.relay6Button = new System.Windows.Forms.Button();
@@ -197,6 +198,8 @@
             // 
             // triggerPoint6NumericUpDown
             // 
+            this.triggerPoint6NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint6NumericUpDown.Enabled = false;
             this.triggerPoint6NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint6NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint6NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -205,22 +208,30 @@
             0,
             0,
             0});
+            this.triggerPoint6NumericUpDown.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
             this.triggerPoint6NumericUpDown.Name = "triggerPoint6NumericUpDown";
             this.triggerPoint6NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint6NumericUpDown.TabIndex = 5;
+            this.triggerPoint6NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // compare6ComboBox
             // 
+            this.compare6ComboBox.Enabled = false;
             this.compare6ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare6ComboBox.FormattingEnabled = true;
             this.compare6ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare6ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare6ComboBox.Name = "compare6ComboBox";
             this.compare6ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare6ComboBox.TabIndex = 3;
+            this.compare6ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // is6Label
             // 
@@ -236,11 +247,13 @@
             // triggerSignal6ComboBox
             // 
             this.triggerSignal6ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal6ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal6ComboBox.FormattingEnabled = true;
             this.triggerSignal6ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal6ComboBox.Name = "triggerSignal6ComboBox";
             this.triggerSignal6ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal6ComboBox.TabIndex = 1;
+            this.triggerSignal6ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger6Label
             // 
@@ -313,6 +326,8 @@
             // 
             // triggerPoint5NumericUpDown
             // 
+            this.triggerPoint5NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint5NumericUpDown.Enabled = false;
             this.triggerPoint5NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint5NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint5NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -321,22 +336,30 @@
             0,
             0,
             0});
+            this.triggerPoint5NumericUpDown.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
             this.triggerPoint5NumericUpDown.Name = "triggerPoint5NumericUpDown";
             this.triggerPoint5NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint5NumericUpDown.TabIndex = 5;
+            this.triggerPoint5NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // compare5ComboBox
             // 
+            this.compare5ComboBox.Enabled = false;
             this.compare5ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare5ComboBox.FormattingEnabled = true;
             this.compare5ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare5ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare5ComboBox.Name = "compare5ComboBox";
             this.compare5ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare5ComboBox.TabIndex = 3;
+            this.compare5ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // is5Label
             // 
@@ -352,11 +375,13 @@
             // triggerSignal5ComboBox
             // 
             this.triggerSignal5ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal5ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal5ComboBox.FormattingEnabled = true;
             this.triggerSignal5ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal5ComboBox.Name = "triggerSignal5ComboBox";
             this.triggerSignal5ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal5ComboBox.TabIndex = 1;
+            this.triggerSignal5ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger5Label
             // 
@@ -383,11 +408,13 @@
             // triggerSignal4ComboBox
             // 
             this.triggerSignal4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal4ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal4ComboBox.FormattingEnabled = true;
             this.triggerSignal4ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal4ComboBox.Name = "triggerSignal4ComboBox";
             this.triggerSignal4ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal4ComboBox.TabIndex = 1;
+            this.triggerSignal4ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger4Label
             // 
@@ -428,6 +455,8 @@
             // 
             // triggerPoint4NumericUpDown
             // 
+            this.triggerPoint4NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint4NumericUpDown.Enabled = false;
             this.triggerPoint4NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint4NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint4NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -436,9 +465,15 @@
             0,
             0,
             0});
+            this.triggerPoint4NumericUpDown.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
             this.triggerPoint4NumericUpDown.Name = "triggerPoint4NumericUpDown";
             this.triggerPoint4NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint4NumericUpDown.TabIndex = 5;
+            this.triggerPoint4NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // relay3Button
             // 
@@ -483,6 +518,8 @@
             // 
             // triggerPoint3NumericUpDown
             // 
+            this.triggerPoint3NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint3NumericUpDown.Enabled = false;
             this.triggerPoint3NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint3NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint3NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -491,22 +528,30 @@
             0,
             0,
             0});
+            this.triggerPoint3NumericUpDown.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
             this.triggerPoint3NumericUpDown.Name = "triggerPoint3NumericUpDown";
             this.triggerPoint3NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint3NumericUpDown.TabIndex = 5;
+            this.triggerPoint3NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // compare3ComboBox
             // 
+            this.compare3ComboBox.Enabled = false;
             this.compare3ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare3ComboBox.FormattingEnabled = true;
             this.compare3ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare3ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare3ComboBox.Name = "compare3ComboBox";
             this.compare3ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare3ComboBox.TabIndex = 3;
+            this.compare3ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // is3Label
             // 
@@ -522,11 +567,13 @@
             // triggerSignal3ComboBox
             // 
             this.triggerSignal3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal3ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal3ComboBox.FormattingEnabled = true;
             this.triggerSignal3ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal3ComboBox.Name = "triggerSignal3ComboBox";
             this.triggerSignal3ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal3ComboBox.TabIndex = 1;
+            this.triggerSignal3ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger3Label
             // 
@@ -541,16 +588,18 @@
             // 
             // compare4ComboBox
             // 
+            this.compare4ComboBox.Enabled = false;
             this.compare4ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare4ComboBox.FormattingEnabled = true;
             this.compare4ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare4ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare4ComboBox.Name = "compare4ComboBox";
             this.compare4ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare4ComboBox.TabIndex = 3;
+            this.compare4ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // serialNumberLabel
             // 
@@ -623,6 +672,8 @@
             // 
             // triggerPoint8NumericUpDown
             // 
+            this.triggerPoint8NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint8NumericUpDown.Enabled = false;
             this.triggerPoint8NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint8NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint8NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -631,22 +682,30 @@
             0,
             0,
             0});
+            this.triggerPoint8NumericUpDown.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
             this.triggerPoint8NumericUpDown.Name = "triggerPoint8NumericUpDown";
             this.triggerPoint8NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint8NumericUpDown.TabIndex = 5;
+            this.triggerPoint8NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // compare8ComboBox
             // 
+            this.compare8ComboBox.Enabled = false;
             this.compare8ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare8ComboBox.FormattingEnabled = true;
             this.compare8ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare8ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare8ComboBox.Name = "compare8ComboBox";
             this.compare8ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare8ComboBox.TabIndex = 3;
+            this.compare8ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // is8Label
             // 
@@ -662,11 +721,13 @@
             // triggerSignal8ComboBox
             // 
             this.triggerSignal8ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal8ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal8ComboBox.FormattingEnabled = true;
             this.triggerSignal8ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal8ComboBox.Name = "triggerSignal8ComboBox";
             this.triggerSignal8ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal8ComboBox.TabIndex = 1;
+            this.triggerSignal8ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger8Label
             // 
@@ -754,6 +815,8 @@
             // 
             // triggerPoint7NumericUpDown
             // 
+            this.triggerPoint7NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint7NumericUpDown.Enabled = false;
             this.triggerPoint7NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint7NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint7NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -762,22 +825,30 @@
             0,
             0,
             0});
+            this.triggerPoint7NumericUpDown.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
             this.triggerPoint7NumericUpDown.Name = "triggerPoint7NumericUpDown";
             this.triggerPoint7NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint7NumericUpDown.TabIndex = 5;
+            this.triggerPoint7NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // compare7ComboBox
             // 
+            this.compare7ComboBox.Enabled = false;
             this.compare7ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare7ComboBox.FormattingEnabled = true;
             this.compare7ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare7ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare7ComboBox.Name = "compare7ComboBox";
             this.compare7ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare7ComboBox.TabIndex = 3;
+            this.compare7ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // is7Label
             // 
@@ -793,11 +864,13 @@
             // triggerSignal7ComboBox
             // 
             this.triggerSignal7ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal7ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal7ComboBox.FormattingEnabled = true;
             this.triggerSignal7ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal7ComboBox.Name = "triggerSignal7ComboBox";
             this.triggerSignal7ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal7ComboBox.TabIndex = 1;
+            this.triggerSignal7ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger7Label
             // 
@@ -838,6 +911,8 @@
             // 
             // triggerPoint2NumericUpDown
             // 
+            this.triggerPoint2NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint2NumericUpDown.Enabled = false;
             this.triggerPoint2NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint2NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint2NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -846,22 +921,30 @@
             0,
             0,
             0});
+            this.triggerPoint2NumericUpDown.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
             this.triggerPoint2NumericUpDown.Name = "triggerPoint2NumericUpDown";
             this.triggerPoint2NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint2NumericUpDown.TabIndex = 5;
+            this.triggerPoint2NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // compare2ComboBox
             // 
+            this.compare2ComboBox.Enabled = false;
             this.compare2ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare2ComboBox.FormattingEnabled = true;
             this.compare2ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare2ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare2ComboBox.Name = "compare2ComboBox";
             this.compare2ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare2ComboBox.TabIndex = 3;
+            this.compare2ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // is2Label
             // 
@@ -903,6 +986,8 @@
             // 
             // triggerPoint1NumericUpDown
             // 
+            this.triggerPoint1NumericUpDown.DecimalPlaces = 2;
+            this.triggerPoint1NumericUpDown.Enabled = false;
             this.triggerPoint1NumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPoint1NumericUpDown.Location = new System.Drawing.Point(331, 6);
             this.triggerPoint1NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -914,19 +999,22 @@
             this.triggerPoint1NumericUpDown.Name = "triggerPoint1NumericUpDown";
             this.triggerPoint1NumericUpDown.Size = new System.Drawing.Size(65, 20);
             this.triggerPoint1NumericUpDown.TabIndex = 5;
+            this.triggerPoint1NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointNumericUpDown_ValueChanged);
             // 
             // compare1ComboBox
             // 
+            this.compare1ComboBox.Enabled = false;
             this.compare1ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compare1ComboBox.FormattingEnabled = true;
             this.compare1ComboBox.Items.AddRange(new object[] {
-            "<=",
-            ">=",
+            "<",
+            ">",
             "="});
             this.compare1ComboBox.Location = new System.Drawing.Point(280, 5);
             this.compare1ComboBox.Name = "compare1ComboBox";
             this.compare1ComboBox.Size = new System.Drawing.Size(40, 21);
             this.compare1ComboBox.TabIndex = 3;
+            this.compare1ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareComboBox_SelectedIndexChanged);
             // 
             // is1Label
             // 
@@ -942,11 +1030,13 @@
             // triggerSignal1ComboBox
             // 
             this.triggerSignal1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal1ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal1ComboBox.FormattingEnabled = true;
             this.triggerSignal1ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal1ComboBox.Name = "triggerSignal1ComboBox";
             this.triggerSignal1ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal1ComboBox.TabIndex = 1;
+            this.triggerSignal1ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger1Label
             // 
@@ -988,11 +1078,13 @@
             // triggerSignal2ComboBox
             // 
             this.triggerSignal2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerSignal2ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerSignal2ComboBox.FormattingEnabled = true;
             this.triggerSignal2ComboBox.Location = new System.Drawing.Point(127, 5);
             this.triggerSignal2ComboBox.Name = "triggerSignal2ComboBox";
             this.triggerSignal2ComboBox.Size = new System.Drawing.Size(121, 21);
             this.triggerSignal2ComboBox.TabIndex = 1;
+            this.triggerSignal2ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalComboBox_SelectedIndexChanged);
             // 
             // trigger4Panel
             // 
@@ -1100,6 +1192,7 @@
             this.Controls.Add(this.serialNumberLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(640, 250);
             this.Name = "USBRelayConfig";
             this.Text = "USB Relay Config";

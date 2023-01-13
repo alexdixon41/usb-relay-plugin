@@ -15,9 +15,8 @@ namespace USBRelay
     public class USBRelay : IDataIOProvider
     {
         private System.Windows.Forms.ToolStripMenuItem menuEntry = new ToolStripMenuItem();
-        
-
-        private List<OnePlugInDataConnection> data = new List<OnePlugInDataConnection>();
+        private List<string> triggerSignals = new List<string>();
+        private List<OnePlugInDataConnection> allPluginDataConnections = new List<OnePlugInDataConnection>();
         private DynoDataConnection dynoDataConnection;
         public event ConfigChangeEventHandler OnConfigurationChange; // not needed for this module
         private USBRelayConfig USBRelayConfig = new USBRelayConfig();
@@ -46,23 +45,45 @@ namespace USBRelay
             }
         }
 
-
+        // YourDyno calls this function when the plugin is loaded. Here is where we connect to DynoDataConnection
         public void initDynoDataConnection(DynoDataConnection d, List<OnePlugInDataConnection> p)
         {
             dynoDataConnection = d;
             dynoDataConnection.OnDynoDataReceived += DynoDataReceivedEventHandler;
+            allPluginDataConnections = p;
         }
 
         public USBRelay()
         {
             this.menuEntry.Name = "menuEntry";
             this.menuEntry.Text = "USB Relay";
-            this.menuEntry.Click += new System.EventHandler(this.menuItem_Click);     
+            this.menuEntry.Click += new System.EventHandler(this.menuItem_Click);
 
-            // this is necessary for YourDyno to associate each plugin channel with the right plugin
-            foreach (OnePlugInDataConnection plugin in data)
-                plugin.pluginName = name;
+            // Timer to update dyno data values and check if any trigger conditions are met
+            System.Windows.Forms.Timer triggerUpdateTimer = new System.Windows.Forms.Timer();
+            triggerUpdateTimer.Interval = 100;
+            triggerUpdateTimer.Tick += new System.EventHandler(this.TriggerUpdateTimer_Tick);
+            triggerUpdateTimer.Enabled = true;
+        }
 
+        private void SetupTriggerSignals()
+        {
+            triggerSignals.Clear();
+            triggerSignals.Add("<none>");
+            triggerSignals.Add("EngineRPM");
+            triggerSignals.Add("Aux1");
+            triggerSignals.Add("Aux2");
+            triggerSignals.Add("Aux3");
+            triggerSignals.Add("ThermoC");
+
+            if (allPluginDataConnections != null)
+            {
+                foreach (OnePlugInDataConnection plugin in allPluginDataConnections)
+                {
+                    if (plugin.name != null)
+                        triggerSignals.Add(plugin.name);
+                }
+            }
         }
 
         public System.Windows.Forms.ToolStripMenuItem pluginMenuEntry
@@ -77,7 +98,7 @@ namespace USBRelay
         {
             get
             {
-                return data;
+                return null;
             }
         }
 
@@ -102,6 +123,8 @@ namespace USBRelay
 
         private void menuItem_Click(object sender, EventArgs e)
         {
+            SetupTriggerSignals();
+            USBRelayConfig.SetTriggerSignals(triggerSignals);
             USBRelayConfig.ShowDialog(); //Shows the configure page.
         }
 
@@ -113,6 +136,44 @@ namespace USBRelay
         public void hotkeyPressed(Keys hotkey)
         {
             USBRelayConfig.KeyPressed(hotkey);
+        }
+
+        private void TriggerUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            if (USBRelayConfig.triggerConditions != null && USBRelayConfig.triggerConditions[0] != null && USBRelayConfig.triggerConditions[0].Signal != null)
+            {
+                switch (USBRelayConfig.triggerConditions[0].Signal)
+                {
+                    case "<none>":
+                        break;
+                    case "EngineRPM":
+
+                        break;
+                    case "Aux1":
+
+                        break;
+                    case "Aux2":
+
+                        break;
+                    case "Aux3":
+
+                        break;
+                    case "ThermoC":
+
+                        break;
+                    default:
+                        try
+                        {
+                            string value = allPluginDataConnections.First(x => x.name == USBRelayConfig.triggerConditions[0].Signal).name;
+                            USBRelayConfig.setLabelText(value.ToString());
+                        }
+                        catch
+                        {
+                            USBRelayConfig.setLabelText("bruh");
+                        }
+                        break;
+                }
+            }
         }
     }
 }
