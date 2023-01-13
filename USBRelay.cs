@@ -140,9 +140,9 @@ namespace USBRelay
 
         private void TriggerUpdateTimer_Tick(object sender, EventArgs e)
         {
-            if (USBRelayConfig.triggerConditions != null && USBRelayConfig.triggerConditions[0] != null && USBRelayConfig.triggerConditions[0].Signal != null)
+            if (USBRelayConfig.triggerOnConditions != null && USBRelayConfig.triggerOnConditions.Count > 0 && USBRelayConfig.triggerOnConditions[0] != null && USBRelayConfig.triggerOnConditions[0].Signal != null)
             {
-                switch (USBRelayConfig.triggerConditions[0].Signal)
+                switch (USBRelayConfig.triggerOnConditions[0].Signal)
                 {
                     case "<none>":
                         break;
@@ -164,7 +164,7 @@ namespace USBRelay
                     default:
                         try
                         {
-                            string value = allPluginDataConnections.First(x => x.name == USBRelayConfig.triggerConditions[0].Signal).name;
+                            string value = allPluginDataConnections.First(x => x.name == USBRelayConfig.triggerOnConditions[0].Signal).name;
                             USBRelayConfig.setLabelText(value.ToString());
                         }
                         catch

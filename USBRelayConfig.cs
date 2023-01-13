@@ -24,29 +24,23 @@ namespace USBRelay
 
         bool[] relayCanToggle = new bool[]
         {
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            true, true, true, true, true, true, true, true
         };
 
         string dlldir; //Remembers the location of the installed driver        
 
-        List<Label> hotkeyLabels;
         List<Button> relayButtons;
-        List<ComboBox> triggerSignalComboBoxes;
-        List<ComboBox> triggerCompareComboBoxes;
-        List<NumericUpDown> triggerPointNumericUpDowns;
 
-        public List<TriggerCondition> triggerConditions = new List<TriggerCondition>()
-        {
-            new TriggerCondition(), new TriggerCondition(), new TriggerCondition(), new TriggerCondition(), 
-            new TriggerCondition(), new TriggerCondition(), new TriggerCondition(), new TriggerCondition()
-        };
+        List<Label> hotkeyLabels;
+        List<ComboBox> triggerSignalOnComboBoxes;
+        List<ComboBox> triggerSignalOffComboBoxes;
+        List<ComboBox> triggerCompareOnComboBoxes;
+        List<ComboBox> triggerCompareOffComboBoxes;
+        List<NumericUpDown> triggerPointOnNumericUpDowns;
+        List<NumericUpDown> triggerPointOffNumericUpDowns;
+
+        public List<TriggerCondition> triggerOnConditions = new List<TriggerCondition>();
+        public List<TriggerCondition> triggerOffConditions = new List<TriggerCondition>();
 
         //Loads the driver from embedded resource
         static public class NativeMethods
@@ -124,32 +118,51 @@ namespace USBRelay
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
             InitializeComponent();
 
-            hotkeyLabels = new List<Label>()
-            {
-                hotkey1Label, hotkey2Label, hotkey3Label, hotkey4Label, hotkey5Label, hotkey6Label, hotkey7Label, hotkey8Label
-            };
-
             relayButtons = new List<Button>()
             {
                 relay1Button, relay2Button, relay3Button, relay4Button, relay5Button, relay6Button, relay7Button, relay8Button
+            };            
+
+            hotkeyLabels = new List<Label>()
+            {
+                hotkey1Label, hotkey2Label, hotkey3Label, hotkey4Label,
+                hotkey5Label, hotkey6Label, hotkey7Label, hotkey8Label
+            };     
+
+            triggerSignalOnComboBoxes = new List<ComboBox>()
+            {
+                triggerSignalOn1ComboBox, triggerSignalOn2ComboBox, triggerSignalOn3ComboBox, triggerSignalOn4ComboBox,
+                triggerSignalOn5ComboBox, triggerSignalOn6ComboBox, triggerSignalOn7ComboBox, triggerSignalOn8ComboBox
             };
 
-            triggerSignalComboBoxes = new List<ComboBox>()
+            triggerSignalOffComboBoxes = new List<ComboBox>()
             {
-                triggerSignal1ComboBox, triggerSignal2ComboBox, triggerSignal3ComboBox, triggerSignal4ComboBox, 
-                triggerSignal5ComboBox, triggerSignal6ComboBox, triggerSignal7ComboBox, triggerSignal8ComboBox
+                triggerSignalOff1ComboBox, triggerSignalOff2ComboBox, triggerSignalOff3ComboBox, triggerSignalOff4ComboBox,
+                triggerSignalOff5ComboBox, triggerSignalOff6ComboBox, triggerSignalOff7ComboBox, triggerSignalOff8ComboBox
             };
 
-            triggerCompareComboBoxes = new List<ComboBox>()
+            triggerCompareOnComboBoxes = new List<ComboBox>()
             {
-                compare1ComboBox, compare2ComboBox, compare3ComboBox, compare4ComboBox, 
-                compare5ComboBox, compare6ComboBox, compare7ComboBox, compare8ComboBox
+                compareOn1ComboBox, compareOn2ComboBox, compareOn3ComboBox, compareOn4ComboBox,
+                compareOn5ComboBox, compareOn6ComboBox, compareOn7ComboBox, compareOn8ComboBox
             };
 
-            triggerPointNumericUpDowns = new List<NumericUpDown>()
+            triggerCompareOffComboBoxes = new List<ComboBox>()
             {
-                triggerPoint1NumericUpDown, triggerPoint2NumericUpDown, triggerPoint3NumericUpDown, triggerPoint4NumericUpDown,
-                triggerPoint5NumericUpDown, triggerPoint6NumericUpDown, triggerPoint7NumericUpDown, triggerPoint8NumericUpDown
+                compareOff1ComboBox, compareOff2ComboBox, compareOff3ComboBox, compareOff4ComboBox,
+                compareOff5ComboBox, compareOff6ComboBox, compareOff7ComboBox, compareOff8ComboBox
+            };
+
+            triggerPointOnNumericUpDowns = new List<NumericUpDown>()
+            {
+                triggerPointOn1NumericUpDown, triggerPointOn2NumericUpDown, triggerPointOn3NumericUpDown, triggerPointOn4NumericUpDown,
+                triggerPointOn5NumericUpDown, triggerPointOn6NumericUpDown, triggerPointOn7NumericUpDown, triggerPointOn8NumericUpDown
+            };
+
+            triggerPointOffNumericUpDowns = new List<NumericUpDown>()
+            {
+                triggerPointOff1NumericUpDown, triggerPointOff2NumericUpDown, triggerPointOff3NumericUpDown, triggerPointOff4NumericUpDown,
+                triggerPointOff5NumericUpDown, triggerPointOff6NumericUpDown, triggerPointOff7NumericUpDown, triggerPointOff8NumericUpDown
             };
 
             //Starts the driver
@@ -159,14 +172,14 @@ namespace USBRelay
             if (RelayManager.DevicesCount() == 0)
             {
                 MessageBox.Show("USBRelay (No Connected Devices)");
-                trigger1Panel.Enabled = false;
-                trigger2Panel.Enabled = false;
-                trigger3Panel.Enabled = false;
-                trigger4Panel.Enabled = false;
-                trigger5Panel.Enabled = false;
-                trigger6Panel.Enabled = false;
-                trigger7Panel.Enabled = false;
-                trigger8Panel.Enabled = false;
+                relay1Panel.Enabled = false;
+                relay2Panel.Enabled = false;
+                relay3Panel.Enabled = false;
+                relay4Panel.Enabled = false;
+                relay5Panel.Enabled = false;
+                relay6Panel.Enabled = false;
+                relay7Panel.Enabled = false;
+                relay8Panel.Enabled = false;
             }
             else
             {
@@ -178,14 +191,21 @@ namespace USBRelay
 
                 //Enables trigger controls based on how many channels the USB Relay device has
                 int channelCount = RelayManager.ChannelsCount();
-                trigger1Panel.Enabled = channelCount > 0 ? true : false;
-                trigger2Panel.Enabled = channelCount > 1 ? true : false;
-                trigger3Panel.Enabled = channelCount > 2 ? true : false;
-                trigger4Panel.Enabled = channelCount > 2 ? true : false;
-                trigger5Panel.Enabled = channelCount > 4 ? true : false;
-                trigger6Panel.Enabled = channelCount > 4 ? true : false;
-                trigger7Panel.Enabled = channelCount > 4 ? true : false;
-                trigger8Panel.Enabled = channelCount > 4 ? true : false;
+                relay1Panel.Enabled = channelCount > 0;
+                relay2Panel.Enabled = channelCount > 1;
+                relay3Panel.Enabled = channelCount > 2;
+                relay4Panel.Enabled = channelCount > 2;
+                relay5Panel.Enabled = channelCount > 4;
+                relay6Panel.Enabled = channelCount > 4;
+                relay7Panel.Enabled = channelCount > 4;
+                relay8Panel.Enabled = channelCount > 4;
+
+                //Initialize trigger conditions based on how many relays are available
+                for (int i = 0; i < channelCount; i++)
+                {
+                    triggerOnConditions.Add(new TriggerCondition());
+                    triggerOffConditions.Add(new TriggerCondition());
+                }
             }            
 
             //Show hotkeys
@@ -193,7 +213,7 @@ namespace USBRelay
             {
                 Keys savedHotkey = (Keys)Properties.Settings.Default["hotkey" + i];
                 hotkeyLabels[i - 1].Text = savedHotkey == Keys.None ? "<none>" : savedHotkey.ToString();
-            }           
+            }
         }        
 
         private void USBRelayConfig_Load(object sender, EventArgs e)
@@ -279,7 +299,7 @@ namespace USBRelay
             }            
         }
 
-        private void RelayOnButton_Click(object sender, EventArgs e)
+        private void ToggleRelayButton_Click(object sender, EventArgs e)
         {            
             string buttonName = ((Button)sender).Name;
             int relayChannel;
@@ -292,43 +312,43 @@ namespace USBRelay
 
         public void SetTriggerSignals(List<string> triggerSignals)
         {
-            foreach (ComboBox triggerComboBox in triggerSignalComboBoxes) {
+            foreach (ComboBox triggerComboBox in triggerSignalOnComboBoxes.Concat(triggerSignalOffComboBoxes)) {
                 triggerComboBox.Items.AddRange(triggerSignals.ToArray());
             }
         }
 
-        private void TriggerSignalComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void TriggerSignalOnComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox changedComboBox = sender as ComboBox;
-            int rowIndex = triggerSignalComboBoxes.IndexOf(changedComboBox);
+            int rowIndex = triggerSignalOnComboBoxes.IndexOf(changedComboBox);
             if (changedComboBox.SelectedIndex == 0)
             {
-                triggerCompareComboBoxes[rowIndex].Enabled = false;
-                triggerPointNumericUpDowns[rowIndex].Enabled = false;
+                triggerCompareOnComboBoxes[rowIndex].Enabled = false;
+                triggerPointOnNumericUpDowns[rowIndex].Enabled = false;
             }
             else
             {
-                triggerCompareComboBoxes[rowIndex].Enabled = true;
-                triggerPointNumericUpDowns[rowIndex].Enabled = true;
-                triggerConditions[rowIndex].Signal = changedComboBox.Text;
+                triggerCompareOnComboBoxes[rowIndex].Enabled = true;
+                triggerPointOnNumericUpDowns[rowIndex].Enabled = true;
+                triggerOnConditions[rowIndex].Signal = changedComboBox.Text;
             }
         }
 
-        private void CompareComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void CompareOnComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox changedComboBox = sender as ComboBox;
-            int rowIndex = triggerCompareComboBoxes.IndexOf(changedComboBox);            
+            int rowIndex = triggerCompareOnComboBoxes.IndexOf(changedComboBox);            
             if (changedComboBox.SelectedIndex != 0)
             {                                             
-                triggerConditions[rowIndex].Operator = changedComboBox.Text;
+                triggerOnConditions[rowIndex].Operator = changedComboBox.Text;
             }
         }
 
-        private void TriggerPointNumericUpDown_ValueChanged(object sender, EventArgs e)
+        private void TriggerPointOnNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown changedNumericUpDown = sender as NumericUpDown;
-            int rowIndex = triggerPointNumericUpDowns.IndexOf(changedNumericUpDown);
-            triggerConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;
+            int rowIndex = triggerPointOnNumericUpDowns.IndexOf(changedNumericUpDown);
+            triggerOnConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;
         }
 
         //TODO - delete this
