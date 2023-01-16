@@ -2368,6 +2368,7 @@
             this.MinimumSize = new System.Drawing.Size(640, 280);
             this.Name = "USBRelayConfig";
             this.Text = "USB Relay Config";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.USBRelayConfig_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.USBRelayConfig_FormClosed);
             this.Load += new System.EventHandler(this.USBRelayConfig_Load);
             ((System.ComponentModel.ISupportInitialize)(this.triggerPointOn1NumericUpDown)).EndInit();

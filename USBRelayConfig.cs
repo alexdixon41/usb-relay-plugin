@@ -221,12 +221,9 @@ namespace USBRelay
         }        
 
         private void USBRelayConfig_Load(object sender, EventArgs e)
-        {
-            // TODO - remove this
-            setLabelText(Properties.Settings.Default.triggerOnConditions);
-            setLabel2Text(Properties.Settings.Default.triggerOffConditions);
+        {            
             var deviceSerialNumber = RelayManager.RelaySerial();
-            //serialNumberLabel.Text = deviceSerialNumber == "none" ? "<not connected>" : deviceSerialNumber;
+            serialNumberLabel.Text = deviceSerialNumber == "none" ? "<not connected>" : deviceSerialNumber;
             USBRelay.triggersActive = false;
 
             for (int i = 1; i <= connectedRelayCount; i++)
@@ -423,33 +420,71 @@ namespace USBRelay
             appendLogText("Off: " + s);
         }
         
-        //TODO - delete this
-        public void setLabelText(string text)
-        {
-            serialNumberLabel.Text = text;
-        }
-        public void setLabel2Text(string text)
-        {
-            offLabel.Text = text;
-        }
+        //TODO - delete this        
         public void appendLogText(string text)
         {
             textBox1.AppendText(text);
             textBox1.AppendText(Environment.NewLine);
         }
 
-        private void USBRelayConfig_FormClosed(object sender, FormClosedEventArgs e)
+        /// <summary>
+        /// Clear the trigger configurations with conflicting conditions
+        /// </summary>
+        /// <param name="enclosedRangeTriggers">Array of relay indices for trigger conditions to clear</param>
+        private void ClearConflictingTriggers(int[] enclosedRangeTriggers)
         {
+            foreach (int i in enclosedRangeTriggers)
+            {
+                triggerOnConditions[i] = new TriggerCondition(true);
+                triggerOffConditions[i] = new TriggerCondition(false);
+            }
+        }
+
+        private bool ShowEnclosedRangeWarningMessage(int[] enclosedRangeTriggers)
+        {
+            string enclosedRangeWarningText = 
+                "The following relay triggers have overlapping conditions that would cause problems if enabled:" + 
+                Environment.NewLine;
+            foreach (int i in enclosedRangeTriggers)
+            {
+                enclosedRangeWarningText += Environment.NewLine + "Relay " + (i + 1).ToString();
+            }
+            enclosedRangeWarningText += Environment.NewLine + Environment.NewLine +
+                "Click OK to clear the conflicting conditions and save, or Cancel to return to the relay configuration.";
+            DialogResult enclosedRangeWarningResult = MessageBox.Show(
+                enclosedRangeWarningText, "Warning", MessageBoxButtons.OKCancel);
+            if (enclosedRangeWarningResult == DialogResult.OK)
+            {
+                ClearConflictingTriggers(enclosedRangeTriggers);
+                return false;
+            }
+            return true;
+        }
+
+        private void USBRelayConfig_FormClosed(object sender, FormClosedEventArgs e)
+        {            
+            USBRelay.triggersActive = true;            
+
             Properties.Settings.Default.triggerOnConditions =
                 TriggerCondition.BuildTriggerConditionsString(connectedRelayCount, triggerOnConditions);
             Properties.Settings.Default.triggerOffConditions =
                 TriggerCondition.BuildTriggerConditionsString(connectedRelayCount, triggerOffConditions);
+        }
 
-            USBRelay.triggersActive = true;
+        private void USBRelayConfig_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            int[] enclosedRangeTriggers = TriggerCondition.CheckForTriggersWithEnclosedRange(
+                triggerOnConditions.ToArray(), triggerOffConditions.ToArray());
+            if (enclosedRangeTriggers.Length > 0)
+            {
+                if (ShowEnclosedRangeWarningMessage(enclosedRangeTriggers))
+                {
+                    e.Cancel = true;
+                }
+            }
         }
     }
 
-    // TODO - check if any conditions are equivalent or enclose a set before saving the triggers on window close.
-    // This would cause the relay to rapidly toggle if allowed.
+    // TODO - load conditions from string each time config window is opened
 
 }

@@ -331,5 +331,38 @@ namespace USBRelay
             return triggerConditionsString;
         }
 
+        public static bool CheckConditionsEncloseARange(TriggerCondition onCondition, TriggerCondition offCondition)
+        {            
+            if (onCondition.Operator == "=" && offCondition.Operator == "=")
+            {
+                return onCondition.Threshold == offCondition.Threshold;
+            }
+            if (onCondition.Operator == "<" && offCondition.Operator == ">")
+            {
+                return onCondition.Threshold > offCondition.Threshold;
+            }
+            if (onCondition.Operator == ">" && offCondition.Operator == "<")
+            {
+                return onCondition.Threshold < offCondition.Threshold;
+            }
+            return false;
+        }
+
+        public static int[] CheckForTriggersWithEnclosedRange(TriggerCondition[] triggerOnConditions, TriggerCondition[] triggerOffConditions)
+        {
+            List<int> result = new List<int>();
+            for (int i = 0; i < triggerOnConditions.Length && i < triggerOffConditions.Length; i++) 
+            { 
+                if (triggerOnConditions[i].Signal == triggerOnConditions[i].Signal)
+                {
+                    if (CheckConditionsEncloseARange(triggerOnConditions[i], triggerOffConditions[i]))
+                    {
+                        result.Add(i);
+                    }                    
+                }
+            }
+            return result.ToArray();
+        }
+
     }
 }
