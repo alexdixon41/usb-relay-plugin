@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,6 +29,9 @@ namespace USBRelay
         };
 
         string dlldir; //Remembers the location of the installed driver        
+
+        // How many relays are available and connected
+        public int connectedRelayCount;
 
         List<Button> relayButtons;
 
@@ -166,7 +170,7 @@ namespace USBRelay
             };
 
             //Starts the driver
-            RelayManager.Init();
+            RelayManager.Init();            
 
             //Checks to see if there is a connected USB Relay board.
             if (RelayManager.DevicesCount() == 0)
@@ -187,24 +191,24 @@ namespace USBRelay
                 RelayManager.OpenDevice(0);
 
                 //Reads serial number
-                serialNumberLabel.Text = RelayManager.RelaySerial().ToString();
+                //serialNumberLabel.Text = RelayManager.RelaySerial().ToString();                
 
                 //Enables trigger controls based on how many channels the USB Relay device has
-                int channelCount = RelayManager.ChannelsCount();
-                relay1Panel.Enabled = channelCount > 0;
-                relay2Panel.Enabled = channelCount > 1;
-                relay3Panel.Enabled = channelCount > 2;
-                relay4Panel.Enabled = channelCount > 2;
-                relay5Panel.Enabled = channelCount > 4;
-                relay6Panel.Enabled = channelCount > 4;
-                relay7Panel.Enabled = channelCount > 4;
-                relay8Panel.Enabled = channelCount > 4;
+                connectedRelayCount = RelayManager.ChannelsCount();
+                relay1Panel.Enabled = connectedRelayCount > 0;
+                relay2Panel.Enabled = connectedRelayCount > 1;
+                relay3Panel.Enabled = connectedRelayCount > 2;
+                relay4Panel.Enabled = connectedRelayCount > 2;
+                relay5Panel.Enabled = connectedRelayCount > 4;
+                relay6Panel.Enabled = connectedRelayCount > 4;
+                relay7Panel.Enabled = connectedRelayCount > 4;
+                relay8Panel.Enabled = connectedRelayCount > 4;
 
                 //Initialize trigger conditions based on how many relays are available
-                for (int i = 0; i < channelCount; i++)
+                for (int i = 0; i < connectedRelayCount; i++)
                 {
-                    triggerOnConditions.Add(new TriggerCondition());
-                    triggerOffConditions.Add(new TriggerCondition());
+                    triggerOnConditions.Add(new TriggerCondition(true));
+                    triggerOffConditions.Add(new TriggerCondition(false));
                 }
             }            
 
@@ -213,13 +217,22 @@ namespace USBRelay
             {
                 Keys savedHotkey = (Keys)Properties.Settings.Default["hotkey" + i];
                 hotkeyLabels[i - 1].Text = savedHotkey == Keys.None ? "<none>" : savedHotkey.ToString();
-            }
+            }            
         }        
 
         private void USBRelayConfig_Load(object sender, EventArgs e)
         {
+            // TODO - remove this
+            setLabelText(Properties.Settings.Default.triggerOnConditions);
+            setLabel2Text(Properties.Settings.Default.triggerOffConditions);
             var deviceSerialNumber = RelayManager.RelaySerial();
-            serialNumberLabel.Text = deviceSerialNumber == "none" ? "<not connected>" : deviceSerialNumber;
+            //serialNumberLabel.Text = deviceSerialNumber == "none" ? "<not connected>" : deviceSerialNumber;
+            USBRelay.triggersActive = false;
+
+            for (int i = 1; i <= connectedRelayCount; i++)
+            {
+                SetRelayButtonAppearance(i - 1, RelayManager.ChannelOpened(i));                
+            }
         }
 
         private void HotkeyButton_Click(object sender, EventArgs e)
@@ -240,7 +253,7 @@ namespace USBRelay
             k.ShowDialog();
             Properties.Settings.Default["hotkey" + hotkeyNumber] = hotkey;
             Properties.Settings.Default.Save();
-            hotkeyLabels[hotkeyNumber - 1].Text = hotkey == Keys.None ? "<none>" : hotkey.ToString();            
+            hotkeyLabels[hotkeyNumber - 1].Text = hotkey == Keys.None ? "<none>" : hotkey.ToString();
         }
 
         public void KeyPressed(Keys pressedKey)
@@ -267,26 +280,40 @@ namespace USBRelay
             return base.ProcessCmdKey(ref msg, keyData);
         }       
 
+        /// <summary>
+        /// Set the relay button appearance properties dependent on the state of the corresponding relay.
+        /// </summary>
+        /// <param name="channel">The 0-based index of the relay channel</param>
+        /// <param name="relayOpen">Whether the relay is currently open</param>
+        private void SetRelayButtonAppearance(int channel, bool relayOpen)
+        {
+            if (relayOpen)
+            {
+                relayButtons[channel].BackColor = Color.Green;
+                relayButtons[channel].Text = "Off";
+            }
+            else
+            {                
+                relayButtons[channel].BackColor = Color.Tomato;
+                relayButtons[channel].Text = "On";
+            }
+        }
 
         private void ToggleRelay(int channel)
         {
-            int channelBitmask = (int)Math.Pow(2, channel - 1);
-
             if (relayCanToggle[channel - 1])
             {
                 relayCanToggle[channel - 1] = false;
 
-                if ((RelayManager.RelayStatus() & channelBitmask) > 0)
+                if (RelayManager.ChannelOpened(channel))
                 {
                     RelayManager.CloseChannel(channel);
-                    relayButtons[channel - 1].BackColor = Color.Tomato;
-                    relayButtons[channel - 1].Text = "On";
+                    SetRelayButtonAppearance(channel - 1, false);
                 }
                 else
                 {
                     RelayManager.OpenChannel(channel);
-                    relayButtons[channel - 1].BackColor = Color.Green;
-                    relayButtons[channel - 1].Text = "Off";
+                    SetRelayButtonAppearance(channel - 1, true);
                 }
 
                 BackgroundWorker backgroundWorker = new BackgroundWorker();
@@ -321,27 +348,53 @@ namespace USBRelay
         {
             ComboBox changedComboBox = sender as ComboBox;
             int rowIndex = triggerSignalOnComboBoxes.IndexOf(changedComboBox);
-            if (changedComboBox.SelectedIndex == 0)
+            triggerOnConditions[rowIndex].Signal = changedComboBox.Text;
+            string s = "";
+            foreach (TriggerCondition t in triggerOnConditions)
             {
-                triggerCompareOnComboBoxes[rowIndex].Enabled = false;
-                triggerPointOnNumericUpDowns[rowIndex].Enabled = false;
+                s += t.Signal + t.Operator + t.Threshold + ";";
             }
-            else
+            s += "\n\n";
+            appendLogText("On: " + s);
+        }
+
+        private void TriggerSignalOffComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox changedComboBox = sender as ComboBox;
+            int rowIndex = triggerSignalOffComboBoxes.IndexOf(changedComboBox);
+            triggerOffConditions[rowIndex].Signal = changedComboBox.Text;
+            string s = "";
+            foreach (TriggerCondition t in triggerOffConditions)
             {
-                triggerCompareOnComboBoxes[rowIndex].Enabled = true;
-                triggerPointOnNumericUpDowns[rowIndex].Enabled = true;
-                triggerOnConditions[rowIndex].Signal = changedComboBox.Text;
+                s += t.Signal + t.Operator + t.Threshold + ";";
             }
+            appendLogText("Off: " + s);
         }
 
         private void CompareOnComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox changedComboBox = sender as ComboBox;
-            int rowIndex = triggerCompareOnComboBoxes.IndexOf(changedComboBox);            
-            if (changedComboBox.SelectedIndex != 0)
-            {                                             
-                triggerOnConditions[rowIndex].Operator = changedComboBox.Text;
+            int rowIndex = triggerCompareOnComboBoxes.IndexOf(changedComboBox);                                                        
+            triggerOnConditions[rowIndex].Operator = changedComboBox.Text;            
+            string s = "";
+            foreach (TriggerCondition t in triggerOnConditions)
+            {
+                s += t.Signal + t.Operator + t.Threshold + ";";
             }
+            appendLogText("On: " + s);
+        }
+
+        private void CompareOffComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox changedComboBox = sender as ComboBox;
+            int rowIndex = triggerCompareOffComboBoxes.IndexOf(changedComboBox);
+            triggerOffConditions[rowIndex].Operator = changedComboBox.Text;            
+            string s = "";
+            foreach (TriggerCondition t in triggerOffConditions)
+            {
+                s += t.Signal + t.Operator + t.Threshold + ";";
+            }
+            appendLogText("Off: " + s);
         }
 
         private void TriggerPointOnNumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -349,41 +402,54 @@ namespace USBRelay
             NumericUpDown changedNumericUpDown = sender as NumericUpDown;
             int rowIndex = triggerPointOnNumericUpDowns.IndexOf(changedNumericUpDown);
             triggerOnConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;
+            string s = "";
+            foreach (TriggerCondition t in triggerOnConditions)
+            {
+                s += t.Signal + t.Operator + t.Threshold + ";";
+            }
+            appendLogText("On: " + s);
         }
 
+        private void TriggerPointOffNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown changedNumericUpDown = sender as NumericUpDown;
+            int rowIndex = triggerPointOffNumericUpDowns.IndexOf(changedNumericUpDown);
+            triggerOffConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;
+            string s = "";
+            foreach (TriggerCondition t in triggerOffConditions)
+            {
+                s += t.Signal + t.Operator + t.Threshold + ";";
+            }
+            appendLogText("Off: " + s);
+        }
+        
         //TODO - delete this
         public void setLabelText(string text)
         {
             serialNumberLabel.Text = text;
         }
-    }
-
-    public class TriggerCondition
-    {
-        //public bool Enabled { get; set; }
-        public string Signal { get; set; } = "";
-        public string Operator { get; set; } = "";
-        public float Threshold { get; set; } = 0.0f;
-
-        public bool ConditionMet(float signalValue)
+        public void setLabel2Text(string text)
         {
-            if (Signal != null && Signal != "" && Signal != "<none>")
-            {
-                if (Operator == "<")
-                {
-                    return signalValue < Threshold;
-                }
-                if (Operator == ">")
-                {
-                    return signalValue > Threshold;
-                }
-                if (Operator == "=")
-                {
-                    return signalValue == Threshold;
-                }
-            }
-            return false;
+            offLabel.Text = text;
+        }
+        public void appendLogText(string text)
+        {
+            textBox1.AppendText(text);
+            textBox1.AppendText(Environment.NewLine);
+        }
+
+        private void USBRelayConfig_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.triggerOnConditions =
+                TriggerCondition.BuildTriggerConditionsString(connectedRelayCount, triggerOnConditions);
+            Properties.Settings.Default.triggerOffConditions =
+                TriggerCondition.BuildTriggerConditionsString(connectedRelayCount, triggerOffConditions);
+
+            USBRelay.triggersActive = true;
         }
     }
+
+    // TODO - check if any conditions are equivalent or enclose a set before saving the triggers on window close.
+    // This would cause the relay to rapidly toggle if allowed.
 
 }

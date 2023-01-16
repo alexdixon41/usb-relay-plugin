@@ -47,9 +47,11 @@
             this.triggerSignalOff1ComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.relay1Panel = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.relay2Panel = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
             this.hotkey2Button = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.hotkey2Label = new System.Windows.Forms.Label();
@@ -68,6 +70,7 @@
             this.compareOff2ComboBox = new System.Windows.Forms.ComboBox();
             this.relay2Button = new System.Windows.Forms.Button();
             this.relay3Panel = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.hotkey3Button = new System.Windows.Forms.Button();
             this.hotkey3Label = new System.Windows.Forms.Label();
@@ -86,6 +89,7 @@
             this.compareOff3ComboBox = new System.Windows.Forms.ComboBox();
             this.relay3Button = new System.Windows.Forms.Button();
             this.relay4Panel = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.hotkey4Button = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,6 +108,7 @@
             this.compareOff4ComboBox = new System.Windows.Forms.ComboBox();
             this.relay4Button = new System.Windows.Forms.Button();
             this.relay5Panel = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.hotkey5Button = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
@@ -122,6 +127,7 @@
             this.compareOff5ComboBox = new System.Windows.Forms.ComboBox();
             this.relay5Button = new System.Windows.Forms.Button();
             this.relay6Panel = new System.Windows.Forms.Panel();
+            this.label49 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.hotkey6Button = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
@@ -140,6 +146,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.relay6Button = new System.Windows.Forms.Button();
             this.relay7Panel = new System.Windows.Forms.Panel();
+            this.label52 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.hotkey7Button = new System.Windows.Forms.Button();
             this.label41 = new System.Windows.Forms.Label();
@@ -158,6 +165,7 @@
             this.label46 = new System.Windows.Forms.Label();
             this.relay7Button = new System.Windows.Forms.Button();
             this.relay8Panel = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.hotkey8Button = new System.Windows.Forms.Button();
             this.label48 = new System.Windows.Forms.Label();
@@ -175,14 +183,8 @@
             this.compareOff8ComboBox = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
             this.relay8Button = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
+            this.offLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.triggerPointOn1NumericUpDown)).BeginInit();
             this.triggerOn1Panel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -282,7 +284,6 @@
             this.triggerPointOn1NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn1NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn1NumericUpDown.Enabled = false;
             this.triggerPointOn1NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn1NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn1NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -300,10 +301,10 @@
             // compareOn1ComboBox
             // 
             this.compareOn1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn1ComboBox.Enabled = false;
             this.compareOn1ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn1ComboBox.FormattingEnabled = true;
             this.compareOn1ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -391,7 +392,6 @@
             this.triggerPointOff1NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff1NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff1NumericUpDown.Enabled = false;
             this.triggerPointOff1NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff1NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff1NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -404,14 +404,15 @@
             this.triggerPointOff1NumericUpDown.Name = "triggerPointOff1NumericUpDown";
             this.triggerPointOff1NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff1NumericUpDown.TabIndex = 5;
+            this.triggerPointOff1NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // compareOff1ComboBox
             // 
             this.compareOff1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff1ComboBox.Enabled = false;
             this.compareOff1ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff1ComboBox.FormattingEnabled = true;
             this.compareOff1ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -419,6 +420,7 @@
             this.compareOff1ComboBox.Name = "compareOff1ComboBox";
             this.compareOff1ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff1ComboBox.TabIndex = 3;
+            this.compareOff1ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -440,6 +442,7 @@
             this.triggerSignalOff1ComboBox.Name = "triggerSignalOff1ComboBox";
             this.triggerSignalOff1ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff1ComboBox.TabIndex = 1;
+            this.triggerSignalOff1ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -466,10 +469,21 @@
             this.relay1Panel.Controls.Add(this.triggerOn1Panel);
             this.relay1Panel.Controls.Add(this.panel1);
             this.relay1Panel.Location = new System.Drawing.Point(12, 44);
-            this.relay1Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay1Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay1Panel.Name = "relay1Panel";
             this.relay1Panel.Size = new System.Drawing.Size(840, 69);
             this.relay1Panel.TabIndex = 29;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label31.BackColor = System.Drawing.Color.Black;
+            this.label31.Location = new System.Drawing.Point(66, 0);
+            this.label31.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(1, 68);
+            this.label31.TabIndex = 37;
             // 
             // label2
             // 
@@ -508,10 +522,21 @@
             this.relay2Panel.Controls.Add(this.panel6);
             this.relay2Panel.Controls.Add(this.relay2Button);
             this.relay2Panel.Location = new System.Drawing.Point(12, 115);
-            this.relay2Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay2Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay2Panel.Name = "relay2Panel";
             this.relay2Panel.Size = new System.Drawing.Size(840, 69);
             this.relay2Panel.TabIndex = 30;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label35.BackColor = System.Drawing.Color.Black;
+            this.label35.Location = new System.Drawing.Point(66, 0);
+            this.label35.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(1, 68);
+            this.label35.TabIndex = 38;
             // 
             // hotkey2Button
             // 
@@ -615,7 +640,6 @@
             this.triggerPointOn2NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn2NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn2NumericUpDown.Enabled = false;
             this.triggerPointOn2NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn2NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn2NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -633,10 +657,10 @@
             // compareOn2ComboBox
             // 
             this.compareOn2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn2ComboBox.Enabled = false;
             this.compareOn2ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn2ComboBox.FormattingEnabled = true;
             this.compareOn2ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -680,13 +704,13 @@
             this.triggerSignalOff2ComboBox.Name = "triggerSignalOff2ComboBox";
             this.triggerSignalOff2ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff2ComboBox.TabIndex = 1;
+            this.triggerSignalOff2ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // triggerPointOff2NumericUpDown
             // 
             this.triggerPointOff2NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff2NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff2NumericUpDown.Enabled = false;
             this.triggerPointOff2NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff2NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff2NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -699,6 +723,7 @@
             this.triggerPointOff2NumericUpDown.Name = "triggerPointOff2NumericUpDown";
             this.triggerPointOff2NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff2NumericUpDown.TabIndex = 5;
+            this.triggerPointOff2NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // label14
             // 
@@ -714,10 +739,10 @@
             // compareOff2ComboBox
             // 
             this.compareOff2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff2ComboBox.Enabled = false;
             this.compareOff2ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff2ComboBox.FormattingEnabled = true;
             this.compareOff2ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -725,6 +750,7 @@
             this.compareOff2ComboBox.Name = "compareOff2ComboBox";
             this.compareOff2ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff2ComboBox.TabIndex = 3;
+            this.compareOff2ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // relay2Button
             // 
@@ -755,10 +781,21 @@
             this.relay3Panel.Controls.Add(this.panel9);
             this.relay3Panel.Controls.Add(this.relay3Button);
             this.relay3Panel.Location = new System.Drawing.Point(12, 186);
-            this.relay3Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay3Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay3Panel.Name = "relay3Panel";
             this.relay3Panel.Size = new System.Drawing.Size(840, 69);
             this.relay3Panel.TabIndex = 31;
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label38.BackColor = System.Drawing.Color.Black;
+            this.label38.Location = new System.Drawing.Point(66, 0);
+            this.label38.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(1, 68);
+            this.label38.TabIndex = 39;
             // 
             // label10
             // 
@@ -862,7 +899,6 @@
             this.triggerPointOn3NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn3NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn3NumericUpDown.Enabled = false;
             this.triggerPointOn3NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn3NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn3NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -880,10 +916,10 @@
             // compareOn3ComboBox
             // 
             this.compareOn3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn3ComboBox.Enabled = false;
             this.compareOn3ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn3ComboBox.FormattingEnabled = true;
             this.compareOn3ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -928,13 +964,13 @@
             this.triggerSignalOff3ComboBox.Name = "triggerSignalOff3ComboBox";
             this.triggerSignalOff3ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff3ComboBox.TabIndex = 1;
+            this.triggerSignalOff3ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // triggerPointOff3NumericUpDown
             // 
             this.triggerPointOff3NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff3NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff3NumericUpDown.Enabled = false;
             this.triggerPointOff3NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff3NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff3NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -947,6 +983,7 @@
             this.triggerPointOff3NumericUpDown.Name = "triggerPointOff3NumericUpDown";
             this.triggerPointOff3NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff3NumericUpDown.TabIndex = 5;
+            this.triggerPointOff3NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // label21
             // 
@@ -962,10 +999,10 @@
             // compareOff3ComboBox
             // 
             this.compareOff3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff3ComboBox.Enabled = false;
             this.compareOff3ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff3ComboBox.FormattingEnabled = true;
             this.compareOff3ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -973,6 +1010,7 @@
             this.compareOff3ComboBox.Name = "compareOff3ComboBox";
             this.compareOff3ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff3ComboBox.TabIndex = 3;
+            this.compareOff3ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // relay3Button
             // 
@@ -1003,10 +1041,21 @@
             this.relay4Panel.Controls.Add(this.panel11);
             this.relay4Panel.Controls.Add(this.relay4Button);
             this.relay4Panel.Location = new System.Drawing.Point(12, 257);
-            this.relay4Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay4Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay4Panel.Name = "relay4Panel";
             this.relay4Panel.Size = new System.Drawing.Size(840, 69);
             this.relay4Panel.TabIndex = 32;
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label42.BackColor = System.Drawing.Color.Black;
+            this.label42.Location = new System.Drawing.Point(66, 0);
+            this.label42.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(1, 68);
+            this.label42.TabIndex = 40;
             // 
             // label13
             // 
@@ -1110,7 +1159,6 @@
             this.triggerPointOn4NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn4NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn4NumericUpDown.Enabled = false;
             this.triggerPointOn4NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn4NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn4NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1128,10 +1176,10 @@
             // compareOn4ComboBox
             // 
             this.compareOn4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn4ComboBox.Enabled = false;
             this.compareOn4ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn4ComboBox.FormattingEnabled = true;
             this.compareOn4ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1176,13 +1224,13 @@
             this.triggerSignalOff4ComboBox.Name = "triggerSignalOff4ComboBox";
             this.triggerSignalOff4ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff4ComboBox.TabIndex = 1;
+            this.triggerSignalOff4ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // triggerPointOff4NumericUpDown
             // 
             this.triggerPointOff4NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff4NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff4NumericUpDown.Enabled = false;
             this.triggerPointOff4NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff4NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff4NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1195,6 +1243,7 @@
             this.triggerPointOff4NumericUpDown.Name = "triggerPointOff4NumericUpDown";
             this.triggerPointOff4NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff4NumericUpDown.TabIndex = 5;
+            this.triggerPointOff4NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // label25
             // 
@@ -1210,10 +1259,10 @@
             // compareOff4ComboBox
             // 
             this.compareOff4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff4ComboBox.Enabled = false;
             this.compareOff4ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff4ComboBox.FormattingEnabled = true;
             this.compareOff4ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1221,6 +1270,7 @@
             this.compareOff4ComboBox.Name = "compareOff4ComboBox";
             this.compareOff4ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff4ComboBox.TabIndex = 3;
+            this.compareOff4ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // relay4Button
             // 
@@ -1251,10 +1301,21 @@
             this.relay5Panel.Controls.Add(this.panel14);
             this.relay5Panel.Controls.Add(this.relay5Button);
             this.relay5Panel.Location = new System.Drawing.Point(12, 328);
-            this.relay5Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay5Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay5Panel.Name = "relay5Panel";
             this.relay5Panel.Size = new System.Drawing.Size(840, 69);
             this.relay5Panel.TabIndex = 31;
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label45.BackColor = System.Drawing.Color.Black;
+            this.label45.Location = new System.Drawing.Point(66, 0);
+            this.label45.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(1, 68);
+            this.label45.TabIndex = 41;
             // 
             // label17
             // 
@@ -1358,7 +1419,6 @@
             this.triggerPointOn5NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn5NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn5NumericUpDown.Enabled = false;
             this.triggerPointOn5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn5NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn5NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1376,10 +1436,10 @@
             // compareOn5ComboBox
             // 
             this.compareOn5ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn5ComboBox.Enabled = false;
             this.compareOn5ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn5ComboBox.FormattingEnabled = true;
             this.compareOn5ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1424,13 +1484,13 @@
             this.triggerSignalOff5ComboBox.Name = "triggerSignalOff5ComboBox";
             this.triggerSignalOff5ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff5ComboBox.TabIndex = 1;
+            this.triggerSignalOff5ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // triggerPointOff5NumericUpDown
             // 
             this.triggerPointOff5NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff5NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff5NumericUpDown.Enabled = false;
             this.triggerPointOff5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff5NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff5NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1443,6 +1503,7 @@
             this.triggerPointOff5NumericUpDown.Name = "triggerPointOff5NumericUpDown";
             this.triggerPointOff5NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff5NumericUpDown.TabIndex = 5;
+            this.triggerPointOff5NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // label32
             // 
@@ -1458,10 +1519,10 @@
             // compareOff5ComboBox
             // 
             this.compareOff5ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff5ComboBox.Enabled = false;
             this.compareOff5ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff5ComboBox.FormattingEnabled = true;
             this.compareOff5ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1469,6 +1530,7 @@
             this.compareOff5ComboBox.Name = "compareOff5ComboBox";
             this.compareOff5ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff5ComboBox.TabIndex = 3;
+            this.compareOff5ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // relay5Button
             // 
@@ -1499,10 +1561,21 @@
             this.relay6Panel.Controls.Add(this.panel17);
             this.relay6Panel.Controls.Add(this.relay6Button);
             this.relay6Panel.Location = new System.Drawing.Point(12, 399);
-            this.relay6Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay6Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay6Panel.Name = "relay6Panel";
             this.relay6Panel.Size = new System.Drawing.Size(840, 69);
             this.relay6Panel.TabIndex = 33;
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label49.BackColor = System.Drawing.Color.Black;
+            this.label49.Location = new System.Drawing.Point(66, 0);
+            this.label49.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(1, 68);
+            this.label49.TabIndex = 42;
             // 
             // label20
             // 
@@ -1604,10 +1677,10 @@
             // compareOn6ComboBox
             // 
             this.compareOn6ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn6ComboBox.Enabled = false;
             this.compareOn6ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn6ComboBox.FormattingEnabled = true;
             this.compareOn6ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1622,7 +1695,6 @@
             this.triggerPointOn6NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn6NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn6NumericUpDown.Enabled = false;
             this.triggerPointOn6NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn6NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn6NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1657,7 +1729,6 @@
             this.triggerPointOff6NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff6NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff6NumericUpDown.Enabled = false;
             this.triggerPointOff6NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff6NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff6NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1670,6 +1741,7 @@
             this.triggerPointOff6NumericUpDown.Name = "triggerPointOff6NumericUpDown";
             this.triggerPointOff6NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff6NumericUpDown.TabIndex = 5;
+            this.triggerPointOff6NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // label40
             // 
@@ -1691,14 +1763,15 @@
             this.triggerSignalOff6ComboBox.Name = "triggerSignalOff6ComboBox";
             this.triggerSignalOff6ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff6ComboBox.TabIndex = 1;
+            this.triggerSignalOff6ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // compareOff6ComboBox
             // 
             this.compareOff6ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff6ComboBox.Enabled = false;
             this.compareOff6ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff6ComboBox.FormattingEnabled = true;
             this.compareOff6ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1706,6 +1779,7 @@
             this.compareOff6ComboBox.Name = "compareOff6ComboBox";
             this.compareOff6ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff6ComboBox.TabIndex = 3;
+            this.compareOff6ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // label39
             // 
@@ -1747,10 +1821,21 @@
             this.relay7Panel.Controls.Add(this.panel20);
             this.relay7Panel.Controls.Add(this.relay7Button);
             this.relay7Panel.Location = new System.Drawing.Point(12, 470);
-            this.relay7Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay7Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay7Panel.Name = "relay7Panel";
             this.relay7Panel.Size = new System.Drawing.Size(840, 69);
             this.relay7Panel.TabIndex = 34;
+            // 
+            // label52
+            // 
+            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label52.BackColor = System.Drawing.Color.Black;
+            this.label52.Location = new System.Drawing.Point(66, 0);
+            this.label52.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(1, 68);
+            this.label52.TabIndex = 43;
             // 
             // label24
             // 
@@ -1852,10 +1937,10 @@
             // compareOn7ComboBox
             // 
             this.compareOn7ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn7ComboBox.Enabled = false;
             this.compareOn7ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn7ComboBox.FormattingEnabled = true;
             this.compareOn7ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1870,7 +1955,6 @@
             this.triggerPointOn7NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn7NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn7NumericUpDown.Enabled = false;
             this.triggerPointOn7NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn7NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn7NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1905,7 +1989,6 @@
             this.triggerPointOff7NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff7NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff7NumericUpDown.Enabled = false;
             this.triggerPointOff7NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff7NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff7NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -1918,6 +2001,7 @@
             this.triggerPointOff7NumericUpDown.Name = "triggerPointOff7NumericUpDown";
             this.triggerPointOff7NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff7NumericUpDown.TabIndex = 5;
+            this.triggerPointOff7NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // label47
             // 
@@ -1939,14 +2023,15 @@
             this.triggerSignalOff7ComboBox.Name = "triggerSignalOff7ComboBox";
             this.triggerSignalOff7ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff7ComboBox.TabIndex = 1;
+            this.triggerSignalOff7ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // compareOff7ComboBox
             // 
             this.compareOff7ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff7ComboBox.Enabled = false;
             this.compareOff7ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff7ComboBox.FormattingEnabled = true;
             this.compareOff7ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -1954,6 +2039,7 @@
             this.compareOff7ComboBox.Name = "compareOff7ComboBox";
             this.compareOff7ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff7ComboBox.TabIndex = 3;
+            this.compareOff7ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // label46
             // 
@@ -1995,10 +2081,21 @@
             this.relay8Panel.Controls.Add(this.panel23);
             this.relay8Panel.Controls.Add(this.relay8Button);
             this.relay8Panel.Location = new System.Drawing.Point(12, 541);
-            this.relay8Panel.MinimumSize = new System.Drawing.Size(820, 0);
+            this.relay8Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay8Panel.Name = "relay8Panel";
             this.relay8Panel.Size = new System.Drawing.Size(840, 69);
             this.relay8Panel.TabIndex = 35;
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label55.BackColor = System.Drawing.Color.Black;
+            this.label55.Location = new System.Drawing.Point(66, 0);
+            this.label55.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(1, 68);
+            this.label55.TabIndex = 44;
             // 
             // label28
             // 
@@ -2100,10 +2197,10 @@
             // compareOn8ComboBox
             // 
             this.compareOn8ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOn8ComboBox.Enabled = false;
             this.compareOn8ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOn8ComboBox.FormattingEnabled = true;
             this.compareOn8ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -2118,7 +2215,6 @@
             this.triggerPointOn8NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn8NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOn8NumericUpDown.Enabled = false;
             this.triggerPointOn8NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOn8NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOn8NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -2153,7 +2249,6 @@
             this.triggerPointOff8NumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff8NumericUpDown.DecimalPlaces = 2;
-            this.triggerPointOff8NumericUpDown.Enabled = false;
             this.triggerPointOff8NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerPointOff8NumericUpDown.Location = new System.Drawing.Point(381, 5);
             this.triggerPointOff8NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
@@ -2166,6 +2261,7 @@
             this.triggerPointOff8NumericUpDown.Name = "triggerPointOff8NumericUpDown";
             this.triggerPointOff8NumericUpDown.Size = new System.Drawing.Size(72, 22);
             this.triggerPointOff8NumericUpDown.TabIndex = 5;
+            this.triggerPointOff8NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
             // label54
             // 
@@ -2187,14 +2283,15 @@
             this.triggerSignalOff8ComboBox.Name = "triggerSignalOff8ComboBox";
             this.triggerSignalOff8ComboBox.Size = new System.Drawing.Size(188, 21);
             this.triggerSignalOff8ComboBox.TabIndex = 1;
+            this.triggerSignalOff8ComboBox.SelectedIndexChanged += new System.EventHandler(this.TriggerSignalOffComboBox_SelectedIndexChanged);
             // 
             // compareOff8ComboBox
             // 
             this.compareOff8ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.compareOff8ComboBox.Enabled = false;
             this.compareOff8ComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compareOff8ComboBox.FormattingEnabled = true;
             this.compareOff8ComboBox.Items.AddRange(new object[] {
+            "",
             "<",
             ">",
             "="});
@@ -2202,6 +2299,7 @@
             this.compareOff8ComboBox.Name = "compareOff8ComboBox";
             this.compareOff8ComboBox.Size = new System.Drawing.Size(44, 21);
             this.compareOff8ComboBox.TabIndex = 3;
+            this.compareOff8ComboBox.SelectedIndexChanged += new System.EventHandler(this.CompareOffComboBox_SelectedIndexChanged);
             // 
             // label53
             // 
@@ -2229,93 +2327,22 @@
             this.relay8Button.UseVisualStyleBackColor = false;
             this.relay8Button.Click += new System.EventHandler(this.ToggleRelayButton_Click);
             // 
-            // label31
+            // offLabel
             // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label31.BackColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(66, 0);
-            this.label31.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(1, 68);
-            this.label31.TabIndex = 37;
+            this.offLabel.AutoSize = true;
+            this.offLabel.Location = new System.Drawing.Point(409, 12);
+            this.offLabel.Name = "offLabel";
+            this.offLabel.Size = new System.Drawing.Size(44, 13);
+            this.offLabel.TabIndex = 36;
+            this.offLabel.Text = "label56";
             // 
-            // label35
+            // textBox1
             // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label35.BackColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(66, 0);
-            this.label35.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(1, 68);
-            this.label35.TabIndex = 38;
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label38.BackColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(66, 0);
-            this.label38.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(1, 68);
-            this.label38.TabIndex = 39;
-            // 
-            // label42
-            // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label42.BackColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(66, 0);
-            this.label42.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(1, 68);
-            this.label42.TabIndex = 40;
-            // 
-            // label45
-            // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label45.BackColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(66, 0);
-            this.label45.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(1, 68);
-            this.label45.TabIndex = 41;
-            // 
-            // label49
-            // 
-            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label49.BackColor = System.Drawing.Color.Black;
-            this.label49.Location = new System.Drawing.Point(66, 0);
-            this.label49.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(1, 68);
-            this.label49.TabIndex = 42;
-            // 
-            // label52
-            // 
-            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label52.BackColor = System.Drawing.Color.Black;
-            this.label52.Location = new System.Drawing.Point(66, 0);
-            this.label52.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(1, 68);
-            this.label52.TabIndex = 43;
-            // 
-            // label55
-            // 
-            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label55.BackColor = System.Drawing.Color.Black;
-            this.label55.Location = new System.Drawing.Point(66, 0);
-            this.label55.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(1, 68);
-            this.label55.TabIndex = 44;
+            this.textBox1.Location = new System.Drawing.Point(12, 617);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(840, 167);
+            this.textBox1.TabIndex = 37;
             // 
             // USBRelayConfig
             // 
@@ -2323,7 +2350,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(840, 620);
-            this.ClientSize = new System.Drawing.Size(864, 621);
+            this.ClientSize = new System.Drawing.Size(864, 796);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.offLabel);
             this.Controls.Add(this.relay8Panel);
             this.Controls.Add(this.relay7Panel);
             this.Controls.Add(this.relay6Panel);
@@ -2339,6 +2368,7 @@
             this.MinimumSize = new System.Drawing.Size(640, 280);
             this.Name = "USBRelayConfig";
             this.Text = "USB Relay Config";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.USBRelayConfig_FormClosed);
             this.Load += new System.EventHandler(this.USBRelayConfig_Load);
             ((System.ComponentModel.ISupportInitialize)(this.triggerPointOn1NumericUpDown)).EndInit();
             this.triggerOn1Panel.ResumeLayout(false);
@@ -2556,5 +2586,7 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label offLabel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

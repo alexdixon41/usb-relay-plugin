@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.33026.149
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USBRelay", "USBRelay.csproj", "{97950A69-7274-47CF-9737-C8EFB8EA1F5D}"
 EndProject
@@ -16,7 +16,10 @@ Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "YourDyno", "..\..\..\..\Pro
 		UseLegacyDebugEngines = No
 		LaunchSQLEngine = No
 		AttachLaunchAction = No
+		IORedirection = Auto
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USBRelayUnitTests", "..\USBRelayUnitTests\USBRelayUnitTests.csproj", "{95C6DF78-2AD5-4723-AF84-7C151936BD99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +49,18 @@ Global
 		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.dynoKRAFT|x86.ActiveCfg = Release|x86
 		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.Release|Any CPU.ActiveCfg = Release|x86
 		{1C0DE6DC-AFA1-4A2D-BFC3-F88387FAD6A4}.Release|x86.ActiveCfg = Release|x86
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Debug|x86.Build.0 = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.dynoKRAFT|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.dynoKRAFT|Any CPU.Build.0 = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.dynoKRAFT|x86.ActiveCfg = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.dynoKRAFT|x86.Build.0 = Debug|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Release|x86.ActiveCfg = Release|Any CPU
+		{95C6DF78-2AD5-4723-AF84-7C151936BD99}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,12 +8,15 @@ using System.ComponentModel.Composition;
 using PluginContracts;
 using DataConnection;
 using Settings;
+using USB;
 
 namespace USBRelay
 {
     [Export(typeof(IDataIOProvider))]
     public class USBRelay : IDataIOProvider
     {
+        public static bool triggersActive = true;
+
         private System.Windows.Forms.ToolStripMenuItem menuEntry = new ToolStripMenuItem();
         private List<string> triggerSignals = new List<string>();
         private List<OnePlugInDataConnection> allPluginDataConnections = new List<OnePlugInDataConnection>();
@@ -74,7 +77,9 @@ namespace USBRelay
             triggerSignals.Add("Aux1");
             triggerSignals.Add("Aux2");
             triggerSignals.Add("Aux3");
-            triggerSignals.Add("ThermoC");
+            triggerSignals.Add("ThermoC1");
+            triggerSignals.Add("ThermoC2");
+            triggerSignals.Add("Roller1RPM");
 
             if (allPluginDataConnections != null)
             {
@@ -138,42 +143,193 @@ namespace USBRelay
             USBRelayConfig.KeyPressed(hotkey);
         }
 
-        private void TriggerUpdateTimer_Tick(object sender, EventArgs e)
+        /// <summary>
+        /// Turn the relay on or off for a trigger that had its condition met       
+        /// </summary>
+        /// <param name="turnRelayOn">When true, the relay will be opened; otherwise,
+        /// the relay will be closed</param>
+        /// <param name="relayIndex">The index (1-based) of the relay to open or close</param>
+        public void ActivateTrigger(bool turnRelayOn, int relayIndex)
         {
-            if (USBRelayConfig.triggerOnConditions != null && USBRelayConfig.triggerOnConditions.Count > 0 && USBRelayConfig.triggerOnConditions[0] != null && USBRelayConfig.triggerOnConditions[0].Signal != null)
+            if (turnRelayOn)
             {
-                switch (USBRelayConfig.triggerOnConditions[0].Signal)
+                if (!RelayManager.ChannelOpened(relayIndex))
                 {
-                    case "<none>":
-                        break;
-                    case "EngineRPM":
-
-                        break;
-                    case "Aux1":
-
-                        break;
-                    case "Aux2":
-
-                        break;
-                    case "Aux3":
-
-                        break;
-                    case "ThermoC":
-
-                        break;
-                    default:
-                        try
-                        {
-                            string value = allPluginDataConnections.First(x => x.name == USBRelayConfig.triggerOnConditions[0].Signal).name;
-                            USBRelayConfig.setLabelText(value.ToString());
-                        }
-                        catch
-                        {
-                            USBRelayConfig.setLabelText("bruh");
-                        }
-                        break;
+                    RelayManager.OpenChannel(relayIndex);
+                }
+            }
+            else
+            {
+                if (RelayManager.ChannelOpened(relayIndex))
+                {
+                    RelayManager.CloseChannel(relayIndex);
                 }
             }
         }
+
+        public void CheckTriggerConditionSignals(TriggerCondition condition, int relayIndex, Dictionary<string, float> values)
+        {                        
+            float? signalValue = null;
+            
+            switch (condition.Signal)
+            {
+                case "<none>":
+                    break;
+                case "EngineRPM":
+                    signalValue = values["EngineRPM"];
+                    //signalValue = (float)dynoDataConnection?.polledDataSet.instantEngineRPM;
+                    break;
+                case "Aux1":
+                    signalValue = values["Aux1"];
+                    //signalValue = (float)dynoDataConnection?.polledDataSet.aux[0];
+                    break;
+                case "Aux2":
+                    signalValue = values["Aux2"];
+                    //signalValue = (float)dynoDataConnection?.polledDataSet.aux[1];
+                    break;
+                case "Aux3":
+                    signalValue = values["Aux3"];
+                    //signalValue = (float)dynoDataConnection?.polledDataSet.aux[2];
+                    break;
+                case "ThermoC1":
+                    signalValue = values["ThermoC1"];
+                    //signalValue = (float)dynoDataConnection?.polledDataSet.EGT[0];
+                    break;
+                case "ThermoC2":
+                    signalValue = values["ThermoC2"];
+                    //signalValue = (float)dynoDataConnection?.polledDataSet.EGT[0];
+                    break;
+                case "Roller1RPM":
+                    signalValue = values["Roller1RPM"];
+                    //signalValue = (float)dynoDataConnection?.polledDataSet.instantRoller1RPM;
+                    break;
+                default:
+                    try
+                    {
+                        signalValue = values[condition.Signal];
+                        //signalValue = allPluginDataConnections.First(x => x.name == condition.Signal).y;
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                    break;
+            }
+
+            if (signalValue.HasValue && condition.ConditionMet(signalValue.Value))
+            {
+                ActivateTrigger(condition.turnRelayOn, relayIndex);
+            }
+        }
+
+        private void TriggerUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            if (triggersActive && dynoDataConnection != null && USBRelayConfig.triggerOnConditions != null)
+            {
+                //TODO - remove this
+                Dictionary<string, float> values = new Dictionary<string, float>()
+                {
+                    { "EngineRPM", 850 },
+                    { "Aux1", 1 },
+                    { "Aux2", 2 },
+                    { "Aux3", 3 },
+                    { "ThermoC1", 10 },
+                    { "ThermoC2", 20 },
+                    { "Roller1RPM", 100 },
+                    { "RPM1", 250 }
+                };
+
+                string[] onConditionsString = Properties.Settings.Default.triggerOnConditions.Split(new char[] { ';' });
+                string[] offConditionsString = Properties.Settings.Default.triggerOffConditions.Split(new char[] { ';' });
+
+                for (int i = 0; i < onConditionsString.Length; i++)
+                {
+                    TriggerCondition onCondition = new TriggerCondition(true, onConditionsString[i]);
+                    CheckTriggerConditionSignals(onCondition, i + 1, values);
+                }
+
+                for (int i = 0; i < offConditionsString.Length; i++)
+                {
+                    TriggerCondition offCondition = new TriggerCondition(false, offConditionsString[i]);
+                    CheckTriggerConditionSignals(offCondition, i + 1, values);
+                }
+
+                //for (int i = 0; i < USBRelayConfig.connectedRelayCount * 2; i++)                  
+                //{                       
+                //    TriggerCondition condition = i % 2 == 0 ? USBRelayConfig.triggerOnConditions[i / 2] : USBRelayConfig.triggerOffConditions[i / 2];
+                //    CheckTriggerConditionSignals(condition, i / 2 + 1, values);
+                //}                
+            }
+        }
+    }
+    public class TriggerCondition
+    {
+        //public bool Enabled { get; set; }
+        public string Signal { get; set; } = "";
+        public string Operator { get; set; } = "";
+        public float Threshold { get; set; } = 0.0f;
+
+        public bool turnRelayOn;
+
+        public TriggerCondition(bool turnRelayOn)
+        {
+            this.turnRelayOn = turnRelayOn;
+        }
+
+        public TriggerCondition(bool turnRelayOn, string conditionString)
+        {
+            this.turnRelayOn = turnRelayOn;
+            string[] conditionParams = conditionString.Split(new char[] { ',' });
+            if (conditionParams.Length == 3)
+            {             
+                Signal = conditionParams[0];
+                Operator = conditionParams[1];
+                if (float.TryParse(conditionParams[2], out float threshold))
+                {
+                    Threshold = threshold;
+                }
+            }
+        }
+
+        public bool ConditionMet(float signalValue)
+        {
+            if (Signal != null && Signal != "" && Signal != "<none>")
+            {
+                if (Operator == "<")
+                {
+                    return signalValue < Threshold;
+                }
+                if (Operator == ">")
+                {
+                    return signalValue > Threshold;
+                }
+                if (Operator == "=")
+                {
+                    return signalValue == Threshold;
+                }
+            }
+            return false;
+        }
+
+        public static string BuildTriggerConditionsString(int numberOfConditions, List<TriggerCondition> conditions)
+        {
+            string triggerConditionsString = "";
+            for (int i = 0; i < numberOfConditions; i++)
+            {
+                if (conditions.Count > i && conditions[i].Signal != "" && conditions[i].Operator != "")
+                {
+                    triggerConditionsString +=
+                        conditions[i].Signal + "," +
+                        conditions[i].Operator + "," +
+                        conditions[i].Threshold + ";";
+                }
+                else
+                {
+                    triggerConditionsString += "$;";
+                }
+            }
+            return triggerConditionsString;
+        }
+
     }
 }

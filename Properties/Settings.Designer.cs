@@ -118,5 +118,29 @@ namespace USBRelay.Properties {
                 this["hotkey8"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("$;$;$;$;$;$;$;$;")]
+        public string triggerOnConditions {
+            get {
+                return ((string)(this["triggerOnConditions"]));
+            }
+            set {
+                this["triggerOnConditions"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("$;$;$;$;$;$;$;$;")]
+        public string triggerOffConditions {
+            get {
+                return ((string)(this["triggerOffConditions"]));
+            }
+            set {
+                this["triggerOffConditions"] = value;
+            }
+        }
     }
 }
