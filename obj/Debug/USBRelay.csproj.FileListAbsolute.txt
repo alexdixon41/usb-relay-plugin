@@ -8,3 +8,4 @@ C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.csproj.CopyComple
 C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.dll
 C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.pdb
 C:\ProgramData\YourDynoPlugins\USBRelay.dll.config
+C:\Users\Alex\source\repos\usb-relay-plugin\obj\Debug\USBRelay.Properties.Resources.resources

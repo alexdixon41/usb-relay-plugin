@@ -40,7 +40,9 @@
             this.trigger1Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.triggerOn1Panel = new System.Windows.Forms.Panel();
+            this.clearOn1PanelButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.clearOff1PanelButton = new System.Windows.Forms.Button();
             this.triggerPointOff1NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.compareOff1ComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,12 +59,14 @@
             this.hotkey2Label = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.clearOn2PanelButton = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.triggerSignalOn2ComboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.triggerPointOn2NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.compareOn2ComboBox = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.clearOff2PanelButton = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.triggerSignalOff2ComboBox = new System.Windows.Forms.ComboBox();
             this.triggerPointOff2NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -76,12 +80,14 @@
             this.hotkey3Label = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.clearOn3PanelButton = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.triggerSignalOn3ComboBox = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.triggerPointOn3NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.compareOn3ComboBox = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.clearOff3PanelButton = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.triggerSignalOff3ComboBox = new System.Windows.Forms.ComboBox();
             this.triggerPointOff3NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -95,12 +101,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.hotkey4Label = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.clearOn4PanelButton = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.triggerSignalOn4ComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.triggerPointOn4NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.compareOn4ComboBox = new System.Windows.Forms.ComboBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.clearOff4PanelButton = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.triggerSignalOff4ComboBox = new System.Windows.Forms.ComboBox();
             this.triggerPointOff4NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -114,12 +122,14 @@
             this.label27 = new System.Windows.Forms.Label();
             this.hotkey5Label = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.clearOn5PanelButton = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.triggerSignalOn5ComboBox = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.triggerPointOn5NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.compareOn5ComboBox = new System.Windows.Forms.ComboBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.clearOff5PanelButton = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.triggerSignalOff5ComboBox = new System.Windows.Forms.ComboBox();
             this.triggerPointOff5NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -133,12 +143,14 @@
             this.label34 = new System.Windows.Forms.Label();
             this.hotkey6Label = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.clearOn6PanelButton = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
             this.triggerSignalOn6ComboBox = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
             this.compareOn6ComboBox = new System.Windows.Forms.ComboBox();
             this.triggerPointOn6NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.clearOff6PanelButton = new System.Windows.Forms.Button();
             this.triggerPointOff6NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label40 = new System.Windows.Forms.Label();
             this.triggerSignalOff6ComboBox = new System.Windows.Forms.ComboBox();
@@ -152,12 +164,14 @@
             this.label41 = new System.Windows.Forms.Label();
             this.hotkey7Label = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.clearOn7PanelButton = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.triggerSignalOn7ComboBox = new System.Windows.Forms.ComboBox();
             this.label43 = new System.Windows.Forms.Label();
             this.compareOn7ComboBox = new System.Windows.Forms.ComboBox();
             this.triggerPointOn7NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.clearOff7PanelButton = new System.Windows.Forms.Button();
             this.triggerPointOff7NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label47 = new System.Windows.Forms.Label();
             this.triggerSignalOff7ComboBox = new System.Windows.Forms.ComboBox();
@@ -171,19 +185,20 @@
             this.label48 = new System.Windows.Forms.Label();
             this.hotkey8Label = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.clearOn8PanelButton = new System.Windows.Forms.Button();
             this.label51 = new System.Windows.Forms.Label();
             this.triggerSignalOn8ComboBox = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
             this.compareOn8ComboBox = new System.Windows.Forms.ComboBox();
             this.triggerPointOn8NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.clearOff8PanelButton = new System.Windows.Forms.Button();
             this.triggerPointOff8NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label54 = new System.Windows.Forms.Label();
             this.triggerSignalOff8ComboBox = new System.Windows.Forms.ComboBox();
             this.compareOff8ComboBox = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
             this.relay8Button = new System.Windows.Forms.Button();
-            this.offLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.triggerPointOn1NumericUpDown)).BeginInit();
             this.triggerOn1Panel.SuspendLayout();
@@ -231,7 +246,7 @@
             // 
             this.serialNumberLabel.AutoSize = true;
             this.serialNumberLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serialNumberLabel.Location = new System.Drawing.Point(126, 9);
+            this.serialNumberLabel.Location = new System.Drawing.Point(198, 9);
             this.serialNumberLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.serialNumberLabel.Name = "serialNumberLabel";
             this.serialNumberLabel.Size = new System.Drawing.Size(109, 17);
@@ -244,10 +259,10 @@
             this.relay1Button.BackColor = System.Drawing.Color.Tomato;
             this.relay1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay1Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay1Button.Location = new System.Drawing.Point(759, 3);
+            this.relay1Button.Location = new System.Drawing.Point(776, 3);
             this.relay1Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay1Button.Name = "relay1Button";
-            this.relay1Button.Size = new System.Drawing.Size(76, 61);
+            this.relay1Button.Size = new System.Drawing.Size(60, 61);
             this.relay1Button.TabIndex = 8;
             this.relay1Button.Text = "On";
             this.relay1Button.UseVisualStyleBackColor = false;
@@ -257,7 +272,7 @@
             // 
             this.hotkey1Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey1Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey1Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey1Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey1Button.Name = "hotkey1Button";
             this.hotkey1Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey1Button.TabIndex = 7;
@@ -270,11 +285,11 @@
             this.hotkey1Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey1Label.AutoEllipsis = true;
             this.hotkey1Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey1Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey1Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey1Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey1Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey1Label.Name = "hotkey1Label";
-            this.hotkey1Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey1Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey1Label.TabIndex = 6;
             this.hotkey1Label.Text = "<none>";
             this.hotkey1Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -285,16 +300,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn1NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn1NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn1NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn1NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn1NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn1NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn1NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn1NumericUpDown.Name = "triggerPointOn1NumericUpDown";
-            this.triggerPointOn1NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn1NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn1NumericUpDown.TabIndex = 5;
             this.triggerPointOn1NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -353,14 +367,15 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 17);
+            this.label1.Size = new System.Drawing.Size(183, 17);
             this.label1.TabIndex = 27;
-            this.label1.Text = "USB Relay Serial:";
+            this.label1.Text = "Relay Device Serial Number:";
             // 
             // triggerOn1Panel
             // 
             this.triggerOn1Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.triggerOn1Panel.Controls.Add(this.clearOn1PanelButton);
             this.triggerOn1Panel.Controls.Add(this.triggerPointOn1NumericUpDown);
             this.triggerOn1Panel.Controls.Add(this.compareOn1ComboBox);
             this.triggerOn1Panel.Controls.Add(this.is1Label);
@@ -369,13 +384,30 @@
             this.triggerOn1Panel.Location = new System.Drawing.Point(70, 3);
             this.triggerOn1Panel.MinimumSize = new System.Drawing.Size(430, 0);
             this.triggerOn1Panel.Name = "triggerOn1Panel";
-            this.triggerOn1Panel.Size = new System.Drawing.Size(456, 30);
+            this.triggerOn1Panel.Size = new System.Drawing.Size(488, 30);
             this.triggerOn1Panel.TabIndex = 0;
+            // 
+            // clearOn1PanelButton
+            // 
+            this.clearOn1PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn1PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn1PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn1PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn1PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn1PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn1PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn1PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn1PanelButton.Name = "clearOn1PanelButton";
+            this.clearOn1PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn1PanelButton.TabIndex = 38;
+            this.clearOn1PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn1PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.clearOff1PanelButton);
             this.panel1.Controls.Add(this.triggerPointOff1NumericUpDown);
             this.panel1.Controls.Add(this.compareOff1ComboBox);
             this.panel1.Controls.Add(this.label3);
@@ -384,8 +416,24 @@
             this.panel1.Location = new System.Drawing.Point(70, 34);
             this.panel1.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(456, 30);
+            this.panel1.Size = new System.Drawing.Size(488, 30);
             this.panel1.TabIndex = 9;
+            // 
+            // clearOff1PanelButton
+            // 
+            this.clearOff1PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff1PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff1PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff1PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff1PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff1PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff1PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff1PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff1PanelButton.Name = "clearOff1PanelButton";
+            this.clearOff1PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff1PanelButton.TabIndex = 39;
+            this.clearOff1PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff1PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // triggerPointOff1NumericUpDown
             // 
@@ -393,16 +441,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff1NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff1NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff1NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff1NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff1NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff1NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff1NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff1NumericUpDown.Name = "triggerPointOff1NumericUpDown";
-            this.triggerPointOff1NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff1NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff1NumericUpDown.TabIndex = 5;
             this.triggerPointOff1NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -469,6 +516,7 @@
             this.relay1Panel.Controls.Add(this.triggerOn1Panel);
             this.relay1Panel.Controls.Add(this.panel1);
             this.relay1Panel.Location = new System.Drawing.Point(12, 44);
+            this.relay1Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay1Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay1Panel.Name = "relay1Panel";
             this.relay1Panel.Size = new System.Drawing.Size(840, 69);
@@ -482,14 +530,14 @@
             this.label31.Location = new System.Drawing.Point(66, 0);
             this.label31.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(1, 68);
+            this.label31.Size = new System.Drawing.Size(1, 135);
             this.label31.TabIndex = 37;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(530, 0);
+            this.label2.Location = new System.Drawing.Point(562, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1, 68);
@@ -522,6 +570,7 @@
             this.relay2Panel.Controls.Add(this.panel6);
             this.relay2Panel.Controls.Add(this.relay2Button);
             this.relay2Panel.Location = new System.Drawing.Point(12, 115);
+            this.relay2Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay2Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay2Panel.Name = "relay2Panel";
             this.relay2Panel.Size = new System.Drawing.Size(840, 69);
@@ -535,14 +584,14 @@
             this.label35.Location = new System.Drawing.Point(66, 0);
             this.label35.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(1, 68);
+            this.label35.Size = new System.Drawing.Size(1, 135);
             this.label35.TabIndex = 38;
             // 
             // hotkey2Button
             // 
             this.hotkey2Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey2Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey2Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey2Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey2Button.Name = "hotkey2Button";
             this.hotkey2Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey2Button.TabIndex = 7;
@@ -554,7 +603,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(530, 0);
+            this.label6.Location = new System.Drawing.Point(562, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(1, 68);
@@ -565,11 +614,11 @@
             this.hotkey2Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey2Label.AutoEllipsis = true;
             this.hotkey2Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey2Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey2Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey2Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey2Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey2Label.Name = "hotkey2Label";
-            this.hotkey2Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey2Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey2Label.TabIndex = 6;
             this.hotkey2Label.Text = "<none>";
             this.hotkey2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -591,6 +640,7 @@
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.clearOn2PanelButton);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.triggerSignalOn2ComboBox);
             this.panel5.Controls.Add(this.label11);
@@ -599,8 +649,24 @@
             this.panel5.Location = new System.Drawing.Point(70, 3);
             this.panel5.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(456, 30);
+            this.panel5.Size = new System.Drawing.Size(488, 30);
             this.panel5.TabIndex = 0;
+            // 
+            // clearOn2PanelButton
+            // 
+            this.clearOn2PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn2PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn2PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn2PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn2PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn2PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn2PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn2PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn2PanelButton.Name = "clearOn2PanelButton";
+            this.clearOn2PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn2PanelButton.TabIndex = 40;
+            this.clearOn2PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn2PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // label12
             // 
@@ -641,16 +707,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn2NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn2NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn2NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn2NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn2NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn2NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn2NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn2NumericUpDown.Name = "triggerPointOn2NumericUpDown";
-            this.triggerPointOn2NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn2NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn2NumericUpDown.TabIndex = 5;
             this.triggerPointOn2NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -674,6 +739,7 @@
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.clearOff2PanelButton);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.triggerSignalOff2ComboBox);
             this.panel6.Controls.Add(this.triggerPointOff2NumericUpDown);
@@ -681,8 +747,24 @@
             this.panel6.Controls.Add(this.compareOff2ComboBox);
             this.panel6.Location = new System.Drawing.Point(70, 34);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(456, 30);
+            this.panel6.Size = new System.Drawing.Size(488, 30);
             this.panel6.TabIndex = 9;
+            // 
+            // clearOff2PanelButton
+            // 
+            this.clearOff2PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff2PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff2PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff2PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff2PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff2PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff2PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff2PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff2PanelButton.Name = "clearOff2PanelButton";
+            this.clearOff2PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff2PanelButton.TabIndex = 41;
+            this.clearOff2PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff2PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // label15
             // 
@@ -712,16 +794,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff2NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff2NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff2NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff2NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff2NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff2NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff2NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff2NumericUpDown.Name = "triggerPointOff2NumericUpDown";
-            this.triggerPointOff2NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff2NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff2NumericUpDown.TabIndex = 5;
             this.triggerPointOff2NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -758,10 +839,10 @@
             this.relay2Button.BackColor = System.Drawing.Color.Tomato;
             this.relay2Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay2Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay2Button.Location = new System.Drawing.Point(759, 3);
+            this.relay2Button.Location = new System.Drawing.Point(776, 3);
             this.relay2Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay2Button.Name = "relay2Button";
-            this.relay2Button.Size = new System.Drawing.Size(76, 61);
+            this.relay2Button.Size = new System.Drawing.Size(60, 61);
             this.relay2Button.TabIndex = 8;
             this.relay2Button.Text = "On";
             this.relay2Button.UseVisualStyleBackColor = false;
@@ -781,6 +862,7 @@
             this.relay3Panel.Controls.Add(this.panel9);
             this.relay3Panel.Controls.Add(this.relay3Button);
             this.relay3Panel.Location = new System.Drawing.Point(12, 186);
+            this.relay3Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay3Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay3Panel.Name = "relay3Panel";
             this.relay3Panel.Size = new System.Drawing.Size(840, 69);
@@ -794,14 +876,14 @@
             this.label38.Location = new System.Drawing.Point(66, 0);
             this.label38.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(1, 68);
+            this.label38.Size = new System.Drawing.Size(1, 135);
             this.label38.TabIndex = 39;
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(530, 0);
+            this.label10.Location = new System.Drawing.Point(562, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(1, 68);
@@ -811,7 +893,7 @@
             // 
             this.hotkey3Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey3Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey3Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey3Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey3Button.Name = "hotkey3Button";
             this.hotkey3Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey3Button.TabIndex = 7;
@@ -824,11 +906,11 @@
             this.hotkey3Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey3Label.AutoEllipsis = true;
             this.hotkey3Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey3Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey3Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey3Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey3Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey3Label.Name = "hotkey3Label";
-            this.hotkey3Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey3Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey3Label.TabIndex = 6;
             this.hotkey3Label.Text = "<none>";
             this.hotkey3Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -850,6 +932,7 @@
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Controls.Add(this.clearOn3PanelButton);
             this.panel8.Controls.Add(this.label19);
             this.panel8.Controls.Add(this.triggerSignalOn3ComboBox);
             this.panel8.Controls.Add(this.label18);
@@ -858,8 +941,24 @@
             this.panel8.Location = new System.Drawing.Point(70, 3);
             this.panel8.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(456, 30);
+            this.panel8.Size = new System.Drawing.Size(488, 30);
             this.panel8.TabIndex = 0;
+            // 
+            // clearOn3PanelButton
+            // 
+            this.clearOn3PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn3PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn3PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn3PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn3PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn3PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn3PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn3PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn3PanelButton.Name = "clearOn3PanelButton";
+            this.clearOn3PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn3PanelButton.TabIndex = 42;
+            this.clearOn3PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn3PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // label19
             // 
@@ -900,16 +999,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn3NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn3NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn3NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn3NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn3NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn3NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn3NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn3NumericUpDown.Name = "triggerPointOn3NumericUpDown";
-            this.triggerPointOn3NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn3NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn3NumericUpDown.TabIndex = 5;
             this.triggerPointOn3NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -933,6 +1031,7 @@
             // 
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.clearOff3PanelButton);
             this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.triggerSignalOff3ComboBox);
             this.panel9.Controls.Add(this.triggerPointOff3NumericUpDown);
@@ -941,8 +1040,24 @@
             this.panel9.Location = new System.Drawing.Point(70, 34);
             this.panel9.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(456, 30);
+            this.panel9.Size = new System.Drawing.Size(488, 30);
             this.panel9.TabIndex = 9;
+            // 
+            // clearOff3PanelButton
+            // 
+            this.clearOff3PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff3PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff3PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff3PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff3PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff3PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff3PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff3PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff3PanelButton.Name = "clearOff3PanelButton";
+            this.clearOff3PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff3PanelButton.TabIndex = 43;
+            this.clearOff3PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff3PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // label22
             // 
@@ -972,16 +1087,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff3NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff3NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff3NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff3NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff3NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff3NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff3NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff3NumericUpDown.Name = "triggerPointOff3NumericUpDown";
-            this.triggerPointOff3NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff3NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff3NumericUpDown.TabIndex = 5;
             this.triggerPointOff3NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -1018,10 +1132,10 @@
             this.relay3Button.BackColor = System.Drawing.Color.Tomato;
             this.relay3Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay3Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay3Button.Location = new System.Drawing.Point(759, 3);
+            this.relay3Button.Location = new System.Drawing.Point(776, 3);
             this.relay3Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay3Button.Name = "relay3Button";
-            this.relay3Button.Size = new System.Drawing.Size(76, 61);
+            this.relay3Button.Size = new System.Drawing.Size(60, 61);
             this.relay3Button.TabIndex = 8;
             this.relay3Button.Text = "On";
             this.relay3Button.UseVisualStyleBackColor = false;
@@ -1041,6 +1155,7 @@
             this.relay4Panel.Controls.Add(this.panel11);
             this.relay4Panel.Controls.Add(this.relay4Button);
             this.relay4Panel.Location = new System.Drawing.Point(12, 257);
+            this.relay4Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay4Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay4Panel.Name = "relay4Panel";
             this.relay4Panel.Size = new System.Drawing.Size(840, 69);
@@ -1054,14 +1169,14 @@
             this.label42.Location = new System.Drawing.Point(66, 0);
             this.label42.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(1, 68);
+            this.label42.Size = new System.Drawing.Size(1, 135);
             this.label42.TabIndex = 40;
             // 
             // label13
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.BackColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(530, 0);
+            this.label13.Location = new System.Drawing.Point(562, 0);
             this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(1, 68);
@@ -1071,7 +1186,7 @@
             // 
             this.hotkey4Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey4Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey4Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey4Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey4Button.Name = "hotkey4Button";
             this.hotkey4Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey4Button.TabIndex = 7;
@@ -1097,11 +1212,11 @@
             this.hotkey4Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey4Label.AutoEllipsis = true;
             this.hotkey4Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey4Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey4Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey4Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey4Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey4Label.Name = "hotkey4Label";
-            this.hotkey4Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey4Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey4Label.TabIndex = 6;
             this.hotkey4Label.Text = "<none>";
             this.hotkey4Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1110,6 +1225,7 @@
             // 
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.Controls.Add(this.clearOn4PanelButton);
             this.panel10.Controls.Add(this.label23);
             this.panel10.Controls.Add(this.triggerSignalOn4ComboBox);
             this.panel10.Controls.Add(this.label7);
@@ -1118,8 +1234,24 @@
             this.panel10.Location = new System.Drawing.Point(70, 3);
             this.panel10.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(456, 30);
+            this.panel10.Size = new System.Drawing.Size(488, 30);
             this.panel10.TabIndex = 0;
+            // 
+            // clearOn4PanelButton
+            // 
+            this.clearOn4PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn4PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn4PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn4PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn4PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn4PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn4PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn4PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn4PanelButton.Name = "clearOn4PanelButton";
+            this.clearOn4PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn4PanelButton.TabIndex = 44;
+            this.clearOn4PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn4PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // label23
             // 
@@ -1160,16 +1292,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn4NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn4NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn4NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn4NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn4NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn4NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn4NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn4NumericUpDown.Name = "triggerPointOn4NumericUpDown";
-            this.triggerPointOn4NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn4NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn4NumericUpDown.TabIndex = 5;
             this.triggerPointOn4NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -1193,6 +1324,7 @@
             // 
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.Controls.Add(this.clearOff4PanelButton);
             this.panel11.Controls.Add(this.label26);
             this.panel11.Controls.Add(this.triggerSignalOff4ComboBox);
             this.panel11.Controls.Add(this.triggerPointOff4NumericUpDown);
@@ -1201,8 +1333,24 @@
             this.panel11.Location = new System.Drawing.Point(70, 34);
             this.panel11.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(456, 30);
+            this.panel11.Size = new System.Drawing.Size(488, 30);
             this.panel11.TabIndex = 9;
+            // 
+            // clearOff4PanelButton
+            // 
+            this.clearOff4PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff4PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff4PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff4PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff4PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff4PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff4PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff4PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff4PanelButton.Name = "clearOff4PanelButton";
+            this.clearOff4PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff4PanelButton.TabIndex = 45;
+            this.clearOff4PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff4PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // label26
             // 
@@ -1232,16 +1380,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff4NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff4NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff4NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff4NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff4NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff4NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff4NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff4NumericUpDown.Name = "triggerPointOff4NumericUpDown";
-            this.triggerPointOff4NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff4NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff4NumericUpDown.TabIndex = 5;
             this.triggerPointOff4NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -1278,10 +1425,10 @@
             this.relay4Button.BackColor = System.Drawing.Color.Tomato;
             this.relay4Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay4Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay4Button.Location = new System.Drawing.Point(759, 3);
+            this.relay4Button.Location = new System.Drawing.Point(776, 3);
             this.relay4Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay4Button.Name = "relay4Button";
-            this.relay4Button.Size = new System.Drawing.Size(76, 61);
+            this.relay4Button.Size = new System.Drawing.Size(60, 61);
             this.relay4Button.TabIndex = 8;
             this.relay4Button.Text = "On";
             this.relay4Button.UseVisualStyleBackColor = false;
@@ -1301,6 +1448,7 @@
             this.relay5Panel.Controls.Add(this.panel14);
             this.relay5Panel.Controls.Add(this.relay5Button);
             this.relay5Panel.Location = new System.Drawing.Point(12, 328);
+            this.relay5Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay5Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay5Panel.Name = "relay5Panel";
             this.relay5Panel.Size = new System.Drawing.Size(840, 69);
@@ -1314,14 +1462,14 @@
             this.label45.Location = new System.Drawing.Point(66, 0);
             this.label45.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(1, 68);
+            this.label45.Size = new System.Drawing.Size(1, 135);
             this.label45.TabIndex = 41;
             // 
             // label17
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.BackColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(530, 0);
+            this.label17.Location = new System.Drawing.Point(562, 0);
             this.label17.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(1, 68);
@@ -1331,7 +1479,7 @@
             // 
             this.hotkey5Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey5Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey5Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey5Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey5Button.Name = "hotkey5Button";
             this.hotkey5Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey5Button.TabIndex = 7;
@@ -1357,11 +1505,11 @@
             this.hotkey5Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey5Label.AutoEllipsis = true;
             this.hotkey5Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey5Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey5Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey5Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey5Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey5Label.Name = "hotkey5Label";
-            this.hotkey5Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey5Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey5Label.TabIndex = 6;
             this.hotkey5Label.Text = "<none>";
             this.hotkey5Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1370,6 +1518,7 @@
             // 
             this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel13.Controls.Add(this.clearOn5PanelButton);
             this.panel13.Controls.Add(this.label30);
             this.panel13.Controls.Add(this.triggerSignalOn5ComboBox);
             this.panel13.Controls.Add(this.label29);
@@ -1378,8 +1527,24 @@
             this.panel13.Location = new System.Drawing.Point(70, 3);
             this.panel13.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(456, 30);
+            this.panel13.Size = new System.Drawing.Size(488, 30);
             this.panel13.TabIndex = 0;
+            // 
+            // clearOn5PanelButton
+            // 
+            this.clearOn5PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn5PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn5PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn5PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn5PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn5PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn5PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn5PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn5PanelButton.Name = "clearOn5PanelButton";
+            this.clearOn5PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn5PanelButton.TabIndex = 46;
+            this.clearOn5PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn5PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // label30
             // 
@@ -1420,16 +1585,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn5NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn5NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn5NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn5NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn5NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn5NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn5NumericUpDown.Name = "triggerPointOn5NumericUpDown";
-            this.triggerPointOn5NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn5NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn5NumericUpDown.TabIndex = 5;
             this.triggerPointOn5NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -1453,6 +1617,7 @@
             // 
             this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel14.Controls.Add(this.clearOff5PanelButton);
             this.panel14.Controls.Add(this.label33);
             this.panel14.Controls.Add(this.triggerSignalOff5ComboBox);
             this.panel14.Controls.Add(this.triggerPointOff5NumericUpDown);
@@ -1461,8 +1626,24 @@
             this.panel14.Location = new System.Drawing.Point(70, 34);
             this.panel14.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(456, 30);
+            this.panel14.Size = new System.Drawing.Size(488, 30);
             this.panel14.TabIndex = 9;
+            // 
+            // clearOff5PanelButton
+            // 
+            this.clearOff5PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff5PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff5PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff5PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff5PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff5PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff5PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff5PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff5PanelButton.Name = "clearOff5PanelButton";
+            this.clearOff5PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff5PanelButton.TabIndex = 47;
+            this.clearOff5PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff5PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // label33
             // 
@@ -1492,16 +1673,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff5NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff5NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff5NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff5NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff5NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff5NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff5NumericUpDown.Name = "triggerPointOff5NumericUpDown";
-            this.triggerPointOff5NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff5NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff5NumericUpDown.TabIndex = 5;
             this.triggerPointOff5NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -1538,10 +1718,10 @@
             this.relay5Button.BackColor = System.Drawing.Color.Tomato;
             this.relay5Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay5Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay5Button.Location = new System.Drawing.Point(759, 3);
+            this.relay5Button.Location = new System.Drawing.Point(776, 3);
             this.relay5Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay5Button.Name = "relay5Button";
-            this.relay5Button.Size = new System.Drawing.Size(76, 61);
+            this.relay5Button.Size = new System.Drawing.Size(60, 61);
             this.relay5Button.TabIndex = 8;
             this.relay5Button.Text = "On";
             this.relay5Button.UseVisualStyleBackColor = false;
@@ -1561,6 +1741,7 @@
             this.relay6Panel.Controls.Add(this.panel17);
             this.relay6Panel.Controls.Add(this.relay6Button);
             this.relay6Panel.Location = new System.Drawing.Point(12, 399);
+            this.relay6Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay6Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay6Panel.Name = "relay6Panel";
             this.relay6Panel.Size = new System.Drawing.Size(840, 69);
@@ -1574,14 +1755,14 @@
             this.label49.Location = new System.Drawing.Point(66, 0);
             this.label49.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(1, 68);
+            this.label49.Size = new System.Drawing.Size(1, 135);
             this.label49.TabIndex = 42;
             // 
             // label20
             // 
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.BackColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(530, 0);
+            this.label20.Location = new System.Drawing.Point(562, 0);
             this.label20.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(1, 68);
@@ -1591,7 +1772,7 @@
             // 
             this.hotkey6Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey6Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey6Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey6Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey6Button.Name = "hotkey6Button";
             this.hotkey6Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey6Button.TabIndex = 7;
@@ -1617,11 +1798,11 @@
             this.hotkey6Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey6Label.AutoEllipsis = true;
             this.hotkey6Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey6Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey6Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey6Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey6Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey6Label.Name = "hotkey6Label";
-            this.hotkey6Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey6Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey6Label.TabIndex = 6;
             this.hotkey6Label.Text = "<none>";
             this.hotkey6Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1630,6 +1811,7 @@
             // 
             this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel16.Controls.Add(this.clearOn6PanelButton);
             this.panel16.Controls.Add(this.label37);
             this.panel16.Controls.Add(this.triggerSignalOn6ComboBox);
             this.panel16.Controls.Add(this.label36);
@@ -1638,8 +1820,24 @@
             this.panel16.Location = new System.Drawing.Point(70, 3);
             this.panel16.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(456, 30);
+            this.panel16.Size = new System.Drawing.Size(488, 30);
             this.panel16.TabIndex = 0;
+            // 
+            // clearOn6PanelButton
+            // 
+            this.clearOn6PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn6PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn6PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn6PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn6PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn6PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn6PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn6PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn6PanelButton.Name = "clearOn6PanelButton";
+            this.clearOn6PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn6PanelButton.TabIndex = 48;
+            this.clearOn6PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn6PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // label37
             // 
@@ -1696,16 +1894,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn6NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn6NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn6NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn6NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn6NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn6NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn6NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn6NumericUpDown.Name = "triggerPointOn6NumericUpDown";
-            this.triggerPointOn6NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn6NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn6NumericUpDown.TabIndex = 5;
             this.triggerPointOn6NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -1713,6 +1910,7 @@
             // 
             this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel17.Controls.Add(this.clearOff6PanelButton);
             this.panel17.Controls.Add(this.triggerPointOff6NumericUpDown);
             this.panel17.Controls.Add(this.label40);
             this.panel17.Controls.Add(this.triggerSignalOff6ComboBox);
@@ -1721,8 +1919,24 @@
             this.panel17.Location = new System.Drawing.Point(70, 34);
             this.panel17.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(456, 30);
+            this.panel17.Size = new System.Drawing.Size(488, 30);
             this.panel17.TabIndex = 9;
+            // 
+            // clearOff6PanelButton
+            // 
+            this.clearOff6PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff6PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff6PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff6PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff6PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff6PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff6PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff6PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff6PanelButton.Name = "clearOff6PanelButton";
+            this.clearOff6PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff6PanelButton.TabIndex = 49;
+            this.clearOff6PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff6PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // triggerPointOff6NumericUpDown
             // 
@@ -1730,16 +1944,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff6NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff6NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff6NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff6NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff6NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff6NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff6NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff6NumericUpDown.Name = "triggerPointOff6NumericUpDown";
-            this.triggerPointOff6NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff6NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff6NumericUpDown.TabIndex = 5;
             this.triggerPointOff6NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -1798,10 +2011,10 @@
             this.relay6Button.BackColor = System.Drawing.Color.Tomato;
             this.relay6Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay6Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay6Button.Location = new System.Drawing.Point(759, 3);
+            this.relay6Button.Location = new System.Drawing.Point(776, 3);
             this.relay6Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay6Button.Name = "relay6Button";
-            this.relay6Button.Size = new System.Drawing.Size(76, 61);
+            this.relay6Button.Size = new System.Drawing.Size(60, 61);
             this.relay6Button.TabIndex = 8;
             this.relay6Button.Text = "On";
             this.relay6Button.UseVisualStyleBackColor = false;
@@ -1821,6 +2034,7 @@
             this.relay7Panel.Controls.Add(this.panel20);
             this.relay7Panel.Controls.Add(this.relay7Button);
             this.relay7Panel.Location = new System.Drawing.Point(12, 470);
+            this.relay7Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay7Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay7Panel.Name = "relay7Panel";
             this.relay7Panel.Size = new System.Drawing.Size(840, 69);
@@ -1834,14 +2048,14 @@
             this.label52.Location = new System.Drawing.Point(66, 0);
             this.label52.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(1, 68);
+            this.label52.Size = new System.Drawing.Size(1, 135);
             this.label52.TabIndex = 43;
             // 
             // label24
             // 
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.BackColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(530, 0);
+            this.label24.Location = new System.Drawing.Point(562, 0);
             this.label24.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(1, 68);
@@ -1851,7 +2065,7 @@
             // 
             this.hotkey7Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey7Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey7Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey7Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey7Button.Name = "hotkey7Button";
             this.hotkey7Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey7Button.TabIndex = 7;
@@ -1877,11 +2091,11 @@
             this.hotkey7Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey7Label.AutoEllipsis = true;
             this.hotkey7Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey7Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey7Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey7Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey7Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey7Label.Name = "hotkey7Label";
-            this.hotkey7Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey7Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey7Label.TabIndex = 6;
             this.hotkey7Label.Text = "<none>";
             this.hotkey7Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1890,6 +2104,7 @@
             // 
             this.panel19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel19.Controls.Add(this.clearOn7PanelButton);
             this.panel19.Controls.Add(this.label44);
             this.panel19.Controls.Add(this.triggerSignalOn7ComboBox);
             this.panel19.Controls.Add(this.label43);
@@ -1898,8 +2113,24 @@
             this.panel19.Location = new System.Drawing.Point(70, 3);
             this.panel19.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(456, 30);
+            this.panel19.Size = new System.Drawing.Size(488, 30);
             this.panel19.TabIndex = 0;
+            // 
+            // clearOn7PanelButton
+            // 
+            this.clearOn7PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn7PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn7PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn7PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn7PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn7PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn7PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn7PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn7PanelButton.Name = "clearOn7PanelButton";
+            this.clearOn7PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn7PanelButton.TabIndex = 50;
+            this.clearOn7PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn7PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // label44
             // 
@@ -1956,16 +2187,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn7NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn7NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn7NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn7NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn7NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn7NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn7NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn7NumericUpDown.Name = "triggerPointOn7NumericUpDown";
-            this.triggerPointOn7NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn7NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn7NumericUpDown.TabIndex = 5;
             this.triggerPointOn7NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -1973,6 +2203,7 @@
             // 
             this.panel20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel20.Controls.Add(this.clearOff7PanelButton);
             this.panel20.Controls.Add(this.triggerPointOff7NumericUpDown);
             this.panel20.Controls.Add(this.label47);
             this.panel20.Controls.Add(this.triggerSignalOff7ComboBox);
@@ -1981,8 +2212,24 @@
             this.panel20.Location = new System.Drawing.Point(70, 34);
             this.panel20.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(456, 30);
+            this.panel20.Size = new System.Drawing.Size(488, 30);
             this.panel20.TabIndex = 9;
+            // 
+            // clearOff7PanelButton
+            // 
+            this.clearOff7PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff7PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff7PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff7PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff7PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff7PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff7PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff7PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff7PanelButton.Name = "clearOff7PanelButton";
+            this.clearOff7PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff7PanelButton.TabIndex = 51;
+            this.clearOff7PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff7PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // triggerPointOff7NumericUpDown
             // 
@@ -1990,16 +2237,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff7NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff7NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff7NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff7NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff7NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff7NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff7NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff7NumericUpDown.Name = "triggerPointOff7NumericUpDown";
-            this.triggerPointOff7NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff7NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff7NumericUpDown.TabIndex = 5;
             this.triggerPointOff7NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -2058,10 +2304,10 @@
             this.relay7Button.BackColor = System.Drawing.Color.Tomato;
             this.relay7Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay7Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay7Button.Location = new System.Drawing.Point(759, 3);
+            this.relay7Button.Location = new System.Drawing.Point(776, 3);
             this.relay7Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay7Button.Name = "relay7Button";
-            this.relay7Button.Size = new System.Drawing.Size(76, 61);
+            this.relay7Button.Size = new System.Drawing.Size(60, 61);
             this.relay7Button.TabIndex = 8;
             this.relay7Button.Text = "On";
             this.relay7Button.UseVisualStyleBackColor = false;
@@ -2081,6 +2327,7 @@
             this.relay8Panel.Controls.Add(this.panel23);
             this.relay8Panel.Controls.Add(this.relay8Button);
             this.relay8Panel.Location = new System.Drawing.Point(12, 541);
+            this.relay8Panel.MaximumSize = new System.Drawing.Size(930, 69);
             this.relay8Panel.MinimumSize = new System.Drawing.Size(820, 2);
             this.relay8Panel.Name = "relay8Panel";
             this.relay8Panel.Size = new System.Drawing.Size(840, 69);
@@ -2094,14 +2341,14 @@
             this.label55.Location = new System.Drawing.Point(66, 0);
             this.label55.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(1, 68);
+            this.label55.Size = new System.Drawing.Size(1, 135);
             this.label55.TabIndex = 44;
             // 
             // label28
             // 
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.BackColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(530, 0);
+            this.label28.Location = new System.Drawing.Point(562, 0);
             this.label28.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(1, 68);
@@ -2111,7 +2358,7 @@
             // 
             this.hotkey8Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey8Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey8Button.Location = new System.Drawing.Point(681, 22);
+            this.hotkey8Button.Location = new System.Drawing.Point(695, 22);
             this.hotkey8Button.Name = "hotkey8Button";
             this.hotkey8Button.Size = new System.Drawing.Size(70, 23);
             this.hotkey8Button.TabIndex = 7;
@@ -2137,11 +2384,11 @@
             this.hotkey8Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hotkey8Label.AutoEllipsis = true;
             this.hotkey8Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotkey8Label.Location = new System.Drawing.Point(537, 26);
+            this.hotkey8Label.Location = new System.Drawing.Point(569, 26);
             this.hotkey8Label.Margin = new System.Windows.Forms.Padding(5, 6, 5, 0);
             this.hotkey8Label.MinimumSize = new System.Drawing.Size(40, 0);
             this.hotkey8Label.Name = "hotkey8Label";
-            this.hotkey8Label.Size = new System.Drawing.Size(136, 20);
+            this.hotkey8Label.Size = new System.Drawing.Size(118, 20);
             this.hotkey8Label.TabIndex = 6;
             this.hotkey8Label.Text = "<none>";
             this.hotkey8Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2150,6 +2397,7 @@
             // 
             this.panel22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel22.Controls.Add(this.clearOn8PanelButton);
             this.panel22.Controls.Add(this.label51);
             this.panel22.Controls.Add(this.triggerSignalOn8ComboBox);
             this.panel22.Controls.Add(this.label50);
@@ -2158,8 +2406,24 @@
             this.panel22.Location = new System.Drawing.Point(70, 3);
             this.panel22.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(456, 30);
+            this.panel22.Size = new System.Drawing.Size(488, 30);
             this.panel22.TabIndex = 0;
+            // 
+            // clearOn8PanelButton
+            // 
+            this.clearOn8PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOn8PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOn8PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOn8PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOn8PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOn8PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOn8PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOn8PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOn8PanelButton.Name = "clearOn8PanelButton";
+            this.clearOn8PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOn8PanelButton.TabIndex = 52;
+            this.clearOn8PanelButton.UseVisualStyleBackColor = false;
+            this.clearOn8PanelButton.Click += new System.EventHandler(this.ClearOnPanelButton_Click);
             // 
             // label51
             // 
@@ -2216,16 +2480,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOn8NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOn8NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOn8NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOn8NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOn8NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOn8NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOn8NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOn8NumericUpDown.Name = "triggerPointOn8NumericUpDown";
-            this.triggerPointOn8NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOn8NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOn8NumericUpDown.TabIndex = 5;
             this.triggerPointOn8NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOnNumericUpDown_ValueChanged);
             // 
@@ -2233,6 +2496,7 @@
             // 
             this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel23.Controls.Add(this.clearOff8PanelButton);
             this.panel23.Controls.Add(this.triggerPointOff8NumericUpDown);
             this.panel23.Controls.Add(this.label54);
             this.panel23.Controls.Add(this.triggerSignalOff8ComboBox);
@@ -2241,8 +2505,24 @@
             this.panel23.Location = new System.Drawing.Point(70, 34);
             this.panel23.MinimumSize = new System.Drawing.Size(430, 0);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(456, 30);
+            this.panel23.Size = new System.Drawing.Size(488, 30);
             this.panel23.TabIndex = 9;
+            // 
+            // clearOff8PanelButton
+            // 
+            this.clearOff8PanelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOff8PanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearOff8PanelButton.FlatAppearance.BorderSize = 0;
+            this.clearOff8PanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.clearOff8PanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearOff8PanelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearOff8PanelButton.Image = global::USBRelay.Properties.Resources.Cancel;
+            this.clearOff8PanelButton.Location = new System.Drawing.Point(462, 3);
+            this.clearOff8PanelButton.Name = "clearOff8PanelButton";
+            this.clearOff8PanelButton.Size = new System.Drawing.Size(23, 23);
+            this.clearOff8PanelButton.TabIndex = 53;
+            this.clearOff8PanelButton.UseVisualStyleBackColor = false;
+            this.clearOff8PanelButton.Click += new System.EventHandler(this.ClearOffPanelButton_Click);
             // 
             // triggerPointOff8NumericUpDown
             // 
@@ -2250,16 +2530,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.triggerPointOff8NumericUpDown.DecimalPlaces = 2;
             this.triggerPointOff8NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triggerPointOff8NumericUpDown.Location = new System.Drawing.Point(381, 5);
+            this.triggerPointOff8NumericUpDown.Location = new System.Drawing.Point(381, 3);
             this.triggerPointOff8NumericUpDown.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.triggerPointOff8NumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.triggerPointOff8NumericUpDown.MaximumSize = new System.Drawing.Size(150, 0);
             this.triggerPointOff8NumericUpDown.Name = "triggerPointOff8NumericUpDown";
-            this.triggerPointOff8NumericUpDown.Size = new System.Drawing.Size(72, 22);
+            this.triggerPointOff8NumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.triggerPointOff8NumericUpDown.TabIndex = 5;
             this.triggerPointOff8NumericUpDown.ValueChanged += new System.EventHandler(this.TriggerPointOffNumericUpDown_ValueChanged);
             // 
@@ -2318,29 +2597,21 @@
             this.relay8Button.BackColor = System.Drawing.Color.Tomato;
             this.relay8Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.relay8Button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relay8Button.Location = new System.Drawing.Point(759, 3);
+            this.relay8Button.Location = new System.Drawing.Point(776, 3);
             this.relay8Button.Margin = new System.Windows.Forms.Padding(8, 3, 6, 3);
             this.relay8Button.Name = "relay8Button";
-            this.relay8Button.Size = new System.Drawing.Size(76, 61);
+            this.relay8Button.Size = new System.Drawing.Size(60, 61);
             this.relay8Button.TabIndex = 8;
             this.relay8Button.Text = "On";
             this.relay8Button.UseVisualStyleBackColor = false;
             this.relay8Button.Click += new System.EventHandler(this.ToggleRelayButton_Click);
-            // 
-            // offLabel
-            // 
-            this.offLabel.AutoSize = true;
-            this.offLabel.Location = new System.Drawing.Point(409, 12);
-            this.offLabel.Name = "offLabel";
-            this.offLabel.Size = new System.Drawing.Size(44, 13);
-            this.offLabel.TabIndex = 36;
-            this.offLabel.Text = "label56";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 617);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(840, 167);
             this.textBox1.TabIndex = 37;
             // 
@@ -2352,7 +2623,6 @@
             this.AutoScrollMinSize = new System.Drawing.Size(840, 620);
             this.ClientSize = new System.Drawing.Size(864, 796);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.offLabel);
             this.Controls.Add(this.relay8Panel);
             this.Controls.Add(this.relay7Panel);
             this.Controls.Add(this.relay6Panel);
@@ -2587,7 +2857,22 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label offLabel;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button clearOn1PanelButton;
+        private System.Windows.Forms.Button clearOff1PanelButton;
+        private System.Windows.Forms.Button clearOn2PanelButton;
+        private System.Windows.Forms.Button clearOff2PanelButton;
+        private System.Windows.Forms.Button clearOn3PanelButton;
+        private System.Windows.Forms.Button clearOff3PanelButton;
+        private System.Windows.Forms.Button clearOn4PanelButton;
+        private System.Windows.Forms.Button clearOff4PanelButton;
+        private System.Windows.Forms.Button clearOn5PanelButton;
+        private System.Windows.Forms.Button clearOff5PanelButton;
+        private System.Windows.Forms.Button clearOn6PanelButton;
+        private System.Windows.Forms.Button clearOff6PanelButton;
+        private System.Windows.Forms.Button clearOn7PanelButton;
+        private System.Windows.Forms.Button clearOff7PanelButton;
+        private System.Windows.Forms.Button clearOn8PanelButton;
+        private System.Windows.Forms.Button clearOff8PanelButton;
     }
 }
