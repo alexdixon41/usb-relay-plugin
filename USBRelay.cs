@@ -25,12 +25,12 @@ namespace USBRelay
 
         public bool triggersEnabled = true;
 
-        private readonly System.Windows.Forms.ToolStripMenuItem menuEntry = new ToolStripMenuItem();
-        private readonly List<string> triggerSignals = new List<string>();
+        private readonly System.Windows.Forms.ToolStripMenuItem menuEntry = new ToolStripMenuItem();        
         private List<OnePlugInDataConnection> allPluginDataConnections = new List<OnePlugInDataConnection>();
         private DynoDataConnection dynoDataConnection;        
         private readonly USBRelayConfig relayConfigForm;
 
+        public readonly List<string> triggerSignals = new List<string>();
         public bool[] relayCanToggle = new bool[MAX_NUMBER_OF_RELAYS];
         public List<TriggerCondition> triggerOnConditions = new List<TriggerCondition>();
         public List<TriggerCondition> triggerOffConditions = new List<TriggerCondition>();        
@@ -173,7 +173,6 @@ namespace USBRelay
         private void menuItem_Click(object sender, EventArgs e)
         {
             SetupTriggerSignals();            
-            relayConfigForm.SetTriggerSignals(triggerSignals.ToArray());
             relayConfigForm.ShowDialog(); //Shows the configure page.
         }
 
@@ -255,7 +254,7 @@ namespace USBRelay
                         break;
                     case "ThermoC2":
                         //signalValue = values["ThermoC2"];
-                        if (dynoDataConnection?.polledDataSet.EGT.Length > 1)
+                        if (dynoDataConnection?.polledDataSet.EGT != null && dynoDataConnection?.polledDataSet.EGT.Length > 1)
                         {
                             signalValue = (float)dynoDataConnection?.polledDataSet.EGT[1];
                         }

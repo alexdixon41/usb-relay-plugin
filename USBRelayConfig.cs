@@ -215,12 +215,24 @@ namespace USBRelay
             // Disable triggers while the config window is open
             relayPlugin.triggersEnabled = false;
 
+            // Setup signal ComboBoxes
+            SetTriggerSignals(relayPlugin.triggerSignals.ToArray());
+
             // Update Controls
-            for (int i = 1; i <= connectedRelayCount; i++)
+            for (int i = 1; i <= USBRelay.MAX_NUMBER_OF_RELAYS; i++)
             {
                 SetRelayButtonAppearance(i - 1, RelayManager.ChannelOpened(i));                
             }
             LoadTriggerConditionControls();
+        }
+
+        public void SetTriggerSignals(string[] triggerSignals)
+        {
+            foreach (ComboBox triggerComboBox in triggerSignalOnComboBoxes.Concat(triggerSignalOffComboBoxes))
+            {
+                triggerComboBox.Items.Clear();
+                triggerComboBox.Items.AddRange(triggerSignals);
+            }
         }
 
         private void LoadTriggerConditionControls()
@@ -294,13 +306,13 @@ namespace USBRelay
         {
             if (relayOpen)
             {
-                relayButtons[channel].BackColor = Color.Green;
-                relayButtons[channel].Text = "Off";
+                relayButtons[channel].BackColor = Color.Tomato;
+                relayButtons[channel].Text = "On";                
             }
             else
-            {                
-                relayButtons[channel].BackColor = Color.Tomato;
-                relayButtons[channel].Text = "On";
+            {
+                relayButtons[channel].BackColor = Color.Green;
+                relayButtons[channel].Text = "Off";
             }
         }
 
@@ -340,14 +352,7 @@ namespace USBRelay
             {
                 ToggleRelay(relayChannel);
             }            
-        }
-
-        public void SetTriggerSignals(string[] triggerSignals)
-        {
-            foreach (ComboBox triggerComboBox in triggerSignalOnComboBoxes.Concat(triggerSignalOffComboBoxes)) {
-                triggerComboBox.Items.AddRange(triggerSignals);
-            }
-        }
+        }        
 
         private void TriggerSignalOnComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
