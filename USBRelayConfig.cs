@@ -172,7 +172,8 @@ namespace USBRelay
 
             // Checks to see if there is a connected USB Relay board.
             if (RelayManager.DevicesCount() == 0)
-            {                
+            {
+                connectedRelayCount = 0;
                 relay1Panel.Enabled = false;
                 relay2Panel.Enabled = false;
                 relay3Panel.Enabled = false;
@@ -352,48 +353,66 @@ namespace USBRelay
             {
                 ToggleRelay(relayChannel);
             }            
-        }        
+        }
 
         private void TriggerSignalOnComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox changedComboBox = sender as ComboBox;
             int rowIndex = triggerSignalOnComboBoxes.IndexOf(changedComboBox);
-            relayPlugin.triggerOnConditions[rowIndex].Signal = changedComboBox.Text;            
+            if (rowIndex >= 0 && rowIndex < relayPlugin.triggerOnConditions.Count)
+            {
+                relayPlugin.triggerOnConditions[rowIndex].Signal = changedComboBox.Text;
+            }
         }
 
         private void TriggerSignalOffComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox changedComboBox = sender as ComboBox;
             int rowIndex = triggerSignalOffComboBoxes.IndexOf(changedComboBox);
-            relayPlugin.triggerOffConditions[rowIndex].Signal = changedComboBox.Text;            
+            if (rowIndex >= 0 && rowIndex < relayPlugin.triggerOffConditions.Count)
+            {
+                relayPlugin.triggerOffConditions[rowIndex].Signal = changedComboBox.Text;
+            }
         }
 
         private void CompareOnComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox changedComboBox = sender as ComboBox;
             int rowIndex = triggerCompareOnComboBoxes.IndexOf(changedComboBox);
-            relayPlugin.triggerOnConditions[rowIndex].Operator = changedComboBox.Text;                        
+            if (rowIndex >= 0 && rowIndex < relayPlugin.triggerOnConditions.Count)
+            {
+                relayPlugin.triggerOnConditions[rowIndex].Operator = changedComboBox.Text;
+            }
         }
 
         private void CompareOffComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox changedComboBox = sender as ComboBox;
             int rowIndex = triggerCompareOffComboBoxes.IndexOf(changedComboBox);
-            relayPlugin.triggerOffConditions[rowIndex].Operator = changedComboBox.Text;                        
+            if (rowIndex >= 0 && rowIndex < relayPlugin.triggerOffConditions.Count)
+            {
+                relayPlugin.triggerOffConditions[rowIndex].Operator = changedComboBox.Text;
+            }
         }
 
         private void TriggerPointOnNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown changedNumericUpDown = sender as NumericUpDown;
             int rowIndex = triggerPointOnNumericUpDowns.IndexOf(changedNumericUpDown);
-            relayPlugin.triggerOnConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;            
+            if (rowIndex >= 0 && rowIndex < relayPlugin.triggerOnConditions.Count)
+            {
+                relayPlugin.triggerOnConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;
+            }
         }
 
         private void TriggerPointOffNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown changedNumericUpDown = sender as NumericUpDown;
             int rowIndex = triggerPointOffNumericUpDowns.IndexOf(changedNumericUpDown);
-            relayPlugin.triggerOffConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;            
+            if (rowIndex >= 0 && rowIndex < relayPlugin.triggerOffConditions.Count)
+            {
+                relayPlugin.triggerOffConditions[rowIndex].Threshold = (float)changedNumericUpDown.Value;
+            }
         }
 
         private void ClearOnPanelButton_Click(object sender, EventArgs e)
@@ -412,13 +431,6 @@ namespace USBRelay
             triggerSignalOffComboBoxes[rowIndex].SelectedIndex = 0;
             triggerCompareOffComboBoxes[rowIndex].SelectedIndex = 0;
             triggerPointOffNumericUpDowns[rowIndex].Value = 0;
-        }
-
-        //TODO - delete this        
-        public void appendLogText(string text)
-        {
-            textBox1.AppendText(text);
-            textBox1.AppendText(Environment.NewLine);
         }
 
         /// <summary>
@@ -458,9 +470,9 @@ namespace USBRelay
         private void USBRelayConfig_FormClosed(object sender, FormClosedEventArgs e)
         {            
             Properties.Settings.Default.triggerOnConditions =
-                TriggerCondition.BuildTriggerConditionsString(connectedRelayCount, relayPlugin.triggerOnConditions);
+                TriggerCondition.BuildTriggerConditionsString(USBRelay.MAX_NUMBER_OF_RELAYS, relayPlugin.triggerOnConditions);
             Properties.Settings.Default.triggerOffConditions =
-                TriggerCondition.BuildTriggerConditionsString(connectedRelayCount, relayPlugin.triggerOffConditions);
+                TriggerCondition.BuildTriggerConditionsString(USBRelay.MAX_NUMBER_OF_RELAYS, relayPlugin.triggerOffConditions);
 
             // Reload the triggers and enable them to start listening
             relayPlugin.LoadTriggerConditionsFromSettings();

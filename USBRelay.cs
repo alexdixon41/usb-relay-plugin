@@ -17,7 +17,7 @@ namespace USBRelay
     [Export(typeof(IDataIOProvider))]
     public class USBRelay : IDataIOProvider
     {
-        // Not used
+        // Required, but not used
         public event ConfigChangeEventHandler OnConfigurationChange;
 
         public const int MAX_NUMBER_OF_RELAYS = 8;
@@ -104,12 +104,20 @@ namespace USBRelay
                     triggerOnConditions.Add(new TriggerCondition(true, onConditionStrings[i]));
                 }
             }
+            for (int i = triggerOnConditions.Count; i < MAX_NUMBER_OF_RELAYS; i++)
+            {
+                triggerOnConditions.Add(new TriggerCondition(true, "$"));
+            }
             for (int i = 0; i < offConditionStrings.Length; i++)
             {
                 if (offConditionStrings[i].Length > 0)
                 {
                     triggerOffConditions.Add(new TriggerCondition(false, offConditionStrings[i]));
                 }
+            }
+            for (int i = triggerOffConditions.Count; i < MAX_NUMBER_OF_RELAYS; i++)
+            {
+                triggerOffConditions.Add(new TriggerCondition(false, "$"));
             }
         }
 
@@ -172,6 +180,7 @@ namespace USBRelay
 
         private void menuItem_Click(object sender, EventArgs e)
         {
+
             SetupTriggerSignals();            
             relayConfigForm.ShowDialog(); //Shows the configure page.
         }
@@ -229,44 +238,35 @@ namespace USBRelay
                     case "<none>":
                         break;
                     case "EngineRPM":
-                        //signalValue = values["EngineRPM"];
                         signalValue = (float)dynoDataConnection?.polledDataSet.instantEngineRPM;
                         break;
                     case "Aux1":
-                        //signalValue = values["Aux1"];
                         signalValue = (float)dynoDataConnection?.polledDataSet.aux[0];
                         break;
                     case "Aux2":
-                        //signalValue = values["Aux2"];
                         signalValue = (float)dynoDataConnection?.polledDataSet.aux[1];
                         break;
                     case "Aux3":
-                        //signalValue = values["Aux3"];
                         signalValue = (float)dynoDataConnection?.polledDataSet.aux[2];
                         break;
                     case "ThermoC1":
-                        //signalValue = values["ThermoC1"];
                         if (dynoDataConnection?.polledDataSet.EGT != null && dynoDataConnection?.polledDataSet.EGT.Length > 0)
                         {
                             signalValue = (float)dynoDataConnection?.polledDataSet.EGT[0];
                         }
-
                         break;
                     case "ThermoC2":
-                        //signalValue = values["ThermoC2"];
                         if (dynoDataConnection?.polledDataSet.EGT != null && dynoDataConnection?.polledDataSet.EGT.Length > 1)
                         {
                             signalValue = (float)dynoDataConnection?.polledDataSet.EGT[1];
                         }
                         break;
                     case "Roller1RPM":
-                        //signalValue = values["Roller1RPM"];
                         signalValue = (float)dynoDataConnection?.polledDataSet.instantRoller1RPM;
                         break;
                     default:
                         try
                         {
-                            //signalValue = values[condition.Signal];
                             signalValue = allPluginDataConnections.First(x => x.name == condition.Signal).y;
                         }
                         catch
@@ -287,19 +287,6 @@ namespace USBRelay
         {
             if (triggersEnabled && dynoDataConnection != null && triggerOnConditions != null)
             {
-                //TODO - Simulate values for testing - remove these and the values in CheckTriggerConditionSignals
-                //Dictionary<string, float> values = new Dictionary<string, float>()
-                //{
-                //    { "EngineRPM", 850 },
-                //    { "Aux1", 1 },
-                //    { "Aux2", 2 },
-                //    { "Aux3", 3 },
-                //    { "ThermoC1", 10 },
-                //    { "ThermoC2", 20 },
-                //    { "Roller1RPM", 100 },
-                //    { "RPM1", 250 }
-                //};
-
                 for (int i = 0; i < triggerOffConditions.Count; i++)
                 {
                     if (relayCanToggle[i])
@@ -319,7 +306,6 @@ namespace USBRelay
     }
     public class TriggerCondition
     {
-        //public bool Enabled { get; set; }
         public string Signal { get; set; } = "";
         public string Operator { get; set; } = "";
         public float Threshold { get; set; } = 0.0f;

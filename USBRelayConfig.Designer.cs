@@ -199,7 +199,6 @@
             this.compareOff8ComboBox = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
             this.relay8Button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.triggerPointOn1NumericUpDown)).BeginInit();
             this.triggerOn1Panel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -2606,23 +2605,13 @@
             this.relay8Button.UseVisualStyleBackColor = false;
             this.relay8Button.Click += new System.EventHandler(this.ToggleRelayButton_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 617);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(840, 167);
-            this.textBox1.TabIndex = 37;
-            // 
             // USBRelayConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(840, 620);
-            this.ClientSize = new System.Drawing.Size(864, 796);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(864, 626);
             this.Controls.Add(this.relay8Panel);
             this.Controls.Add(this.relay7Panel);
             this.Controls.Add(this.relay6Panel);
@@ -2857,7 +2846,6 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button clearOn1PanelButton;
         private System.Windows.Forms.Button clearOff1PanelButton;
         private System.Windows.Forms.Button clearOn2PanelButton;
