@@ -74,43 +74,25 @@ namespace USBRelay
             }
         }
 
-        // Is called when "YourDyno" Closes
-        private void OnApplicationExit(object sender, EventArgs e)
-        {
-            try
-            {
-                RelayManager.CloseAllChannels(); // Closes all relay channels
-            }
-            catch
-            {
-                MessageBox.Show("Failed to close relays.");
-            }
+        private static USBRelayConfig instance = null;
 
-            try
+        public static USBRelayConfig GetInstance(USBRelay relayPlugin)
+        {
+            if (instance == null)
             {
-                // Removes the driver (Needs to be done though CMD since not every one runs "YourDyno" as admin.
-                System.Diagnostics.Process process = new System.Diagnostics.Process();
-                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                startInfo.FileName = "cmd.exe";
-                startInfo.Arguments = "/C del " + dlldir;
-                process.StartInfo = startInfo;
-                process.Start();
+                instance = new USBRelayConfig(relayPlugin);
             }
-            catch
-            {
-                MessageBox.Show("Failed to clean up extracted unmanaged dll.");
-            }
+            return instance;
         }
 
-        public USBRelayConfig(USBRelay relayPlugin)
+        private USBRelayConfig(USBRelay relayPlugin)
         {
-            this.relayPlugin = relayPlugin;            
+            this.relayPlugin = relayPlugin;
 
             // create and load library from the resource
             string tempDllPath = CommonUtils.LoadUnmanagedLibraryFromResource(
                 Assembly.GetExecutingAssembly(), RESOURCE_NAME, LIBRARY_NAME);
-            dlldir = tempDllPath;            
+            dlldir = tempDllPath;
 
             // Makes a new event for when "YourDyno" closes.
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
@@ -118,14 +100,14 @@ namespace USBRelay
 
             relayButtons = new List<Button>()
             {
-                relay1Button, relay2Button, relay3Button, relay4Button, 
+                relay1Button, relay2Button, relay3Button, relay4Button,
                 relay5Button, relay6Button, relay7Button, relay8Button
-            };            
+            };
             hotkeyLabels = new List<Label>()
             {
                 hotkey1Label, hotkey2Label, hotkey3Label, hotkey4Label,
                 hotkey5Label, hotkey6Label, hotkey7Label, hotkey8Label
-            };     
+            };
             triggerSignalOnComboBoxes = new List<ComboBox>()
             {
                 triggerSignalOn1ComboBox, triggerSignalOn2ComboBox, triggerSignalOn3ComboBox, triggerSignalOn4ComboBox,
@@ -168,7 +150,7 @@ namespace USBRelay
             };
 
             // Starts the driver
-            RelayManager.Init();            
+            RelayManager.Init();
 
             // Checks to see if there is a connected USB Relay board.
             if (RelayManager.DevicesCount() == 0)
@@ -186,7 +168,7 @@ namespace USBRelay
             else
             {
                 // Opens first USB Relay board found
-                RelayManager.OpenDevice(0);                               
+                RelayManager.OpenDevice(0);
 
                 // Enables controls based on how many channels the USB Relay device has
                 connectedRelayCount = RelayManager.ChannelsCount();
@@ -197,15 +179,44 @@ namespace USBRelay
                 relay5Panel.Enabled = connectedRelayCount > 4;
                 relay6Panel.Enabled = connectedRelayCount > 4;
                 relay7Panel.Enabled = connectedRelayCount > 4;
-                relay8Panel.Enabled = connectedRelayCount > 4;                                
-            }            
+                relay8Panel.Enabled = connectedRelayCount > 4;
+            }
 
             // Show hotkeys
             for (int i = 1; i <= hotkeyLabels.Count(); i++)
             {
                 Keys savedHotkey = (Keys)Properties.Settings.Default["hotkey" + i];
                 hotkeyLabels[i - 1].Text = savedHotkey == Keys.None ? "<none>" : savedHotkey.ToString();
-            }            
+            }
+        }
+
+        // Is called when "YourDyno" Closes
+        private void OnApplicationExit(object sender, EventArgs e)
+        {
+            try
+            {
+                RelayManager.CloseAllChannels(); // Closes all relay channels
+            }
+            catch
+            {
+                MessageBox.Show("Failed to close relays.");
+            }
+
+            try
+            {
+                // Removes the driver (Needs to be done though CMD since not every one runs "YourDyno" as admin.
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                startInfo.FileName = "cmd.exe";
+                startInfo.Arguments = "/C del " + dlldir;
+                process.StartInfo = startInfo;
+                process.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Failed to clean up extracted unmanaged dll.");
+            }
         }        
 
         private void USBRelayConfig_Load(object sender, EventArgs e)

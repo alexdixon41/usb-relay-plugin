@@ -69,7 +69,7 @@ namespace USBRelay
 
         public USBRelay()
         {
-            relayConfigForm = new USBRelayConfig(this);
+            relayConfigForm = USBRelayConfig.GetInstance(this);
             this.menuEntry.Name = "menuEntry";
             this.menuEntry.Text = "USB Relay";
             this.menuEntry.Click += new System.EventHandler(this.menuItem_Click);
