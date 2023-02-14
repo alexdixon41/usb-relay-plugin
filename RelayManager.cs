@@ -1,9 +1,8 @@
-﻿/*
- * I hate commenting code but ill try where I can.
+﻿/* 
  * USB Relay Board
  * https://www.ebay.com/itm/1-2-4-8-Ch-5V-10V-USB-Relay-Programmable-Computer-Control-Relay-For-Smart-Home/192208103778?hash=item2cc07ee962:m:mlg_RwObhC-7ozedu3cOnAQ:rk:1:pf:0
  * Supports 1/2/4/8 channel
- *  2019 bmgjet
+ * This version by bababooey9, based on original plugin by bmgjet.
  */
 using System;
 using System.Runtime.InteropServices;

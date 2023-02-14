@@ -47,7 +47,7 @@ namespace USBRelay
         {
             get
             {
-                return "This plugin provides control over USB HID Relays by bmgjet.";
+                return "This plugin provides automated and manual controls for USB relay devices.";
             }
         }
 
