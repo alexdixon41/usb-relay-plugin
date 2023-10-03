@@ -55,7 +55,7 @@ namespace USBRelay
         {
             get
             {
-                return "1.1";
+                return "1.2";
             }
         }
 
@@ -65,6 +65,11 @@ namespace USBRelay
             dynoDataConnection = d;
             dynoDataConnection.OnDynoDataReceived += DynoDataReceivedEventHandler;
             allPluginDataConnections = p;
+        }
+
+        public void initDynoDataConnection(DynoDataConnection dynoDataConnection, Dictionary<string, OnePlugInDataConnection> allPlugins)
+        {
+            initDynoDataConnection(dynoDataConnection, allPlugins.Values.ToList<OnePlugInDataConnection>());
         }
 
         public USBRelay()
@@ -238,7 +243,7 @@ namespace USBRelay
                     case "<none>":
                         break;
                     case "EngineRPM":
-                        signalValue = (float)dynoDataConnection?.polledDataSet.instantEngineRPM;
+                        signalValue = (float)dynoDataConnection?.polledDataSet.engineRPM;
                         break;
                     case "Aux1":
                         signalValue = (float)dynoDataConnection?.polledDataSet.aux[0];
@@ -262,7 +267,7 @@ namespace USBRelay
                         }
                         break;
                     case "Roller1RPM":
-                        signalValue = (float)dynoDataConnection?.polledDataSet.instantRoller1RPM;
+                        signalValue = (float)dynoDataConnection?.polledDataSet.RPM1;
                         break;
                     default:
                         try
@@ -304,6 +309,7 @@ namespace USBRelay
             }
         }
     }
+
     public class TriggerCondition
     {
         public string Signal { get; set; } = "";
